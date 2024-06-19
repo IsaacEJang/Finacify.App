@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace MiniProject___Budgetting_App
 {
-    public partial class HomePageForm : Form
+    public partial class MonthsSummary : Form
     {
-        public HomePageForm()
+        public MonthsSummary()
         {
             InitializeComponent();
+        }
+
+        private void buttonBackHome_Click_1(object sender, EventArgs e)
+        {
+            HomePageForm homePageForm = new HomePageForm();
+            homePageForm.Show();
+            this.Hide();
         }
     }
 }

@@ -31,12 +31,12 @@
             label7 = new Label();
             buttonBackHome = new Button();
             groupBoxCategory = new GroupBox();
-            label1 = new Label();
-            radioButtonGroceries = new RadioButton();
-            radioButtonGas = new RadioButton();
-            radioButtonDiningOut = new RadioButton();
-            radioButtonMisc = new RadioButton();
             radioButtonShopping = new RadioButton();
+            radioButtonMisc = new RadioButton();
+            radioButtonDiningOut = new RadioButton();
+            radioButtonGas = new RadioButton();
+            radioButtonGroceries = new RadioButton();
+            label1 = new Label();
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
             groupBox2 = new GroupBox();
@@ -61,13 +61,15 @@
             // buttonBackHome
             // 
             buttonBackHome.BackColor = SystemColors.ActiveCaption;
+            buttonBackHome.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonBackHome.ForeColor = Color.SeaShell;
-            buttonBackHome.Location = new Point(12, 27);
+            buttonBackHome.Location = new Point(12, 12);
             buttonBackHome.Name = "buttonBackHome";
-            buttonBackHome.Size = new Size(40, 40);
+            buttonBackHome.Size = new Size(49, 49);
             buttonBackHome.TabIndex = 14;
             buttonBackHome.Text = "↩️";
             buttonBackHome.UseVisualStyleBackColor = false;
+            buttonBackHome.Click += buttonBackHome_Click;
             // 
             // groupBoxCategory
             // 
@@ -84,49 +86,16 @@
             groupBoxCategory.TabStop = false;
             groupBoxCategory.Text = "Category";
             // 
-            // label1
+            // radioButtonShopping
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SeaShell;
-            label1.Location = new Point(225, -1);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 53);
-            label1.TabIndex = 16;
-            label1.Text = "💳";
-            // 
-            // radioButtonGroceries
-            // 
-            radioButtonGroceries.AutoSize = true;
-            radioButtonGroceries.Location = new Point(42, 33);
-            radioButtonGroceries.Name = "radioButtonGroceries";
-            radioButtonGroceries.Size = new Size(110, 26);
-            radioButtonGroceries.TabIndex = 1;
-            radioButtonGroceries.TabStop = true;
-            radioButtonGroceries.Text = "Groceries";
-            radioButtonGroceries.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonGas
-            // 
-            radioButtonGas.AutoSize = true;
-            radioButtonGas.Location = new Point(42, 65);
-            radioButtonGas.Name = "radioButtonGas";
-            radioButtonGas.Size = new Size(62, 26);
-            radioButtonGas.TabIndex = 2;
-            radioButtonGas.TabStop = true;
-            radioButtonGas.Text = "Gas";
-            radioButtonGas.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDiningOut
-            // 
-            radioButtonDiningOut.AutoSize = true;
-            radioButtonDiningOut.Location = new Point(42, 97);
-            radioButtonDiningOut.Name = "radioButtonDiningOut";
-            radioButtonDiningOut.Size = new Size(117, 26);
-            radioButtonDiningOut.TabIndex = 3;
-            radioButtonDiningOut.TabStop = true;
-            radioButtonDiningOut.Text = "Dining Out";
-            radioButtonDiningOut.UseVisualStyleBackColor = true;
+            radioButtonShopping.AutoSize = true;
+            radioButtonShopping.Location = new Point(42, 129);
+            radioButtonShopping.Name = "radioButtonShopping";
+            radioButtonShopping.Size = new Size(105, 26);
+            radioButtonShopping.TabIndex = 5;
+            radioButtonShopping.TabStop = true;
+            radioButtonShopping.Text = "Shopping";
+            radioButtonShopping.UseVisualStyleBackColor = true;
             // 
             // radioButtonMisc
             // 
@@ -139,16 +108,49 @@
             radioButtonMisc.Text = "Misc";
             radioButtonMisc.UseVisualStyleBackColor = true;
             // 
-            // radioButtonShopping
+            // radioButtonDiningOut
             // 
-            radioButtonShopping.AutoSize = true;
-            radioButtonShopping.Location = new Point(42, 129);
-            radioButtonShopping.Name = "radioButtonShopping";
-            radioButtonShopping.Size = new Size(105, 26);
-            radioButtonShopping.TabIndex = 5;
-            radioButtonShopping.TabStop = true;
-            radioButtonShopping.Text = "Shopping";
-            radioButtonShopping.UseVisualStyleBackColor = true;
+            radioButtonDiningOut.AutoSize = true;
+            radioButtonDiningOut.Location = new Point(42, 97);
+            radioButtonDiningOut.Name = "radioButtonDiningOut";
+            radioButtonDiningOut.Size = new Size(117, 26);
+            radioButtonDiningOut.TabIndex = 3;
+            radioButtonDiningOut.TabStop = true;
+            radioButtonDiningOut.Text = "Dining Out";
+            radioButtonDiningOut.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonGas
+            // 
+            radioButtonGas.AutoSize = true;
+            radioButtonGas.Location = new Point(42, 65);
+            radioButtonGas.Name = "radioButtonGas";
+            radioButtonGas.Size = new Size(62, 26);
+            radioButtonGas.TabIndex = 2;
+            radioButtonGas.TabStop = true;
+            radioButtonGas.Text = "Gas";
+            radioButtonGas.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonGroceries
+            // 
+            radioButtonGroceries.AutoSize = true;
+            radioButtonGroceries.Location = new Point(42, 33);
+            radioButtonGroceries.Name = "radioButtonGroceries";
+            radioButtonGroceries.Size = new Size(110, 26);
+            radioButtonGroceries.TabIndex = 1;
+            radioButtonGroceries.TabStop = true;
+            radioButtonGroceries.Text = "Groceries";
+            radioButtonGroceries.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.SeaShell;
+            label1.Location = new Point(225, -1);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 53);
+            label1.TabIndex = 16;
+            label1.Text = "💳";
             // 
             // groupBox1
             // 

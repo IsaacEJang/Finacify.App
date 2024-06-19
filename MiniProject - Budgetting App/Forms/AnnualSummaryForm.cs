@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MiniProject___Budgetting_App
+namespace MiniProject___Budgetting_App.Forms
 {
-    public partial class TrackExpenseForm : Form
+    public partial class AnnualSummaryForm : Form
     {
-        public TrackExpenseForm()
+        public AnnualSummaryForm()
         {
             InitializeComponent();
         }

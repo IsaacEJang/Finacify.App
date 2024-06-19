@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MiniProject___Budgetting_App
+namespace MiniProject___Budgetting_App.Forms
 {
-    public partial class TrackExpenseForm : Form
+    public partial class ViewTransactionsForm : Form
     {
-        public TrackExpenseForm()
+        public ViewTransactionsForm()
         {
             InitializeComponent();
         }
@@ -23,5 +23,6 @@ namespace MiniProject___Budgetting_App
             homePageForm.Show();
             this.Hide();
         }
+
     }
 }
