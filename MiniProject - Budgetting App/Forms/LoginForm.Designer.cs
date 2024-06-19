@@ -55,7 +55,7 @@
             buttonLogin.BackColor = SystemColors.ActiveCaption;
             buttonLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = Color.SeaShell;
-            buttonLogin.Location = new Point(158, 217);
+            buttonLogin.Location = new Point(160, 218);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(175, 46);
             buttonLogin.TabIndex = 5;

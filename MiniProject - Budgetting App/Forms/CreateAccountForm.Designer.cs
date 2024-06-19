@@ -28,38 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            richTextBoxUserPassword = new RichTextBox();
             buttonLogin = new Button();
             groupBox1 = new GroupBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             label6 = new Label();
-            richTextBox4 = new RichTextBox();
             label3 = new Label();
-            richTextBox3 = new RichTextBox();
             label5 = new Label();
             label4 = new Label();
-            richTextBox2 = new RichTextBox();
             label2 = new Label();
             label1 = new Label();
-            richTextBox1 = new RichTextBox();
             label7 = new Label();
             TitleLabel1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // richTextBoxUserPassword
-            // 
-            richTextBoxUserPassword.Location = new Point(28, 255);
-            richTextBoxUserPassword.Name = "richTextBoxUserPassword";
-            richTextBoxUserPassword.Size = new Size(450, 47);
-            richTextBoxUserPassword.TabIndex = 4;
-            richTextBoxUserPassword.Text = "";
             // 
             // buttonLogin
             // 
             buttonLogin.BackColor = SystemColors.ActiveCaption;
             buttonLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = Color.SeaShell;
-            buttonLogin.Location = new Point(157, 384);
+            buttonLogin.Location = new Point(157, 375);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(175, 55);
             buttonLogin.TabIndex = 5;
@@ -69,23 +61,63 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.SeaShell;
+            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(richTextBox4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(richTextBox3);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(richTextBox2);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(richTextBox1);
-            groupBox1.Controls.Add(richTextBoxUserPassword);
             groupBox1.Controls.Add(buttonLogin);
             groupBox1.Location = new Point(12, 96);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(498, 445);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(28, 330);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(450, 30);
+            textBox5.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(28, 255);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(450, 30);
+            textBox4.TabIndex = 21;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(28, 180);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(450, 30);
+            textBox3.TabIndex = 20;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(238, 105);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(240, 30);
+            textBox2.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(28, 105);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(204, 30);
+            textBox1.TabIndex = 18;
             // 
             // label6
             // 
@@ -97,14 +129,6 @@
             label6.TabIndex = 17;
             label6.Text = "Last Name";
             // 
-            // richTextBox4
-            // 
-            richTextBox4.Location = new Point(238, 105);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(240, 47);
-            richTextBox4.TabIndex = 16;
-            richTextBox4.Text = "";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -114,14 +138,6 @@
             label3.Size = new Size(98, 22);
             label3.TabIndex = 15;
             label3.Text = "First Name";
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.Location = new Point(28, 105);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(204, 47);
-            richTextBox3.TabIndex = 14;
-            richTextBox3.Text = "";
             // 
             // label5
             // 
@@ -143,14 +159,6 @@
             label4.TabIndex = 12;
             label4.Text = "Validate Password";
             // 
-            // richTextBox2
-            // 
-            richTextBox2.Location = new Point(28, 330);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(450, 48);
-            richTextBox2.TabIndex = 11;
-            richTextBox2.Text = "";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -170,14 +178,6 @@
             label1.Size = new Size(57, 22);
             label1.TabIndex = 9;
             label1.Text = "Email";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(28, 180);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(450, 47);
-            richTextBox1.TabIndex = 8;
-            richTextBox1.Text = "";
             // 
             // label7
             // 
@@ -219,20 +219,20 @@
         }
 
         #endregion
-        private RichTextBox richTextBoxUserPassword;
         private Button buttonLogin;
         private GroupBox groupBox1;
         private Label label4;
-        private RichTextBox richTextBox2;
         private Label label2;
         private Label label1;
-        private RichTextBox richTextBox1;
         private Label label6;
-        private RichTextBox richTextBox4;
         private Label label3;
-        private RichTextBox richTextBox3;
         private Label label5;
         private Label label7;
         private Label TitleLabel1;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }
