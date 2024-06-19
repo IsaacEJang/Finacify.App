@@ -6,5 +6,15 @@ namespace MiniProject___Budgetting_App
         {
             InitializeComponent();
         }
+
+        private void linkLabelCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
