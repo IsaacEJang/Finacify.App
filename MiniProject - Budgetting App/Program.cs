@@ -11,7 +11,7 @@ namespace MiniProject___Budgetting_App
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new HomePageForm());
+            Application.Run(new LoginForm());
         }
     }
 }

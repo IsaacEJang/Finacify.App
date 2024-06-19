@@ -1,8 +1,8 @@
 namespace MiniProject___Budgetting_App
 {
-    public partial class HomePageForm : Form
+    public partial class LoginForm : Form
     {
-        public HomePageForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
