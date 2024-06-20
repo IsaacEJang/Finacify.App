@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             richTextBoxUserPassword = new RichTextBox();
-            buttonLogin = new Button();
+            buttonSignIn = new RoundedButton();
             groupBox1 = new GroupBox();
             label2 = new Label();
             label1 = new Label();
@@ -50,29 +51,31 @@
             richTextBoxUserPassword.TabIndex = 4;
             richTextBoxUserPassword.Text = "";
             // 
-            // buttonLogin
+            // buttonSignIn
             // 
-            buttonLogin.BackColor = SystemColors.ActiveCaption;
-            buttonLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonLogin.ForeColor = Color.SeaShell;
-            buttonLogin.Location = new Point(160, 218);
-            buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(175, 46);
-            buttonLogin.TabIndex = 5;
-            buttonLogin.Text = "Sign In";
-            buttonLogin.UseVisualStyleBackColor = false;
-            buttonLogin.Click += buttonLogin_Click;
+            buttonSignIn.BackColor = Color.FromArgb(123, 114, 229);
+            buttonSignIn.FlatAppearance.BorderSize = 0;
+            buttonSignIn.FlatStyle = FlatStyle.Flat;
+            buttonSignIn.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSignIn.ForeColor = Color.White;
+            buttonSignIn.Location = new Point(160, 218);
+            buttonSignIn.Name = "buttonSignIn";
+            buttonSignIn.Size = new Size(175, 46);
+            buttonSignIn.TabIndex = 5;
+            buttonSignIn.Text = "Sign In";
+            buttonSignIn.UseVisualStyleBackColor = false;
+            buttonSignIn.Click += buttonLogin_Click;
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.SeaShell;
+            groupBox1.BackColor = Color.White;
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(richTextBox1);
             groupBox1.Controls.Add(linkLabelCreateAccount);
             groupBox1.Controls.Add(richTextBoxUserPassword);
             groupBox1.Controls.Add(linkLabelForgotPassword);
-            groupBox1.Controls.Add(buttonLogin);
+            groupBox1.Controls.Add(buttonSignIn);
             groupBox1.Location = new Point(12, 188);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(498, 353);
@@ -133,33 +136,36 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.SeaShell;
-            label3.Location = new Point(57, 91);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(68, 106);
             label3.Name = "label3";
-            label3.Size = new Size(424, 68);
+            label3.Size = new Size(404, 68);
             label3.TabIndex = 7;
-            label3.Text = "Welcome Back!";
+            label3.Text = "Welcome Back";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.SeaShell;
-            label4.Location = new Point(195, 51);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(193, 61);
             label4.Name = "label4";
-            label4.Size = new Size(130, 32);
+            label4.Size = new Size(153, 38);
             label4.TabIndex = 8;
-            label4.Text = "PennyPal";
+            label4.Text = "Financify";
             // 
             // TitleLabel1
             // 
             TitleLabel1.AutoSize = true;
-            TitleLabel1.Font = new Font("Times New Roman", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TitleLabel1.ForeColor = Color.SeaShell;
-            TitleLabel1.Location = new Point(235, 9);
+            TitleLabel1.BackColor = Color.Transparent;
+            TitleLabel1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TitleLabel1.ForeColor = Color.White;
+            TitleLabel1.Location = new Point(234, 10);
             TitleLabel1.Name = "TitleLabel1";
-            TitleLabel1.Size = new Size(57, 42);
+            TitleLabel1.Size = new Size(71, 51);
             TitleLabel1.TabIndex = 0;
             TitleLabel1.Text = "💰";
             // 
@@ -168,6 +174,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 553);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -183,7 +191,7 @@
 
         #endregion
         private RichTextBox richTextBoxUserPassword;
-        private Button buttonLogin;
+        private RoundedButton buttonSignIn;
         private GroupBox groupBox1;
         private LinkLabel linkLabelForgotPassword;
         private Label label2;
