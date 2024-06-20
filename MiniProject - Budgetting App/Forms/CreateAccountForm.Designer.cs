@@ -83,6 +83,7 @@
             groupBox1.Size = new Size(400, 362);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
+            groupBox1.Text = " ";
             // 
             // textBox5
             // 

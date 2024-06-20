@@ -52,5 +52,19 @@ namespace MiniProject___Budgetting_App
             loginForm.Show();
             this.Hide();
         }
+
+        private void ButtonBuildBudget_Click(object sender, EventArgs e)
+        {
+            BuildBudgetForm buildBudgetForm = new BuildBudgetForm();
+            buildBudgetForm.Show();
+            this.Hide();
+        }
+
+        private void roundedButtonLogIncome_Click(object sender, EventArgs e)
+        {
+            LogIncomeForm logIncomeForm = new LogIncomeForm();
+            logIncomeForm.Show();
+            this.Hide();
+        }
     }
 }

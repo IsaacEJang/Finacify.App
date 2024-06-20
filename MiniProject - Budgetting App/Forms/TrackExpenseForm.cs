@@ -23,5 +23,10 @@ namespace MiniProject___Budgetting_App
             homePageForm.Show();
             this.Hide();
         }
+
+        private void radioButtonGroceries_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

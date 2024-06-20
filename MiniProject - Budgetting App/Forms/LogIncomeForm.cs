@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace MiniProject___Budgetting_App.Forms
 {
-    public partial class BuildBudgetForm : Form
+    public partial class LogIncomeForm : Form
     {
-        public BuildBudgetForm()
+        public LogIncomeForm()
         {
             InitializeComponent();
-        }
-
-        private void buttonBackLogin_Click(object sender, EventArgs e)
-        {
-            HomePageForm homePageForm = new HomePageForm();
-            homePageForm.Show();
-            this.Hide();
         }
     }
 }

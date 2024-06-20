@@ -36,7 +36,7 @@
             buttonLogOut = new RoundedButton();
             AppName = new Label();
             AppLogo = new Label();
-            roundedButton1 = new RoundedButton();
+            roundedButtonLogIncome = new RoundedButton();
             ButtonBuildBudget = new RoundedButton();
             SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             buttonTrackExpenseForm.Name = "buttonTrackExpenseForm";
             buttonTrackExpenseForm.Size = new Size(220, 110);
             buttonTrackExpenseForm.TabIndex = 0;
-            buttonTrackExpenseForm.Text = "💳 Track Expense";
+            buttonTrackExpenseForm.Text = "💳 \r\nTrack Expense";
             buttonTrackExpenseForm.UseVisualStyleBackColor = false;
             buttonTrackExpenseForm.Click += buttonTrackExpenseForm_Click;
             // 
@@ -60,7 +60,7 @@
             buttonViewTransactionsForm.Name = "buttonViewTransactionsForm";
             buttonViewTransactionsForm.Size = new Size(220, 110);
             buttonViewTransactionsForm.TabIndex = 1;
-            buttonViewTransactionsForm.Text = "\U0001f9fe View All Transactions";
+            buttonViewTransactionsForm.Text = "\U0001f9fe\r\nView Transactions";
             buttonViewTransactionsForm.UseVisualStyleBackColor = false;
             buttonViewTransactionsForm.Click += buttonViewTransactionsForm_Click;
             // 
@@ -72,7 +72,7 @@
             buttonAnnualSummaryForm.Name = "buttonAnnualSummaryForm";
             buttonAnnualSummaryForm.Size = new Size(220, 110);
             buttonAnnualSummaryForm.TabIndex = 2;
-            buttonAnnualSummaryForm.Text = "📊 Annual Summary";
+            buttonAnnualSummaryForm.Text = "📊 \r\nAnnual Summary";
             buttonAnnualSummaryForm.UseVisualStyleBackColor = false;
             buttonAnnualSummaryForm.Click += buttonAnnualSummaryForm_Click;
             // 
@@ -84,7 +84,7 @@
             buttonMonthsSummaryForm.Name = "buttonMonthsSummaryForm";
             buttonMonthsSummaryForm.Size = new Size(220, 110);
             buttonMonthsSummaryForm.TabIndex = 3;
-            buttonMonthsSummaryForm.Text = "💸 Month's Summary";
+            buttonMonthsSummaryForm.Text = "💸 \r\nMonth's Summary";
             buttonMonthsSummaryForm.UseVisualStyleBackColor = false;
             buttonMonthsSummaryForm.Click += buttonMonthsSummaryForm_Click;
             // 
@@ -127,16 +127,17 @@
             AppLogo.TabIndex = 14;
             AppLogo.Text = "💰";
             // 
-            // roundedButton1
+            // roundedButtonLogIncome
             // 
-            roundedButton1.BackColor = Color.White;
-            roundedButton1.Font = new Font("Times New Roman", 18F);
-            roundedButton1.Location = new Point(36, 139);
-            roundedButton1.Name = "roundedButton1";
-            roundedButton1.Size = new Size(220, 110);
-            roundedButton1.TabIndex = 18;
-            roundedButton1.Text = "💵 Log Income";
-            roundedButton1.UseVisualStyleBackColor = false;
+            roundedButtonLogIncome.BackColor = Color.White;
+            roundedButtonLogIncome.Font = new Font("Times New Roman", 18F);
+            roundedButtonLogIncome.Location = new Point(36, 139);
+            roundedButtonLogIncome.Name = "roundedButtonLogIncome";
+            roundedButtonLogIncome.Size = new Size(220, 110);
+            roundedButtonLogIncome.TabIndex = 18;
+            roundedButtonLogIncome.Text = "💵\r\nLog Income";
+            roundedButtonLogIncome.UseVisualStyleBackColor = false;
+            roundedButtonLogIncome.Click += roundedButtonLogIncome_Click;
             // 
             // ButtonBuildBudget
             // 
@@ -146,8 +147,9 @@
             ButtonBuildBudget.Name = "ButtonBuildBudget";
             ButtonBuildBudget.Size = new Size(220, 110);
             ButtonBuildBudget.TabIndex = 17;
-            ButtonBuildBudget.Text = "\U0001fa99 Build A Budget";
+            ButtonBuildBudget.Text = "\U0001fa99 \r\nBuild Budget";
             ButtonBuildBudget.UseVisualStyleBackColor = false;
+            ButtonBuildBudget.Click += ButtonBuildBudget_Click;
             // 
             // HomePageForm
             // 
@@ -157,7 +159,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 573);
-            Controls.Add(roundedButton1);
+            Controls.Add(roundedButtonLogIncome);
             Controls.Add(ButtonBuildBudget);
             Controls.Add(buttonLogOut);
             Controls.Add(AppName);
@@ -180,7 +182,7 @@
         private RoundedButton buttonAnnualSummaryForm;
         private RoundedButton buttonMonthsSummaryForm;
         private RoundedButton buttonLogOut;
-        private RoundedButton roundedButton1;
+        private RoundedButton roundedButtonLogIncome;
         private RoundedButton ButtonBuildBudget;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace MiniProject___Budgetting_App
+﻿namespace MiniProject___Budgetting_App.Forms
 {
-    partial class MonthsSummary
+    partial class LogIncomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthsSummary));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIncomeForm));
+            buttonBackLogin = new Button();
             label1 = new Label();
             label7 = new Label();
-            buttonBackLogin = new Button();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SeaShell;
-            label1.Location = new Point(225, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 53);
-            label1.TabIndex = 19;
-            label1.Text = "💸";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.SeaShell;
-            label7.Location = new Point(105, 62);
-            label7.Name = "label7";
-            label7.Size = new Size(337, 45);
-            label7.TabIndex = 17;
-            label7.Text = "Month's Summary";
             // 
             // buttonBackLogin
             // 
@@ -68,34 +44,58 @@
             buttonBackLogin.Location = new Point(12, 12);
             buttonBackLogin.Name = "buttonBackLogin";
             buttonBackLogin.Size = new Size(49, 49);
-            buttonBackLogin.TabIndex = 21;
+            buttonBackLogin.TabIndex = 23;
             buttonBackLogin.Text = "↩️";
             buttonBackLogin.UseVisualStyleBackColor = false;
             // 
-            // MonthsSummary
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(220, 8);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 53);
+            label1.TabIndex = 22;
+            label1.Text = "💵";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(162, 65);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(222, 45);
+            label7.TabIndex = 21;
+            label7.Text = "Log Income";
+            // 
+            // LogIncomeForm
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(552, 553);
+            ClientSize = new Size(522, 553);
             Controls.Add(buttonBackLogin);
             Controls.Add(label1);
             Controls.Add(label7);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ForeColor = Color.White;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "MonthsSummary";
-            Text = "Month's Summary";
+            Name = "LogIncomeForm";
+            Text = "Log Income";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Button buttonBackLogin;
         private Label label1;
         private Label label7;
-        private Button buttonBackLogin;
     }
 }

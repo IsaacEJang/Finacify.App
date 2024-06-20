@@ -15,12 +15,6 @@ namespace MiniProject___Budgetting_App
         public CreateAccountForm()
         {
             InitializeComponent();
-            Centered();
-
-        }
-        private void Centered()
-        {
-            TitleLabel1.Location = new Point((this.ClientSize.Width - TitleLabel1.Width) / 2, TitleLabel1.Location.Y);
         }
 
         private void buttonBackHome_Click(object sender, EventArgs e)
