@@ -72,7 +72,7 @@
             groupBoxCategory.Controls.Add(radioButtonDiningOut);
             groupBoxCategory.Controls.Add(radioButtonGas);
             groupBoxCategory.Controls.Add(radioButtonGroceries);
-            groupBoxCategory.Location = new Point(54, 100);
+            groupBoxCategory.Location = new Point(54, 104);
             groupBoxCategory.Name = "groupBoxCategory";
             groupBoxCategory.Size = new Size(418, 203);
             groupBoxCategory.TabIndex = 15;

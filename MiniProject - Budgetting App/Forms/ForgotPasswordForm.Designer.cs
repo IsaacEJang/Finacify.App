@@ -81,12 +81,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 553);
+            ClientSize = new Size(522, 623);
             Controls.Add(buttonBackLogin);
             Controls.Add(label7);
             Controls.Add(TitleLabel1);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "ForgotPasswordForm";
             Text = "ForgotPasswordForm";
             ResumeLayout(false);

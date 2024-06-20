@@ -38,13 +38,14 @@
             AppLogo = new Label();
             roundedButtonLogIncome = new RoundedButton();
             ButtonBuildBudget = new RoundedButton();
+            roundedButtonInformation = new RoundedButton();
             SuspendLayout();
             // 
             // buttonTrackExpenseForm
             // 
             buttonTrackExpenseForm.BackColor = Color.White;
-            buttonTrackExpenseForm.Font = new Font("Times New Roman", 18F);
-            buttonTrackExpenseForm.Location = new Point(275, 139);
+            buttonTrackExpenseForm.Font = new Font("Times New Roman", 16.2F);
+            buttonTrackExpenseForm.Location = new Point(275, 154);
             buttonTrackExpenseForm.Name = "buttonTrackExpenseForm";
             buttonTrackExpenseForm.Size = new Size(220, 110);
             buttonTrackExpenseForm.TabIndex = 0;
@@ -55,8 +56,8 @@
             // buttonViewTransactionsForm
             // 
             buttonViewTransactionsForm.BackColor = Color.White;
-            buttonViewTransactionsForm.Font = new Font("Times New Roman", 18F);
-            buttonViewTransactionsForm.Location = new Point(36, 255);
+            buttonViewTransactionsForm.Font = new Font("Times New Roman", 16.2F);
+            buttonViewTransactionsForm.Location = new Point(36, 291);
             buttonViewTransactionsForm.Name = "buttonViewTransactionsForm";
             buttonViewTransactionsForm.Size = new Size(220, 110);
             buttonViewTransactionsForm.TabIndex = 1;
@@ -67,8 +68,8 @@
             // buttonAnnualSummaryForm
             // 
             buttonAnnualSummaryForm.BackColor = Color.White;
-            buttonAnnualSummaryForm.Font = new Font("Times New Roman", 18F);
-            buttonAnnualSummaryForm.Location = new Point(275, 371);
+            buttonAnnualSummaryForm.Font = new Font("Times New Roman", 16.2F);
+            buttonAnnualSummaryForm.Location = new Point(275, 426);
             buttonAnnualSummaryForm.Name = "buttonAnnualSummaryForm";
             buttonAnnualSummaryForm.Size = new Size(220, 110);
             buttonAnnualSummaryForm.TabIndex = 2;
@@ -79,8 +80,8 @@
             // buttonMonthsSummaryForm
             // 
             buttonMonthsSummaryForm.BackColor = Color.White;
-            buttonMonthsSummaryForm.Font = new Font("Times New Roman", 18F);
-            buttonMonthsSummaryForm.Location = new Point(36, 371);
+            buttonMonthsSummaryForm.Font = new Font("Times New Roman", 16.2F);
+            buttonMonthsSummaryForm.Location = new Point(36, 426);
             buttonMonthsSummaryForm.Name = "buttonMonthsSummaryForm";
             buttonMonthsSummaryForm.Size = new Size(220, 110);
             buttonMonthsSummaryForm.TabIndex = 3;
@@ -95,7 +96,7 @@
             buttonLogOut.FlatStyle = FlatStyle.Flat;
             buttonLogOut.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogOut.ForeColor = Color.White;
-            buttonLogOut.Location = new Point(170, 504);
+            buttonLogOut.Location = new Point(169, 553);
             buttonLogOut.Name = "buttonLogOut";
             buttonLogOut.Size = new Size(184, 46);
             buttonLogOut.TabIndex = 16;
@@ -130,8 +131,8 @@
             // roundedButtonLogIncome
             // 
             roundedButtonLogIncome.BackColor = Color.White;
-            roundedButtonLogIncome.Font = new Font("Times New Roman", 18F);
-            roundedButtonLogIncome.Location = new Point(36, 139);
+            roundedButtonLogIncome.Font = new Font("Times New Roman", 16.2F);
+            roundedButtonLogIncome.Location = new Point(36, 154);
             roundedButtonLogIncome.Name = "roundedButtonLogIncome";
             roundedButtonLogIncome.Size = new Size(220, 110);
             roundedButtonLogIncome.TabIndex = 18;
@@ -142,14 +143,29 @@
             // ButtonBuildBudget
             // 
             ButtonBuildBudget.BackColor = Color.White;
-            ButtonBuildBudget.Font = new Font("Times New Roman", 18F);
-            ButtonBuildBudget.Location = new Point(275, 255);
+            ButtonBuildBudget.Font = new Font("Times New Roman", 16.2F);
+            ButtonBuildBudget.Location = new Point(275, 291);
             ButtonBuildBudget.Name = "ButtonBuildBudget";
             ButtonBuildBudget.Size = new Size(220, 110);
             ButtonBuildBudget.TabIndex = 17;
             ButtonBuildBudget.Text = "\U0001fa99 \r\nBuild Budget";
             ButtonBuildBudget.UseVisualStyleBackColor = false;
             ButtonBuildBudget.Click += ButtonBuildBudget_Click;
+            // 
+            // roundedButtonInformation
+            // 
+            roundedButtonInformation.BackColor = Color.FromArgb(123, 114, 229);
+            roundedButtonInformation.FlatAppearance.BorderSize = 0;
+            roundedButtonInformation.FlatStyle = FlatStyle.Flat;
+            roundedButtonInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedButtonInformation.ForeColor = Color.White;
+            roundedButtonInformation.Location = new Point(475, -1);
+            roundedButtonInformation.Name = "roundedButtonInformation";
+            roundedButtonInformation.Size = new Size(49, 49);
+            roundedButtonInformation.TabIndex = 19;
+            roundedButtonInformation.Text = "ℹ️";
+            roundedButtonInformation.UseVisualStyleBackColor = false;
+            roundedButtonInformation.Click += roundedButtonInformation_Click;
             // 
             // HomePageForm
             // 
@@ -158,7 +174,8 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 573);
+            ClientSize = new Size(522, 623);
+            Controls.Add(roundedButtonInformation);
             Controls.Add(roundedButtonLogIncome);
             Controls.Add(ButtonBuildBudget);
             Controls.Add(buttonLogOut);
@@ -184,5 +201,6 @@
         private RoundedButton buttonLogOut;
         private RoundedButton roundedButtonLogIncome;
         private RoundedButton ButtonBuildBudget;
+        private RoundedButton roundedButtonInformation;
     }
 }

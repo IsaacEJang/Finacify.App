@@ -13,7 +13,7 @@ namespace MiniProject___Budgetting_App
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             // Get the dimensions of the group box
-            Rectangle rect = new Rectangle(this.ClientRectangle.X, this.ClientRectangle.Y + 10, this.ClientRectangle.Width - 1, this.ClientRectangle.Height - 11);
+            Rectangle rect = new Rectangle(ClientRectangle.X, ClientRectangle.Y + 10, ClientRectangle.Width - 1, ClientRectangle.Height - 11);
 
             // Define the radius for the corners
             int radius = 20; // Adjust the radius value as needed
@@ -27,7 +27,7 @@ namespace MiniProject___Budgetting_App
             path.CloseFigure();
 
             // Set the region of the group box to the path with rounded corners
-            this.Region = new Region(path);
+            Region = new Region(path);
 
             // Draw the border of the group box
             using (Pen pen = new Pen(Color.Gray))
@@ -36,10 +36,10 @@ namespace MiniProject___Budgetting_App
             }
 
             // Draw the text of the group box
-            SizeF stringSize = e.Graphics.MeasureString(this.Text, this.Font);
+            SizeF stringSize = e.Graphics.MeasureString(Text, Font);
             Rectangle textRect = new Rectangle(10, 0, (int)stringSize.Width, (int)stringSize.Height);
-            e.Graphics.FillRectangle(new SolidBrush(this.BackColor), textRect);
-            e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(this.ForeColor), 10, 0);
+            e.Graphics.FillRectangle(new SolidBrush(BackColor), textRect);
+            e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), 10, 0);
         }
     }
 }

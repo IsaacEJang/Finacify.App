@@ -38,14 +38,14 @@
             linkLabelCreateAccount = new LinkLabel();
             linkLabelForgotPassword = new LinkLabel();
             label3 = new Label();
-            label4 = new Label();
-            TitleLabel1 = new Label();
+            AppName = new Label();
+            AppLogo = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // richTextBoxUserPassword
             // 
-            richTextBoxUserPassword.Location = new Point(25, 146);
+            richTextBoxUserPassword.Location = new Point(25, 155);
             richTextBoxUserPassword.Name = "richTextBoxUserPassword";
             richTextBoxUserPassword.Size = new Size(373, 38);
             richTextBoxUserPassword.TabIndex = 4;
@@ -58,7 +58,7 @@
             buttonSignIn.FlatStyle = FlatStyle.Flat;
             buttonSignIn.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSignIn.ForeColor = Color.White;
-            buttonSignIn.Location = new Point(123, 205);
+            buttonSignIn.Location = new Point(128, 213);
             buttonSignIn.Name = "buttonSignIn";
             buttonSignIn.Size = new Size(175, 46);
             buttonSignIn.TabIndex = 5;
@@ -76,9 +76,9 @@
             groupBox1.Controls.Add(richTextBoxUserPassword);
             groupBox1.Controls.Add(linkLabelForgotPassword);
             groupBox1.Controls.Add(buttonSignIn);
-            groupBox1.Location = new Point(56, 186);
+            groupBox1.Location = new Point(64, 245);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(420, 336);
+            groupBox1.Size = new Size(420, 350);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             // 
@@ -86,7 +86,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(25, 121);
+            label2.Location = new Point(25, 130);
             label2.Name = "label2";
             label2.Size = new Size(88, 22);
             label2.TabIndex = 10;
@@ -96,7 +96,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 28);
+            label1.Location = new Point(25, 45);
             label1.Name = "label1";
             label1.Size = new Size(57, 22);
             label1.TabIndex = 9;
@@ -104,7 +104,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(25, 53);
+            richTextBox1.Location = new Point(25, 70);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(373, 38);
             richTextBox1.TabIndex = 8;
@@ -114,7 +114,7 @@
             // 
             linkLabelCreateAccount.AutoSize = true;
             linkLabelCreateAccount.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            linkLabelCreateAccount.Location = new Point(25, 272);
+            linkLabelCreateAccount.Location = new Point(25, 273);
             linkLabelCreateAccount.Name = "linkLabelCreateAccount";
             linkLabelCreateAccount.Size = new Size(110, 46);
             linkLabelCreateAccount.TabIndex = 7;
@@ -127,7 +127,7 @@
             // 
             linkLabelForgotPassword.AutoSize = true;
             linkLabelForgotPassword.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            linkLabelForgotPassword.Location = new Point(298, 272);
+            linkLabelForgotPassword.Location = new Point(298, 273);
             linkLabelForgotPassword.Name = "linkLabelForgotPassword";
             linkLabelForgotPassword.Size = new Size(100, 46);
             linkLabelForgotPassword.TabIndex = 6;
@@ -142,35 +142,36 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(64, 106);
+            label3.Location = new Point(64, 160);
             label3.Name = "label3";
             label3.Size = new Size(404, 68);
             label3.TabIndex = 7;
             label3.Text = "Welcome Back";
             // 
-            // label4
+            // AppName
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(184, 61);
-            label4.Name = "label4";
-            label4.Size = new Size(153, 38);
-            label4.TabIndex = 8;
-            label4.Text = "Financify";
+            AppName.AutoSize = true;
+            AppName.BackColor = Color.Transparent;
+            AppName.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold);
+            AppName.ForeColor = Color.White;
+            AppName.Location = new Point(161, 76);
+            AppName.Name = "AppName";
+            AppName.Size = new Size(213, 53);
+            AppName.TabIndex = 17;
+            AppName.Text = "Financify";
+            AppName.Click += AppName_Click;
             // 
-            // TitleLabel1
+            // AppLogo
             // 
-            TitleLabel1.AutoSize = true;
-            TitleLabel1.BackColor = Color.Transparent;
-            TitleLabel1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TitleLabel1.ForeColor = Color.White;
-            TitleLabel1.Location = new Point(225, 10);
-            TitleLabel1.Name = "TitleLabel1";
-            TitleLabel1.Size = new Size(71, 51);
-            TitleLabel1.TabIndex = 0;
-            TitleLabel1.Text = "💰";
+            AppLogo.AutoSize = true;
+            AppLogo.BackColor = Color.Transparent;
+            AppLogo.Font = new Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AppLogo.ForeColor = Color.White;
+            AppLogo.Location = new Point(221, 9);
+            AppLogo.Name = "AppLogo";
+            AppLogo.Size = new Size(95, 68);
+            AppLogo.TabIndex = 16;
+            AppLogo.Text = "💰";
             // 
             // LoginForm
             // 
@@ -179,10 +180,10 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 553);
-            Controls.Add(label4);
+            ClientSize = new Size(522, 623);
+            Controls.Add(AppName);
+            Controls.Add(AppLogo);
             Controls.Add(label3);
-            Controls.Add(TitleLabel1);
             Controls.Add(groupBox1);
             Name = "LoginForm";
             Text = "Login";
@@ -202,7 +203,7 @@
         private RichTextBox richTextBox1;
         private LinkLabel linkLabelCreateAccount;
         private Label label3;
-        private Label label4;
-        private Label TitleLabel1;
+        private Label AppName;
+        private Label AppLogo;
     }
 }

@@ -20,15 +20,15 @@ namespace MiniProject___Budgetting_App
 
             graphicsPath.StartFigure();
             graphicsPath.AddArc(new Rectangle(0, 0, diameter, diameter), 180, 90);
-            graphicsPath.AddArc(new Rectangle(this.Width - diameter, 0, diameter, diameter), -90, 90);
-            graphicsPath.AddArc(new Rectangle(this.Width - diameter, this.Height - diameter, diameter, diameter), 0, 90);
-            graphicsPath.AddArc(new Rectangle(0, this.Height - diameter, diameter, diameter), 90, 90);
+            graphicsPath.AddArc(new Rectangle(Width - diameter, 0, diameter, diameter), -90, 90);
+            graphicsPath.AddArc(new Rectangle(Width - diameter, Height - diameter, diameter, diameter), 0, 90);
+            graphicsPath.AddArc(new Rectangle(0, Height - diameter, diameter, diameter), 90, 90);
             graphicsPath.CloseFigure();
 
-            this.Region = new Region(graphicsPath);
+            Region = new Region(graphicsPath);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.DrawPath(Pens.Transparent, graphicsPath);
         }
-    
+
     }
 }

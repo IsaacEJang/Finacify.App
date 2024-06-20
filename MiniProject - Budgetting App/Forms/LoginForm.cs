@@ -29,5 +29,10 @@ namespace MiniProject___Budgetting_App
             forgotPasswordForm.Show();
             this.Hide();
         }
+
+        private void AppName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

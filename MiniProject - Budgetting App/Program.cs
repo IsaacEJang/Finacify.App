@@ -1,3 +1,5 @@
+using MiniProject___Budgetting_App.Forms;
+
 namespace MiniProject___Budgetting_App
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace MiniProject___Budgetting_App
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            Application.Run(new BuildBudgetForm());
         }
     }
 }

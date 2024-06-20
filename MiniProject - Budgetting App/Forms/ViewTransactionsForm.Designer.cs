@@ -80,7 +80,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 553);
+            ClientSize = new Size(522, 623);
             Controls.Add(buttonBackHome);
             Controls.Add(label1);
             Controls.Add(label7);

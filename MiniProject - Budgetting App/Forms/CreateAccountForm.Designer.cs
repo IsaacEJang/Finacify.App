@@ -56,7 +56,7 @@
             buttonSignUp.FlatStyle = FlatStyle.Flat;
             buttonSignUp.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSignUp.ForeColor = Color.White;
-            buttonSignUp.Location = new Point(113, 302);
+            buttonSignUp.Location = new Point(113, 362);
             buttonSignUp.Name = "buttonSignUp";
             buttonSignUp.Size = new Size(174, 40);
             buttonSignUp.TabIndex = 5;
@@ -80,7 +80,7 @@
             groupBox1.Controls.Add(buttonSignUp);
             groupBox1.Location = new Point(70, 169);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(400, 362);
+            groupBox1.Size = new Size(400, 424);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             groupBox1.Text = " ";
@@ -88,7 +88,7 @@
             // textBox5
             // 
             textBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(23, 257);
+            textBox5.Location = new Point(23, 314);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(356, 30);
             textBox5.TabIndex = 22;
@@ -96,7 +96,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(23, 189);
+            textBox4.Location = new Point(23, 232);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(356, 30);
             textBox4.TabIndex = 21;
@@ -104,7 +104,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(23, 121);
+            textBox3.Location = new Point(23, 149);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(356, 30);
             textBox3.TabIndex = 20;
@@ -112,7 +112,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(213, 52);
+            textBox2.Location = new Point(213, 69);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(166, 30);
             textBox2.TabIndex = 19;
@@ -120,7 +120,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(23, 52);
+            textBox1.Location = new Point(23, 70);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(158, 30);
             textBox1.TabIndex = 18;
@@ -129,7 +129,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(213, 27);
+            label6.Location = new Point(213, 44);
             label6.Name = "label6";
             label6.Size = new Size(94, 22);
             label6.TabIndex = 17;
@@ -139,7 +139,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(23, 27);
+            label3.Location = new Point(23, 45);
             label3.Name = "label3";
             label3.Size = new Size(98, 22);
             label3.TabIndex = 15;
@@ -149,7 +149,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(23, 232);
+            label4.Location = new Point(23, 289);
             label4.Name = "label4";
             label4.Size = new Size(158, 22);
             label4.TabIndex = 12;
@@ -159,7 +159,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(23, 164);
+            label2.Location = new Point(23, 207);
             label2.Name = "label2";
             label2.Size = new Size(88, 22);
             label2.TabIndex = 10;
@@ -169,7 +169,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 96);
+            label1.Location = new Point(23, 124);
             label1.Name = "label1";
             label1.Size = new Size(57, 22);
             label1.TabIndex = 9;
@@ -223,7 +223,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 553);
+            ClientSize = new Size(522, 623);
             Controls.Add(buttonBackLogin);
             Controls.Add(label7);
             Controls.Add(TitleLabel1);

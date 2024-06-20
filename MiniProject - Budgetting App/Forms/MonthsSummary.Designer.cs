@@ -39,7 +39,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SeaShell;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(225, 9);
             label1.Name = "label1";
             label1.Size = new Size(76, 53);
@@ -51,7 +51,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.SeaShell;
+            label7.ForeColor = Color.White;
             label7.Location = new Point(105, 62);
             label7.Name = "label7";
             label7.Size = new Size(337, 45);
@@ -80,7 +80,7 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(552, 553);
+            ClientSize = new Size(522, 623);
             Controls.Add(buttonBackLogin);
             Controls.Add(label1);
             Controls.Add(label7);

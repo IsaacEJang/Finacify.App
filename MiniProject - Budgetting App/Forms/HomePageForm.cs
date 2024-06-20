@@ -66,5 +66,10 @@ namespace MiniProject___Budgetting_App
             logIncomeForm.Show();
             this.Hide();
         }
+
+        private void roundedButtonInformation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
