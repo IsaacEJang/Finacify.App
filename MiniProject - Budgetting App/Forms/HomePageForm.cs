@@ -27,8 +27,8 @@ namespace MiniProject___Budgetting_App
 
         private void buttonMonthsSummaryForm_Click(object sender, EventArgs e)
         {
-            MonthsSummary monthsSummaryForm = new MonthsSummary();
-            monthsSummaryForm.Show();
+            BudgetTrackerForm budgetTrackerForm = new BudgetTrackerForm();
+            budgetTrackerForm.Show();
             this.Hide();
         }
 

@@ -24,7 +24,6 @@ namespace MiniProject___Budgetting_App.Forms
             this.Hide();
         }
 
-
         private void roundedCalculate_Click(object sender, EventArgs e)
         {
             if (double.TryParse(textBoxPostTaxMonthlyIncome.Text, out double monthlyIncome))

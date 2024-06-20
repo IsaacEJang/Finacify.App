@@ -85,7 +85,7 @@
             buttonMonthsSummaryForm.Name = "buttonMonthsSummaryForm";
             buttonMonthsSummaryForm.Size = new Size(220, 110);
             buttonMonthsSummaryForm.TabIndex = 3;
-            buttonMonthsSummaryForm.Text = "💸 \r\nMonth's Summary";
+            buttonMonthsSummaryForm.Text = "💸 \r\nBudget Tracker";
             buttonMonthsSummaryForm.UseVisualStyleBackColor = false;
             buttonMonthsSummaryForm.Click += buttonMonthsSummaryForm_Click;
             // 
