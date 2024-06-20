@@ -78,7 +78,7 @@
             groupBox1.Controls.Add(buttonSignIn);
             groupBox1.Location = new Point(56, 186);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(419, 336);
+            groupBox1.Size = new Size(420, 336);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             // 
@@ -134,6 +134,7 @@
             linkLabelForgotPassword.TabStop = true;
             linkLabelForgotPassword.Text = "Forgot\r\nPassword?";
             linkLabelForgotPassword.TextAlign = ContentAlignment.MiddleCenter;
+            linkLabelForgotPassword.LinkClicked += linkLabelForgotPassword_LinkClicked;
             // 
             // label3
             // 

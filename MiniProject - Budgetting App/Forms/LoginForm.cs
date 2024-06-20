@@ -1,3 +1,5 @@
+using MiniProject___Budgetting_App.Forms;
+
 namespace MiniProject___Budgetting_App
 {
     public partial class LoginForm : Form
@@ -18,6 +20,13 @@ namespace MiniProject___Budgetting_App
         {
             HomePageForm homePageForm = new HomePageForm();
             homePageForm.Show();
+            this.Hide();
+        }
+
+        private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+            forgotPasswordForm.Show();
             this.Hide();
         }
     }
