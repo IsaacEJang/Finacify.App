@@ -71,6 +71,7 @@
             buttonBackLogin.TabIndex = 21;
             buttonBackLogin.Text = "↩️";
             buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackLogin.Click += buttonBackLogin_Click;
             // 
             // MonthsSummary
             // 

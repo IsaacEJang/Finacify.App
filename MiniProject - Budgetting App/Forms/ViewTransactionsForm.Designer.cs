@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTransactionsForm));
             label1 = new Label();
             label7 = new Label();
-            buttonBackLogin = new Button();
+            buttonBackHome = new Button();
             SuspendLayout();
             // 
             // label1
@@ -40,7 +40,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.SeaShell;
-            label1.Location = new Point(246, 12);
+            label1.Location = new Point(221, 12);
             label1.Name = "label1";
             label1.Size = new Size(76, 53);
             label1.TabIndex = 19;
@@ -52,25 +52,26 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.SeaShell;
-            label7.Location = new Point(95, 65);
+            label7.Location = new Point(113, 65);
             label7.Name = "label7";
-            label7.Size = new Size(391, 45);
+            label7.Size = new Size(332, 45);
             label7.TabIndex = 17;
-            label7.Text = "View All Transactions";
+            label7.Text = "View Transactions";
             // 
-            // buttonBackLogin
+            // buttonBackHome
             // 
-            buttonBackLogin.BackColor = Color.FromArgb(123, 114, 229);
-            buttonBackLogin.FlatAppearance.BorderSize = 0;
-            buttonBackLogin.FlatStyle = FlatStyle.Flat;
-            buttonBackLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBackLogin.ForeColor = Color.White;
-            buttonBackLogin.Location = new Point(12, 12);
-            buttonBackLogin.Name = "buttonBackLogin";
-            buttonBackLogin.Size = new Size(49, 49);
-            buttonBackLogin.TabIndex = 23;
-            buttonBackLogin.Text = "↩️";
-            buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackHome.BackColor = Color.FromArgb(123, 114, 229);
+            buttonBackHome.FlatAppearance.BorderSize = 0;
+            buttonBackHome.FlatStyle = FlatStyle.Flat;
+            buttonBackHome.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonBackHome.ForeColor = Color.White;
+            buttonBackHome.Location = new Point(12, 12);
+            buttonBackHome.Name = "buttonBackHome";
+            buttonBackHome.Size = new Size(49, 49);
+            buttonBackHome.TabIndex = 23;
+            buttonBackHome.Text = "↩️";
+            buttonBackHome.UseVisualStyleBackColor = false;
+            buttonBackHome.Click += buttonBackHome_Click_1;
             // 
             // ViewTransactionsForm
             // 
@@ -78,8 +79,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(552, 553);
-            Controls.Add(buttonBackLogin);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(522, 553);
+            Controls.Add(buttonBackHome);
             Controls.Add(label1);
             Controls.Add(label7);
             Name = "ViewTransactionsForm";
@@ -92,6 +94,6 @@
 
         private Label label1;
         private Label label7;
-        private Button buttonBackLogin;
+        private Button buttonBackHome;
     }
 }

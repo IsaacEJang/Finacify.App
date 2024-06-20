@@ -47,6 +47,7 @@
             buttonBackLogin.TabIndex = 23;
             buttonBackLogin.Text = "↩️";
             buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackLogin.Click += buttonBackLogin_Click;
             // 
             // label1
             // 

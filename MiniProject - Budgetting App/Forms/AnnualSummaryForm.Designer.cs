@@ -73,6 +73,7 @@
             buttonBackLogin.TabIndex = 20;
             buttonBackLogin.Text = "↩️";
             buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackLogin.Click += buttonBackLogin_Click;
             // 
             // AnnualSummaryForm
             // 

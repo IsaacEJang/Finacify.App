@@ -17,16 +17,17 @@ namespace MiniProject___Budgetting_App
             InitializeComponent();
         }
 
-        private void buttonBackHome_Click(object sender, EventArgs e)
-        {
-            HomePageForm homePageForm = new HomePageForm();
-            homePageForm.Show();
-            this.Hide();
-        }
 
         private void radioButtonGroceries_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBackLogin_Click(object sender, EventArgs e)
+        {
+            HomePageForm homePageForm = new HomePageForm();
+            homePageForm.Show();
+            this.Hide();
         }
     }
 }

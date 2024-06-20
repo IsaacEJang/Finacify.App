@@ -17,12 +17,11 @@ namespace MiniProject___Budgetting_App.Forms
             InitializeComponent();
         }
 
-        private void buttonBackHome_Click(object sender, EventArgs e)
+        private void buttonBackHome_Click_1(object sender, EventArgs e)
         {
             HomePageForm homePageForm = new HomePageForm();
             homePageForm.Show();
             this.Hide();
         }
-
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackExpenseForm));
             label7 = new Label();
             groupBoxCategory = new RoundedGroupBox();
+            label4 = new Label();
             radioButtonShopping = new RadioButton();
             radioButtonMisc = new RadioButton();
             radioButtonDiningOut = new RadioButton();
@@ -38,14 +39,13 @@
             radioButtonGroceries = new RadioButton();
             label1 = new Label();
             groupBoxAmount = new RoundedGroupBox();
+            label2 = new Label();
             textBox1 = new TextBox();
             groupBoxDescription = new RoundedGroupBox();
             label3 = new Label();
             textBox2 = new TextBox();
             buttonSubmitExpense = new RoundedButton();
             buttonBackLogin = new Button();
-            label2 = new Label();
-            label4 = new Label();
             groupBoxCategory.SuspendLayout();
             groupBoxAmount.SuspendLayout();
             groupBoxDescription.SuspendLayout();
@@ -77,6 +77,16 @@
             groupBoxCategory.Size = new Size(418, 203);
             groupBoxCategory.TabIndex = 15;
             groupBoxCategory.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(23, 90);
+            label4.Name = "label4";
+            label4.Size = new Size(123, 33);
+            label4.TabIndex = 6;
+            label4.Text = "Category:";
             // 
             // radioButtonShopping
             // 
@@ -157,6 +167,16 @@
             groupBoxAmount.TabIndex = 16;
             groupBoxAmount.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Location = new Point(23, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(106, 22);
+            label2.TabIndex = 1;
+            label2.Text = "Amount ($):";
+            // 
             // textBox1
             // 
             textBox1.Location = new Point(143, 38);
@@ -218,26 +238,7 @@
             buttonBackLogin.TabIndex = 22;
             buttonBackLogin.Text = "↩️";
             buttonBackLogin.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Location = new Point(23, 42);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 22);
-            label2.TabIndex = 1;
-            label2.Text = "Amount ($):";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(23, 90);
-            label4.Name = "label4";
-            label4.Size = new Size(123, 33);
-            label4.TabIndex = 6;
-            label4.Text = "Category:";
+            buttonBackLogin.Click += buttonBackLogin_Click;
             // 
             // TrackExpenseForm
             // 
