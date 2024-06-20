@@ -33,11 +33,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccountForm));
             buttonSignUp = new RoundedButton();
             groupBox1 = new RoundedGroupBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            textBoxPassword2 = new TextBox();
+            textBoxPassword1 = new TextBox();
+            textBoxEmail = new TextBox();
+            textBoxUserLastName = new TextBox();
+            textBoxUserFirstName = new TextBox();
             label6 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -62,16 +62,16 @@
             buttonSignUp.TabIndex = 5;
             buttonSignUp.Text = "Sign Up";
             buttonSignUp.UseVisualStyleBackColor = false;
-            buttonSignUp.Click += buttonLogin_Click;
+            buttonSignUp.Click += buttonSignUp_Click;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textBoxPassword2);
+            groupBox1.Controls.Add(textBoxPassword1);
+            groupBox1.Controls.Add(textBoxEmail);
+            groupBox1.Controls.Add(textBoxUserLastName);
+            groupBox1.Controls.Add(textBoxUserFirstName);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label4);
@@ -85,45 +85,45 @@
             groupBox1.TabStop = false;
             groupBox1.Text = " ";
             // 
-            // textBox5
+            // textBoxPassword2
             // 
-            textBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(23, 314);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(356, 30);
-            textBox5.TabIndex = 22;
+            textBoxPassword2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxPassword2.Location = new Point(23, 314);
+            textBoxPassword2.Name = "textBoxPassword2";
+            textBoxPassword2.Size = new Size(356, 30);
+            textBoxPassword2.TabIndex = 22;
             // 
-            // textBox4
+            // textBoxPassword1
             // 
-            textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(23, 232);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(356, 30);
-            textBox4.TabIndex = 21;
+            textBoxPassword1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxPassword1.Location = new Point(23, 232);
+            textBoxPassword1.Name = "textBoxPassword1";
+            textBoxPassword1.Size = new Size(356, 30);
+            textBoxPassword1.TabIndex = 21;
             // 
-            // textBox3
+            // textBoxEmail
             // 
-            textBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(23, 149);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(356, 30);
-            textBox3.TabIndex = 20;
+            textBoxEmail.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxEmail.Location = new Point(23, 149);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(356, 30);
+            textBoxEmail.TabIndex = 20;
             // 
-            // textBox2
+            // textBoxUserLastName
             // 
-            textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(213, 69);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 30);
-            textBox2.TabIndex = 19;
+            textBoxUserLastName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUserLastName.Location = new Point(213, 69);
+            textBoxUserLastName.Name = "textBoxUserLastName";
+            textBoxUserLastName.Size = new Size(166, 30);
+            textBoxUserLastName.TabIndex = 19;
             // 
-            // textBox1
+            // textBoxUserFirstName
             // 
-            textBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(23, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 30);
-            textBox1.TabIndex = 18;
+            textBoxUserFirstName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUserFirstName.Location = new Point(23, 70);
+            textBoxUserFirstName.Name = "textBoxUserFirstName";
+            textBoxUserFirstName.Size = new Size(158, 30);
+            textBoxUserFirstName.TabIndex = 18;
             // 
             // label6
             // 
@@ -246,11 +246,11 @@
         private Label label3;
         private Label label7;
         private Label TitleLabel1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox textBoxPassword2;
+        private TextBox textBoxPassword1;
+        private TextBox textBoxEmail;
+        private TextBox textBoxUserLastName;
+        private TextBox textBoxUserFirstName;
         private Button buttonBackLogin;
     }
 }

@@ -1,4 +1,5 @@
 using MiniProject___Budgetting_App.Forms;
+using System.Windows.Forms;
 
 namespace MiniProject___Budgetting_App
 {
@@ -18,9 +19,19 @@ namespace MiniProject___Budgetting_App
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            HomePageForm homePageForm = new HomePageForm();
-            homePageForm.Show();
-            this.Hide();
+            string email = textBoxLoginEmail.Text;
+            string password = textBoxLoginPassword.Text;
+
+            if (User.ValidateLogin(email, password))
+            {
+                HomePageForm homePageForm = new HomePageForm();
+                homePageForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid email or password.");
+            }
         }
 
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -30,9 +41,5 @@ namespace MiniProject___Budgetting_App
             this.Hide();
         }
 
-        private void AppName_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

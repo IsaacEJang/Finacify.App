@@ -29,27 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            richTextBoxUserPassword = new RichTextBox();
             buttonSignIn = new RoundedButton();
             groupBox1 = new RoundedGroupBox();
             label2 = new Label();
             label1 = new Label();
-            richTextBox1 = new RichTextBox();
             linkLabelCreateAccount = new LinkLabel();
             linkLabelForgotPassword = new LinkLabel();
             label3 = new Label();
             AppName = new Label();
             AppLogo = new Label();
+            textBoxLoginEmail = new TextBox();
+            textBoxLoginPassword = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // richTextBoxUserPassword
-            // 
-            richTextBoxUserPassword.Location = new Point(25, 155);
-            richTextBoxUserPassword.Name = "richTextBoxUserPassword";
-            richTextBoxUserPassword.Size = new Size(373, 38);
-            richTextBoxUserPassword.TabIndex = 4;
-            richTextBoxUserPassword.Text = "";
             // 
             // buttonSignIn
             // 
@@ -69,11 +61,11 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
+            groupBox1.Controls.Add(textBoxLoginPassword);
+            groupBox1.Controls.Add(textBoxLoginEmail);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(richTextBox1);
             groupBox1.Controls.Add(linkLabelCreateAccount);
-            groupBox1.Controls.Add(richTextBoxUserPassword);
             groupBox1.Controls.Add(linkLabelForgotPassword);
             groupBox1.Controls.Add(buttonSignIn);
             groupBox1.Location = new Point(64, 245);
@@ -101,14 +93,6 @@
             label1.Size = new Size(57, 22);
             label1.TabIndex = 9;
             label1.Text = "Email";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(25, 70);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(373, 38);
-            richTextBox1.TabIndex = 8;
-            richTextBox1.Text = "";
             // 
             // linkLabelCreateAccount
             // 
@@ -159,7 +143,6 @@
             AppName.Size = new Size(213, 53);
             AppName.TabIndex = 17;
             AppName.Text = "Financify";
-            AppName.Click += AppName_Click;
             // 
             // AppLogo
             // 
@@ -172,6 +155,22 @@
             AppLogo.Size = new Size(95, 68);
             AppLogo.TabIndex = 16;
             AppLogo.Text = "💰";
+            // 
+            // textBoxLoginEmail
+            // 
+            textBoxLoginEmail.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxLoginEmail.Location = new Point(25, 70);
+            textBoxLoginEmail.Name = "textBoxLoginEmail";
+            textBoxLoginEmail.Size = new Size(359, 34);
+            textBoxLoginEmail.TabIndex = 11;
+            // 
+            // textBoxLoginPassword
+            // 
+            textBoxLoginPassword.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxLoginPassword.Location = new Point(25, 155);
+            textBoxLoginPassword.Name = "textBoxLoginPassword";
+            textBoxLoginPassword.Size = new Size(359, 34);
+            textBoxLoginPassword.TabIndex = 12;
             // 
             // LoginForm
             // 
@@ -194,16 +193,16 @@
         }
 
         #endregion
-        private RichTextBox richTextBoxUserPassword;
         private RoundedButton buttonSignIn;
         private RoundedGroupBox groupBox1;
         private LinkLabel linkLabelForgotPassword;
         private Label label2;
         private Label label1;
-        private RichTextBox richTextBox1;
         private LinkLabel linkLabelCreateAccount;
         private Label label3;
         private Label AppName;
         private Label AppLogo;
+        private TextBox textBoxLoginPassword;
+        private TextBox textBoxLoginEmail;
     }
 }
