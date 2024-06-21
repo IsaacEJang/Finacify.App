@@ -181,6 +181,7 @@
             roundedButtonFeedback.TabIndex = 20;
             roundedButtonFeedback.Text = "📝";
             roundedButtonFeedback.UseVisualStyleBackColor = false;
+            roundedButtonFeedback.Click += roundedButtonFeedback_Click;
             // 
             // HomePageForm
             // 

@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FeedbackForm));
-            buttonBackLogin = new Button();
+            buttonBackHome = new Button();
             label1 = new Label();
             label7 = new Label();
             roundedGroupBoxIncome = new RoundedGroupBox();
             roundedButtonSaveBudget = new RoundedButton();
             SuspendLayout();
             // 
-            // buttonBackLogin
+            // buttonBackHome
             // 
-            buttonBackLogin.BackColor = Color.FromArgb(123, 114, 229);
-            buttonBackLogin.FlatAppearance.BorderSize = 0;
-            buttonBackLogin.FlatStyle = FlatStyle.Flat;
-            buttonBackLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBackLogin.ForeColor = Color.White;
-            buttonBackLogin.Location = new Point(11, 13);
-            buttonBackLogin.Name = "buttonBackLogin";
-            buttonBackLogin.Size = new Size(49, 49);
-            buttonBackLogin.TabIndex = 23;
-            buttonBackLogin.Text = "↩️";
-            buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackHome.BackColor = Color.FromArgb(123, 114, 229);
+            buttonBackHome.FlatAppearance.BorderSize = 0;
+            buttonBackHome.FlatStyle = FlatStyle.Flat;
+            buttonBackHome.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonBackHome.ForeColor = Color.White;
+            buttonBackHome.Location = new Point(11, 13);
+            buttonBackHome.Name = "buttonBackHome";
+            buttonBackHome.Size = new Size(49, 49);
+            buttonBackHome.TabIndex = 23;
+            buttonBackHome.Text = "↩️";
+            buttonBackHome.UseVisualStyleBackColor = false;
+            buttonBackHome.Click += buttonBackHome_Click;
             // 
             // label1
             // 
@@ -108,7 +109,7 @@
             ClientSize = new Size(522, 623);
             Controls.Add(roundedButtonSaveBudget);
             Controls.Add(roundedGroupBoxIncome);
-            Controls.Add(buttonBackLogin);
+            Controls.Add(buttonBackHome);
             Controls.Add(label1);
             Controls.Add(label7);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -121,7 +122,7 @@
 
         #endregion
 
-        private Button buttonBackLogin;
+        private Button buttonBackHome;
         private Label label1;
         private Label label7;
         private RoundedGroupBox roundedGroupBoxIncome;

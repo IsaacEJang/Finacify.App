@@ -71,5 +71,12 @@ namespace MiniProject___Budgetting_App
         {
 
         }
+
+        private void roundedButtonFeedback_Click(object sender, EventArgs e)
+        {
+            FeedbackForm feedbackForm = new FeedbackForm();
+            feedbackForm.Show();
+            this.Hide();
+        }
     }
 }
