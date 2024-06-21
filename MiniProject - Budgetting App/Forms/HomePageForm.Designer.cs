@@ -173,9 +173,9 @@
             roundedButtonFeedback.BackColor = Color.Transparent;
             roundedButtonFeedback.FlatAppearance.BorderSize = 0;
             roundedButtonFeedback.FlatStyle = FlatStyle.Flat;
-            roundedButtonFeedback.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedButtonFeedback.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             roundedButtonFeedback.ForeColor = Color.Gray;
-            roundedButtonFeedback.Location = new Point(476, 576);
+            roundedButtonFeedback.Location = new Point(471, 570);
             roundedButtonFeedback.Name = "roundedButtonFeedback";
             roundedButtonFeedback.Size = new Size(49, 49);
             roundedButtonFeedback.TabIndex = 20;
