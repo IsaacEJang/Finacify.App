@@ -34,6 +34,13 @@
             label7 = new Label();
             roundedGroupBoxIncome = new RoundedGroupBox();
             roundedButtonSaveBudget = new RoundedButton();
+            richTextBoxFeedbackComment = new RichTextBox();
+            label2 = new Label();
+            comboBoxFeedbackPage = new ComboBox();
+            label3 = new Label();
+            label4 = new Label();
+            comboBoxTypeOfFeedback = new ComboBox();
+            roundedGroupBoxIncome.SuspendLayout();
             SuspendLayout();
             // 
             // buttonBackHome
@@ -80,9 +87,15 @@
             // roundedGroupBoxIncome
             // 
             roundedGroupBoxIncome.BackColor = Color.White;
-            roundedGroupBoxIncome.Location = new Point(19, 138);
+            roundedGroupBoxIncome.Controls.Add(label4);
+            roundedGroupBoxIncome.Controls.Add(comboBoxTypeOfFeedback);
+            roundedGroupBoxIncome.Controls.Add(label3);
+            roundedGroupBoxIncome.Controls.Add(comboBoxFeedbackPage);
+            roundedGroupBoxIncome.Controls.Add(label2);
+            roundedGroupBoxIncome.Controls.Add(richTextBoxFeedbackComment);
+            roundedGroupBoxIncome.Location = new Point(17, 161);
             roundedGroupBoxIncome.Name = "roundedGroupBoxIncome";
-            roundedGroupBoxIncome.Size = new Size(488, 405);
+            roundedGroupBoxIncome.Size = new Size(488, 371);
             roundedGroupBoxIncome.TabIndex = 24;
             roundedGroupBoxIncome.TabStop = false;
             // 
@@ -93,12 +106,63 @@
             roundedButtonSaveBudget.FlatStyle = FlatStyle.Flat;
             roundedButtonSaveBudget.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             roundedButtonSaveBudget.ForeColor = Color.White;
-            roundedButtonSaveBudget.Location = new Point(174, 564);
+            roundedButtonSaveBudget.Location = new Point(170, 564);
             roundedButtonSaveBudget.Name = "roundedButtonSaveBudget";
             roundedButtonSaveBudget.Size = new Size(176, 47);
             roundedButtonSaveBudget.TabIndex = 28;
             roundedButtonSaveBudget.Text = "📪 Submit ";
             roundedButtonSaveBudget.UseVisualStyleBackColor = false;
+            // 
+            // richTextBoxFeedbackComment
+            // 
+            richTextBoxFeedbackComment.Location = new Point(29, 181);
+            richTextBoxFeedbackComment.Name = "richTextBoxFeedbackComment";
+            richTextBoxFeedbackComment.Size = new Size(436, 170);
+            richTextBoxFeedbackComment.TabIndex = 0;
+            richTextBoxFeedbackComment.Text = "";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 22);
+            label2.TabIndex = 1;
+            label2.Text = "Comments:";
+            // 
+            // comboBoxFeedbackPage
+            // 
+            comboBoxFeedbackPage.FormattingEnabled = true;
+            comboBoxFeedbackPage.Location = new Point(197, 99);
+            comboBoxFeedbackPage.Name = "comboBoxFeedbackPage";
+            comboBoxFeedbackPage.Size = new Size(268, 30);
+            comboBoxFeedbackPage.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 102);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 22);
+            label3.TabIndex = 3;
+            label3.Text = "Which Page:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(29, 43);
+            label4.Name = "label4";
+            label4.Size = new Size(157, 22);
+            label4.TabIndex = 5;
+            label4.Text = "Type of Feedback:";
+            // 
+            // comboBoxTypeOfFeedback
+            // 
+            comboBoxTypeOfFeedback.FormattingEnabled = true;
+            comboBoxTypeOfFeedback.Location = new Point(197, 40);
+            comboBoxTypeOfFeedback.Name = "comboBoxTypeOfFeedback";
+            comboBoxTypeOfFeedback.Size = new Size(268, 30);
+            comboBoxTypeOfFeedback.TabIndex = 4;
             // 
             // FeedbackForm
             // 
@@ -116,6 +180,8 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "FeedbackForm";
             Text = "FeedbackForm";
+            roundedGroupBoxIncome.ResumeLayout(false);
+            roundedGroupBoxIncome.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +193,11 @@
         private Label label7;
         private RoundedGroupBox roundedGroupBoxIncome;
         private RoundedButton roundedButtonSaveBudget;
+        private RichTextBox richTextBoxFeedbackComment;
+        private Label label3;
+        private ComboBox comboBoxFeedbackPage;
+        private Label label2;
+        private Label label4;
+        private ComboBox comboBoxTypeOfFeedback;
     }
 }
