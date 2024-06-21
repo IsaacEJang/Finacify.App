@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudgetTrackerForm));
-            this.textBoxCurrentMonth = new System.Windows.Forms.TextBox();
             label1 = new Label();
             label7 = new Label();
             buttonBackLogin = new Button();
             roundedGroupBudgetTracker = new RoundedGroupBox();
-            textBoxCurrentMonth = new TextBox();
-            roundedGroupBudgetTracker.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -80,24 +77,13 @@
             // roundedGroupBudgetTracker
             // 
             roundedGroupBudgetTracker.BackColor = Color.White;
-            roundedGroupBudgetTracker.Controls.Add(textBoxCurrentMonth);
+            roundedGroupBudgetTracker.BackgroundImage = (Image)resources.GetObject("roundedGroupBudgetTracker.BackgroundImage");
+            roundedGroupBudgetTracker.BackgroundImageLayout = ImageLayout.Center;
             roundedGroupBudgetTracker.Location = new Point(19, 109);
             roundedGroupBudgetTracker.Name = "roundedGroupBudgetTracker";
-            roundedGroupBudgetTracker.Size = new Size(488, 461);
+            roundedGroupBudgetTracker.Size = new Size(488, 523);
             roundedGroupBudgetTracker.TabIndex = 24;
             roundedGroupBudgetTracker.TabStop = false;
-            // 
-            // textBoxCurrentMonth
-            // 
-            textBoxCurrentMonth.BackColor = Color.White;
-            textBoxCurrentMonth.Font = new Font("Times New Roman", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxCurrentMonth.ForeColor = Color.Black;
-            textBoxCurrentMonth.Location = new Point(6, 24);
-            this.textBoxCurrentMonth.ReadOnly = true; // Make it read-only
-            textBoxCurrentMonth.Name = "textBoxCurrentMonth";
-            textBoxCurrentMonth.Size = new Size(476, 50);
-            textBoxCurrentMonth.TabIndex = 0;
-            textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
             // 
             // BudgetTrackerForm
             // 
@@ -116,18 +102,19 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "BudgetTrackerForm";
             Text = "Budget Tracker";
-            roundedGroupBudgetTracker.ResumeLayout(false);
-            roundedGroupBudgetTracker.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label7;
-        private Button buttonBackLogin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonBackLogin;
         private RoundedGroupBox roundedGroupBudgetTracker;
-        private TextBox textBoxCurrentMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Budget;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Spent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LeftOver;
     }
 }

@@ -39,6 +39,7 @@
             roundedButtonLogIncome = new RoundedButton();
             ButtonBuildBudget = new RoundedButton();
             roundedButtonInformation = new RoundedButton();
+            roundedButtonFeedback = new RoundedButton();
             SuspendLayout();
             // 
             // buttonTrackExpenseForm
@@ -159,13 +160,27 @@
             roundedButtonInformation.FlatStyle = FlatStyle.Flat;
             roundedButtonInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             roundedButtonInformation.ForeColor = Color.White;
-            roundedButtonInformation.Location = new Point(475, -1);
+            roundedButtonInformation.Location = new Point(471, 1);
             roundedButtonInformation.Name = "roundedButtonInformation";
             roundedButtonInformation.Size = new Size(49, 49);
             roundedButtonInformation.TabIndex = 19;
             roundedButtonInformation.Text = "ℹ️";
             roundedButtonInformation.UseVisualStyleBackColor = false;
             roundedButtonInformation.Click += roundedButtonInformation_Click;
+            // 
+            // roundedButtonFeedback
+            // 
+            roundedButtonFeedback.BackColor = Color.Transparent;
+            roundedButtonFeedback.FlatAppearance.BorderSize = 0;
+            roundedButtonFeedback.FlatStyle = FlatStyle.Flat;
+            roundedButtonFeedback.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedButtonFeedback.ForeColor = Color.Gray;
+            roundedButtonFeedback.Location = new Point(476, 576);
+            roundedButtonFeedback.Name = "roundedButtonFeedback";
+            roundedButtonFeedback.Size = new Size(49, 49);
+            roundedButtonFeedback.TabIndex = 20;
+            roundedButtonFeedback.Text = "📝";
+            roundedButtonFeedback.UseVisualStyleBackColor = false;
             // 
             // HomePageForm
             // 
@@ -175,6 +190,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 623);
+            Controls.Add(roundedButtonFeedback);
             Controls.Add(roundedButtonInformation);
             Controls.Add(roundedButtonLogIncome);
             Controls.Add(ButtonBuildBudget);
@@ -202,5 +218,6 @@
         private RoundedButton roundedButtonLogIncome;
         private RoundedButton ButtonBuildBudget;
         private RoundedButton roundedButtonInformation;
+        private RoundedButton roundedButtonFeedback;
     }
 }

@@ -20,7 +20,7 @@ namespace MiniProject___Budgetting_App
         private void BudgetTrackerForm_Load(object sender, EventArgs e)
         {
             // Set the text of textBoxCurrentMonth to the current month and year
-            textBoxCurrentMonth.Text = DateTime.Now.ToString("MMMM yyyy");
+            //textBoxCurrentMonth.Text = DateTime.Now.ToString("MMMM yyyy");
 
             //BudgetValueStorage budgetStorage = new BudgetValueStorage();
 
