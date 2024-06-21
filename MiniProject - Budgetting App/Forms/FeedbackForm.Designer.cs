@@ -33,13 +33,13 @@
             label1 = new Label();
             label7 = new Label();
             roundedGroupBoxIncome = new RoundedGroupBox();
-            roundedButtonSaveBudget = new RoundedButton();
-            richTextBoxFeedbackComment = new RichTextBox();
-            label2 = new Label();
-            comboBoxFeedbackPage = new ComboBox();
-            label3 = new Label();
             label4 = new Label();
             comboBoxTypeOfFeedback = new ComboBox();
+            label3 = new Label();
+            comboBoxFeedbackPage = new ComboBox();
+            label2 = new Label();
+            richTextBoxFeedbackComment = new RichTextBox();
+            roundedButtonSaveBudget = new RoundedButton();
             roundedGroupBoxIncome.SuspendLayout();
             SuspendLayout();
             // 
@@ -99,54 +99,6 @@
             roundedGroupBoxIncome.TabIndex = 24;
             roundedGroupBoxIncome.TabStop = false;
             // 
-            // roundedButtonSaveBudget
-            // 
-            roundedButtonSaveBudget.BackColor = Color.FromArgb(123, 114, 229);
-            roundedButtonSaveBudget.FlatAppearance.BorderSize = 0;
-            roundedButtonSaveBudget.FlatStyle = FlatStyle.Flat;
-            roundedButtonSaveBudget.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            roundedButtonSaveBudget.ForeColor = Color.White;
-            roundedButtonSaveBudget.Location = new Point(170, 564);
-            roundedButtonSaveBudget.Name = "roundedButtonSaveBudget";
-            roundedButtonSaveBudget.Size = new Size(176, 47);
-            roundedButtonSaveBudget.TabIndex = 28;
-            roundedButtonSaveBudget.Text = "📪 Submit ";
-            roundedButtonSaveBudget.UseVisualStyleBackColor = false;
-            // 
-            // richTextBoxFeedbackComment
-            // 
-            richTextBoxFeedbackComment.Location = new Point(29, 181);
-            richTextBoxFeedbackComment.Name = "richTextBoxFeedbackComment";
-            richTextBoxFeedbackComment.Size = new Size(436, 170);
-            richTextBoxFeedbackComment.TabIndex = 0;
-            richTextBoxFeedbackComment.Text = "";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(29, 156);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 22);
-            label2.TabIndex = 1;
-            label2.Text = "Comments:";
-            // 
-            // comboBoxFeedbackPage
-            // 
-            comboBoxFeedbackPage.FormattingEnabled = true;
-            comboBoxFeedbackPage.Location = new Point(197, 99);
-            comboBoxFeedbackPage.Name = "comboBoxFeedbackPage";
-            comboBoxFeedbackPage.Size = new Size(268, 30);
-            comboBoxFeedbackPage.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 102);
-            label3.Name = "label3";
-            label3.Size = new Size(110, 22);
-            label3.TabIndex = 3;
-            label3.Text = "Which Page:";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -163,6 +115,55 @@
             comboBoxTypeOfFeedback.Name = "comboBoxTypeOfFeedback";
             comboBoxTypeOfFeedback.Size = new Size(268, 30);
             comboBoxTypeOfFeedback.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 102);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 22);
+            label3.TabIndex = 3;
+            label3.Text = "Which Page:";
+            // 
+            // comboBoxFeedbackPage
+            // 
+            comboBoxFeedbackPage.FormattingEnabled = true;
+            comboBoxFeedbackPage.Location = new Point(197, 99);
+            comboBoxFeedbackPage.Name = "comboBoxFeedbackPage";
+            comboBoxFeedbackPage.Size = new Size(268, 30);
+            comboBoxFeedbackPage.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 22);
+            label2.TabIndex = 1;
+            label2.Text = "Comments:";
+            // 
+            // richTextBoxFeedbackComment
+            // 
+            richTextBoxFeedbackComment.Location = new Point(29, 181);
+            richTextBoxFeedbackComment.Name = "richTextBoxFeedbackComment";
+            richTextBoxFeedbackComment.Size = new Size(436, 170);
+            richTextBoxFeedbackComment.TabIndex = 0;
+            richTextBoxFeedbackComment.Text = "";
+            // 
+            // roundedButtonSaveBudget
+            // 
+            roundedButtonSaveBudget.BackColor = Color.FromArgb(123, 114, 229);
+            roundedButtonSaveBudget.FlatAppearance.BorderSize = 0;
+            roundedButtonSaveBudget.FlatStyle = FlatStyle.Flat;
+            roundedButtonSaveBudget.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedButtonSaveBudget.ForeColor = Color.White;
+            roundedButtonSaveBudget.Location = new Point(170, 564);
+            roundedButtonSaveBudget.Name = "roundedButtonSaveBudget";
+            roundedButtonSaveBudget.Size = new Size(176, 47);
+            roundedButtonSaveBudget.TabIndex = 28;
+            roundedButtonSaveBudget.Text = "📪 Submit ";
+            roundedButtonSaveBudget.UseVisualStyleBackColor = false;
+            roundedButtonSaveBudget.Click += roundedButtonSaveBudget_Click;
             // 
             // FeedbackForm
             // 
