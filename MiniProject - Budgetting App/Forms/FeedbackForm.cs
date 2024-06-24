@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject___Budgetting_App.Classes;
 
 namespace MiniProject___Budgetting_App.Forms
 {

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniProject___Budgetting_App
+namespace MiniProject___Budgetting_App.Classes
 {
-    public class BudgetValueStorage
+    public class Budget
     {
         // A dictionary to hold budget categories and their corresponding values
         public Dictionary<string, double> BudgetValues { get; private set; }
 
         // Constructor initializes the dictionary
-        public BudgetValueStorage()
+        public Budget()
         {
             BudgetValues = new Dictionary<string, double>();
         }

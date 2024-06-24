@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniProject___Budgetting_App
+namespace MiniProject___Budgetting_App.Classes
 {
     public enum FeedbackType
     {

@@ -32,6 +32,10 @@
             label1 = new Label();
             label7 = new Label();
             buttonBackHome = new Button();
+            dataGridViewTransactions = new DataGridView();
+            roundedEditTransaction = new RoundedButton();
+            roundedButtonDeleteTransaction = new RoundedButton();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTransactions).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -73,6 +77,45 @@
             buttonBackHome.UseVisualStyleBackColor = false;
             buttonBackHome.Click += buttonBackHome_Click_1;
             // 
+            // dataGridViewTransactions
+            // 
+            dataGridViewTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTransactions.Location = new Point(12, 113);
+            dataGridViewTransactions.Name = "dataGridViewTransactions";
+            dataGridViewTransactions.RowHeadersWidth = 51;
+            dataGridViewTransactions.Size = new Size(498, 423);
+            dataGridViewTransactions.TabIndex = 24;
+            // 
+            // roundedEditTransaction
+            // 
+            roundedEditTransaction.BackColor = Color.FromArgb(123, 114, 229);
+            roundedEditTransaction.FlatAppearance.BorderSize = 0;
+            roundedEditTransaction.FlatStyle = FlatStyle.Flat;
+            roundedEditTransaction.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedEditTransaction.ForeColor = Color.White;
+            roundedEditTransaction.Location = new Point(310, 556);
+            roundedEditTransaction.Name = "roundedEditTransaction";
+            roundedEditTransaction.Size = new Size(200, 55);
+            roundedEditTransaction.TabIndex = 26;
+            roundedEditTransaction.Text = "Edit Transaction";
+            roundedEditTransaction.UseVisualStyleBackColor = false;
+            roundedEditTransaction.Click += roundedEditTransaction_Click;
+            // 
+            // roundedButtonDeleteTransaction
+            // 
+            roundedButtonDeleteTransaction.BackColor = Color.FromArgb(255, 128, 128);
+            roundedButtonDeleteTransaction.FlatAppearance.BorderSize = 0;
+            roundedButtonDeleteTransaction.FlatStyle = FlatStyle.Flat;
+            roundedButtonDeleteTransaction.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            roundedButtonDeleteTransaction.ForeColor = Color.White;
+            roundedButtonDeleteTransaction.Location = new Point(12, 556);
+            roundedButtonDeleteTransaction.Name = "roundedButtonDeleteTransaction";
+            roundedButtonDeleteTransaction.Size = new Size(200, 55);
+            roundedButtonDeleteTransaction.TabIndex = 27;
+            roundedButtonDeleteTransaction.Text = "Delete Transaction";
+            roundedButtonDeleteTransaction.UseVisualStyleBackColor = false;
+            roundedButtonDeleteTransaction.Click += roundedButtonDeleteTransaction_Click;
+            // 
             // ViewTransactionsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -81,11 +124,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 623);
+            Controls.Add(roundedButtonDeleteTransaction);
+            Controls.Add(roundedEditTransaction);
+            Controls.Add(dataGridViewTransactions);
             Controls.Add(buttonBackHome);
             Controls.Add(label1);
             Controls.Add(label7);
             Name = "ViewTransactionsForm";
             Text = "View Transactions";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTransactions).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +142,8 @@
         private Label label1;
         private Label label7;
         private Button buttonBackHome;
+        private DataGridView dataGridViewTransactions;
+        private RoundedButton roundedEditTransaction;
+        private RoundedButton roundedButtonDeleteTransaction;
     }
 }

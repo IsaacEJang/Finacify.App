@@ -40,10 +40,10 @@
             label1 = new Label();
             groupBoxAmount = new RoundedGroupBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            textBoxExpenseAmount = new TextBox();
             groupBoxDescription = new RoundedGroupBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            textBoxExpenseDescription = new TextBox();
             buttonSubmitExpense = new RoundedButton();
             buttonBackLogin = new Button();
             groupBoxCategory.SuspendLayout();
@@ -142,7 +142,6 @@
             radioButtonGroceries.TabStop = true;
             radioButtonGroceries.Text = "Groceries";
             radioButtonGroceries.UseVisualStyleBackColor = true;
-            radioButtonGroceries.CheckedChanged += radioButtonGroceries_CheckedChanged;
             // 
             // label1
             // 
@@ -160,7 +159,7 @@
             // 
             groupBoxAmount.BackColor = Color.White;
             groupBoxAmount.Controls.Add(label2);
-            groupBoxAmount.Controls.Add(textBox1);
+            groupBoxAmount.Controls.Add(textBoxExpenseAmount);
             groupBoxAmount.Location = new Point(54, 322);
             groupBoxAmount.Name = "groupBoxAmount";
             groupBoxAmount.Size = new Size(418, 91);
@@ -177,18 +176,18 @@
             label2.TabIndex = 1;
             label2.Text = "Amount ($):";
             // 
-            // textBox1
+            // textBoxExpenseAmount
             // 
-            textBox1.Location = new Point(143, 38);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 30);
-            textBox1.TabIndex = 0;
+            textBoxExpenseAmount.Location = new Point(143, 38);
+            textBoxExpenseAmount.Name = "textBoxExpenseAmount";
+            textBoxExpenseAmount.Size = new Size(261, 30);
+            textBoxExpenseAmount.TabIndex = 0;
             // 
             // groupBoxDescription
             // 
             groupBoxDescription.BackColor = Color.White;
             groupBoxDescription.Controls.Add(label3);
-            groupBoxDescription.Controls.Add(textBox2);
+            groupBoxDescription.Controls.Add(textBoxExpenseDescription);
             groupBoxDescription.Location = new Point(54, 437);
             groupBoxDescription.Name = "groupBoxDescription";
             groupBoxDescription.Size = new Size(418, 91);
@@ -204,12 +203,12 @@
             label3.TabIndex = 1;
             label3.Text = "Description:";
             // 
-            // textBox2
+            // textBoxExpenseDescription
             // 
-            textBox2.Location = new Point(143, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(261, 30);
-            textBox2.TabIndex = 0;
+            textBoxExpenseDescription.Location = new Point(143, 36);
+            textBoxExpenseDescription.Name = "textBoxExpenseDescription";
+            textBoxExpenseDescription.Size = new Size(261, 30);
+            textBoxExpenseDescription.TabIndex = 0;
             // 
             // buttonSubmitExpense
             // 
@@ -224,6 +223,7 @@
             buttonSubmitExpense.TabIndex = 18;
             buttonSubmitExpense.Text = "💸 Submit";
             buttonSubmitExpense.UseVisualStyleBackColor = false;
+            buttonSubmitExpense.Click += buttonSubmitExpense_Click;
             // 
             // buttonBackLogin
             // 
@@ -280,9 +280,9 @@
         private RadioButton radioButtonGas;
         private RadioButton radioButtonGroceries;
         private RoundedGroupBox groupBoxAmount;
-        private TextBox textBox1;
+        private TextBox textBoxExpenseAmount;
         private RoundedGroupBox groupBoxDescription;
-        private TextBox textBox2;
+        private TextBox textBoxExpenseDescription;
         private RoundedButton buttonSubmitExpense;
         private Button buttonBackLogin;
         private Label label3;

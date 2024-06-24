@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject___Budgetting_App.Classes;
 
 namespace MiniProject___Budgetting_App.Forms
 {
@@ -95,7 +96,7 @@ namespace MiniProject___Budgetting_App.Forms
             MessageBox.Show(message, "Set Your Own Budget");
         }
 
-        private BudgetValueStorage budgetValueStorage = new BudgetValueStorage();
+        private Budget budgetValueStorage = new Budget();
 
         private void roundedButtonSaveBudget_Click(object sender, EventArgs e)
         {

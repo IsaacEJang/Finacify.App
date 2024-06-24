@@ -1,3 +1,4 @@
+using MiniProject___Budgetting_App.Classes;
 using MiniProject___Budgetting_App.Forms;
 using System.Windows.Forms;
 

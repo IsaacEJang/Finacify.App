@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniProject___Budgetting_App.Classes;
 
 namespace MiniProject___Budgetting_App
 {
@@ -27,13 +28,15 @@ namespace MiniProject___Budgetting_App
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
+            string firstName = textBoxUserFirstName.Text;
+            string lastName = textBoxUserLastName.Text;
             string email = textBoxEmail.Text;
             string password1 = textBoxPassword1.Text;
             string password2 = textBoxPassword2.Text;
 
-            if (User.ArePasswordsMatching(password1, password2))
+            if (password1 == password2)
             {
-                User newUser = new User(email, password1);
+                User newUser = new User(firstName, lastName, email, password1);
 
                 if (newUser.IsValidEmail())
                 {
