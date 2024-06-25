@@ -62,8 +62,8 @@
             textBox3 = new TextBox();
             textBoxRemaining = new TextBox();
             textBoxSpent = new TextBox();
-            textBoxBudget = new TextBox();
             textBoxCurrentMonth = new TextBox();
+            textBoxBudget = new TextBox();
             roundedGroupBudgetTracker.SuspendLayout();
             SuspendLayout();
             // 
@@ -509,18 +509,6 @@
             textBoxSpent.Text = "Spent";
             textBoxSpent.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBoxBudget
-            // 
-            textBoxBudget.BackColor = Color.White;
-            textBoxBudget.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
-            textBoxBudget.Location = new Point(0, 65);
-            textBoxBudget.Name = "textBoxBudget";
-            textBoxBudget.ReadOnly = true;
-            textBoxBudget.Size = new Size(165, 34);
-            textBoxBudget.TabIndex = 7;
-            textBoxBudget.Text = "Budget";
-            textBoxBudget.TextAlign = HorizontalAlignment.Center;
-            // 
             // textBoxCurrentMonth
             // 
             textBoxCurrentMonth.BackColor = Color.White;
@@ -532,6 +520,18 @@
             textBoxCurrentMonth.TabIndex = 6;
             textBoxCurrentMonth.Text = "Month";
             textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBoxBudget
+            // 
+            textBoxBudget.BackColor = Color.White;
+            textBoxBudget.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold);
+            textBoxBudget.Location = new Point(0, 65);
+            textBoxBudget.Name = "textBoxBudget";
+            textBoxBudget.ReadOnly = true;
+            textBoxBudget.Size = new Size(165, 34);
+            textBoxBudget.TabIndex = 7;
+            textBoxBudget.Text = "Budget";
+            textBoxBudget.TextAlign = HorizontalAlignment.Center;
             // 
             // BudgetTrackerForm
             // 
@@ -567,7 +567,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Spent;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeftOver;
         private TextBox textBoxCurrentMonth;
-        private TextBox textBoxBudget;
         private TextBox textBoxRemaining;
         private TextBox textBoxSpent;
         private TextBox textBox3;
@@ -597,5 +596,6 @@
         private TextBox textBoxDaysRemaining;
         private TextBox textBoxCurrentDay;
         private TextBox textBoxTotalDays;
+        private TextBox textBoxBudget;
     }
 }

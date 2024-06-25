@@ -36,17 +36,19 @@ namespace MiniProject___Budgetting_App
 
         public void LoadBudgetTracker()
         {
-            // Ensure this is the correct instance usage
+
+            //// Get the default budget instance from the static property
             var defaultBudget = Budget.DefaultBudget;
 
-            // Access each text box through the roundedGroupBudgetTracker container
-            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxGroceryBudget"]).Text = defaultBudget.BudgetGroceries.ToString("C");
-            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxGasBudget"]).Text = defaultBudget.BudgetGas.ToString("C");
-            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxDiningOutBudget"]).Text = defaultBudget.BudgetDiningOut.ToString("C");
-            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxShoppingBudget"]).Text = defaultBudget.BudgetShopping.ToString("C");
-            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxMiscBudget"]).Text = defaultBudget.BudgetMisc.ToString("C");
 
+            //// Setting text boxes with formatted currency values
+            textBoxGroceryBudget.Text = defaultBudget.BudgetGroceries.ToString("C");
+            textBoxGasBudget.Text = defaultBudget.BudgetGas.ToString("C");
+            textBoxDiningOutBudget.Text = defaultBudget.BudgetDiningOut.ToString("C");
+            textBoxShoppingBudget.Text = defaultBudget.BudgetShopping.ToString("C");
+            textBoxMiscBudget.Text = defaultBudget.BudgetMisc.ToString("C");
         }
+    
 
 
         private void buttonBackLogin_Click(object sender, EventArgs e)
