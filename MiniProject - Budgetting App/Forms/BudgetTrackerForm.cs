@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniProject___Budgetting_App.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,41 +13,41 @@ namespace MiniProject___Budgetting_App
 {
     public partial class BudgetTrackerForm : Form
     {
+
         public BudgetTrackerForm()
         {
             InitializeComponent();
+            CurrentMonth();
+            LoadBudgetTracker();
         }
 
-        private void BudgetTrackerForm_Load(object sender, EventArgs e)
+        public void CurrentMonth()
         {
-            // Set the text of textBoxCurrentMonth to the current month and year
-            //textBoxCurrentMonth.Text = DateTime.Now.ToString("MMMM yyyy");
 
-            //BudgetValueStorage budgetStorage = new BudgetValueStorage();
+            // Get the current date
+            DateTime currentDate = DateTime.Now;
 
-            // Load budget values
-            //textBoxBudgetGroceries.Text = budgetStorage.BudgetValues.TryGetValue("Groceries", out double groceries) ? groceries.ToString("C") : "$0.00";
-            //textBoxBudgetGas.Text = budgetStorage.BudgetValues.TryGetValue("Gas", out double gas) ? gas.ToString("C") : "$0.00";
-            //textBoxBudgetDiningOut.Text = budgetStorage.BudgetValues.TryGetValue("DiningOut", out double diningOut) ? diningOut.ToString("C") : "$0.00";
-            //textBoxBudgetShopping.Text = budgetStorage.BudgetValues.TryGetValue("Shopping", out double shopping) ? shopping.ToString("C") : "$0.00";
-            //textBoxBudgetMisc.Text = budgetStorage.BudgetValues.TryGetValue("Misc", out double misc) ? misc.ToString("C") : "$0.00";
+            // Format the date to display only the month and year
+            string currentMonthYear = currentDate.ToString("MMMM yyyy"); // "MMMM" for full month name, "yyyy" for the year
 
-            //// Initialize spent and leftover text boxes
-            //textBoxSpentGroceries.Text = "$0.00";
-            //textBoxSpentGas.Text = "$0.00";
-            //textBoxSpentDiningOut.Text = "$0.00";
-            //textBoxSpentShopping.Text = "$0.00";
-            //textBoxSpentMisc.Text = "$0.00";
-
-            //textBoxLeftOverGroceries.Text = textBoxBudgetGroceries.Text;
-            //textBoxLeftOverGas.Text = textBoxBudgetGas.Text;
-            //textBoxLeftOverDiningOut.Text = textBoxBudgetDiningOut.Text;
-            //textBoxLeftOverShopping.Text = textBoxBudgetShopping.Text;
-            //textBoxLeftOverMisc.Text = textBoxBudgetMisc.Text;
-
-            //// Calculate totals
-            //CalculateTotals();
+            // Display the current month and year in the label
+            textBoxCurrentMonth.Text = currentMonthYear;
         }
+
+        public void LoadBudgetTracker()
+        {
+            // Ensure this is the correct instance usage
+            var defaultBudget = Budget.DefaultBudget;
+
+            // Access each text box through the roundedGroupBudgetTracker container
+            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxGroceryBudget"]).Text = defaultBudget.BudgetGroceries.ToString("C");
+            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxGasBudget"]).Text = defaultBudget.BudgetGas.ToString("C");
+            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxDiningOutBudget"]).Text = defaultBudget.BudgetDiningOut.ToString("C");
+            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxShoppingBudget"]).Text = defaultBudget.BudgetShopping.ToString("C");
+            ((TextBox)roundedGroupBudgetTracker.Controls["textBoxMiscBudget"]).Text = defaultBudget.BudgetMisc.ToString("C");
+
+        }
+
 
         private void buttonBackLogin_Click(object sender, EventArgs e)
         {
@@ -54,5 +55,6 @@ namespace MiniProject___Budgetting_App
             homePageForm.Show();
             this.Hide();
         }
+
     }
 }

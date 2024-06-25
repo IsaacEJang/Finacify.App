@@ -96,31 +96,24 @@ namespace MiniProject___Budgetting_App.Forms
             MessageBox.Show(message, "Set Your Own Budget");
         }
 
-        private Budget budgetValueStorage = new Budget();
+        private Budget newBudget = new Budget();
 
         private void roundedButtonSaveBudget_Click(object sender, EventArgs e)
         {
-            bool isValid = true;
-            var budgetValues = new Dictionary<string, double>();
-
-            if (double.TryParse(textBoxSetBudgetGroceries.Text, out double groceries)) { budgetValues["Groceries"] = groceries; } else { isValid = false; }
-            if (double.TryParse(textBoxSetBudgetGas.Text, out double gas)) { budgetValues["Gas"] = gas; } else { isValid = false; }
-            if (double.TryParse(textBoxSetBudgetDiningOut.Text, out double diningOut)) { budgetValues["DiningOut"] = diningOut; } else { isValid = false; }
-            if (double.TryParse(textBoxSetBudgetShopping.Text, out double shopping)) { budgetValues["Shopping"] = shopping; } else { isValid = false; }
-            if (double.TryParse(textBoxSetBudgetMisc.Text, out double misc)) { budgetValues["Misc"] = misc; } else { isValid = false; }
+            bool isValid = decimal.TryParse(textBoxSetBudgetGroceries.Text, out decimal groceries) && (newBudget.BudgetGroceries = groceries) == groceries &&
+                           decimal.TryParse(textBoxSetBudgetGas.Text, out decimal gas) && (newBudget.BudgetGas = gas) == gas &&
+                           decimal.TryParse(textBoxSetBudgetDiningOut.Text, out decimal diningOut) && (newBudget.BudgetDiningOut = diningOut) == diningOut &&
+                           decimal.TryParse(textBoxSetBudgetShopping.Text, out decimal shopping) && (newBudget.BudgetShopping = shopping) == shopping &&
+                           decimal.TryParse(textBoxSetBudgetMisc.Text, out decimal misc) && (newBudget.BudgetMisc = misc) == misc;
 
             if (isValid)
             {
-                budgetValueStorage.SaveBudgetValues(budgetValues);
-
                 textBoxSetBudgetGroceries.Clear();
                 textBoxSetBudgetGas.Clear();
                 textBoxSetBudgetDiningOut.Clear();
                 textBoxSetBudgetShopping.Clear();
                 textBoxSetBudgetMisc.Clear();
-
-                MessageBox.Show("Your budget has been saved! \n\n" +
-                    "You can see it on 💸 'Month's Summary'", "Budget Saved");
+                MessageBox.Show("Your budget has been saved! \n\nYou can see it on '💸 Budget Tracker'", "Budget Saved");
             }
             else
             {

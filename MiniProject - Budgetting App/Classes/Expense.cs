@@ -22,9 +22,6 @@ namespace MiniProject___Budgetting_App.Classes
         public decimal Amount { get; set; }
         public string Description { get; set; }
 
-        // Foreign key reference
-        public User User { get; set; }
-
         // List to hold the expense objects
         public static List<Expense> expenses = new List<Expense> {
             new Expense { Date = DateTime.Now, Category = ExpenseCategory.DiningOut, Amount = 50.00m,  Description = "Food"},

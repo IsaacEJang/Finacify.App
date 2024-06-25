@@ -8,20 +8,20 @@ namespace MiniProject___Budgetting_App.Classes
 {
     public class Budget
     {
-        // A dictionary to hold budget categories and their corresponding values
-        public Dictionary<string, double> BudgetValues { get; private set; }
+        public decimal BudgetGroceries { get; set; }
+        public decimal BudgetGas { get; set; }
+        public decimal BudgetDiningOut { get; set; }
+        public decimal BudgetShopping { get; set; }
+        public decimal BudgetMisc { get; set; }
 
-        // Constructor initializes the dictionary
-        public Budget()
+        public static Budget DefaultBudget = new Budget
         {
-            BudgetValues = new Dictionary<string, double>();
-        }
-
-        // Method to save budget values into the dictionary
-        // It replaces the existing dictionary with a new one containing the given values
-        public void SaveBudgetValues(Dictionary<string, double> values)
-        {
-            BudgetValues = new Dictionary<string, double>(values);
-        }
+            BudgetGroceries = 750,
+            BudgetGas = 500,
+            BudgetDiningOut = 450,
+            BudgetShopping = 450,
+            BudgetMisc = 500
+        };
     }
 }
+

@@ -15,7 +15,5 @@ namespace MiniProject___Budgetting_App.Classes
         public DateTime DateReceived { get; set; }
 
 
-        // Foreign key reference
-        public User User { get; set; }
     }
 }
