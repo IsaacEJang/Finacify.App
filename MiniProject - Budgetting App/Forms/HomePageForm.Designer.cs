@@ -82,7 +82,7 @@
             // 
             buttonMonthsSummaryForm.BackColor = Color.White;
             buttonMonthsSummaryForm.Font = new Font("Times New Roman", 16.2F);
-            buttonMonthsSummaryForm.Location = new Point(36, 426);
+            buttonMonthsSummaryForm.Location = new Point(36, 154);
             buttonMonthsSummaryForm.Name = "buttonMonthsSummaryForm";
             buttonMonthsSummaryForm.Size = new Size(220, 110);
             buttonMonthsSummaryForm.TabIndex = 3;
@@ -133,7 +133,7 @@
             // 
             roundedButtonLogIncome.BackColor = Color.White;
             roundedButtonLogIncome.Font = new Font("Times New Roman", 16.2F);
-            roundedButtonLogIncome.Location = new Point(36, 154);
+            roundedButtonLogIncome.Location = new Point(36, 426);
             roundedButtonLogIncome.Name = "roundedButtonLogIncome";
             roundedButtonLogIncome.Size = new Size(220, 110);
             roundedButtonLogIncome.TabIndex = 18;

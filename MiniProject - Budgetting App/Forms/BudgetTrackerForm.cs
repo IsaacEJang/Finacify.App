@@ -1,4 +1,5 @@
 ﻿using MiniProject___Budgetting_App.Classes;
+using MiniProject___Budgetting_App.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,18 +38,18 @@ namespace MiniProject___Budgetting_App
         public void LoadBudgetTracker()
         {
 
-            //// Get the default budget instance from the static property
-            var defaultBudget = Budget.DefaultBudget;
+            // Get the default budget instance from the static property
+            //Budget defaultBudget = new Budget();
 
 
             //// Setting text boxes with formatted currency values
-            textBoxGroceryBudget.Text = defaultBudget.BudgetGroceries.ToString("C");
-            textBoxGasBudget.Text = defaultBudget.BudgetGas.ToString("C");
-            textBoxDiningOutBudget.Text = defaultBudget.BudgetDiningOut.ToString("C");
-            textBoxShoppingBudget.Text = defaultBudget.BudgetShopping.ToString("C");
-            textBoxMiscBudget.Text = defaultBudget.BudgetMisc.ToString("C");
+            textBoxGroceryBudget.Text = Data.defaultBudget.BudgetGroceries.ToString("C");
+            textBoxGasBudget.Text = Data.defaultBudget.BudgetGas.ToString("C");
+            textBoxDiningOutBudget.Text = Data.defaultBudget.BudgetDiningOut.ToString("C");
+            textBoxShoppingBudget.Text = Data.defaultBudget.BudgetShopping.ToString("C");
+            textBoxMiscBudget.Text = Data.defaultBudget.BudgetMisc.ToString("C");
         }
-    
+
 
 
         private void buttonBackLogin_Click(object sender, EventArgs e)
@@ -58,5 +59,11 @@ namespace MiniProject___Budgetting_App
             this.Hide();
         }
 
+        private void buttonViewTransactions_Click(object sender, EventArgs e)
+        {
+            ViewTransactionsForm viewTransactionsForm = new ViewTransactionsForm();
+            viewTransactionsForm.Show();
+            this.Hide();
+        }
     }
 }

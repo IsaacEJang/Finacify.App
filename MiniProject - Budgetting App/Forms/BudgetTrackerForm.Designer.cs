@@ -62,8 +62,9 @@
             textBox3 = new TextBox();
             textBoxRemaining = new TextBox();
             textBoxSpent = new TextBox();
-            textBoxCurrentMonth = new TextBox();
             textBoxBudget = new TextBox();
+            textBoxCurrentMonth = new TextBox();
+            buttonViewTransactions = new Button();
             roundedGroupBudgetTracker.SuspendLayout();
             SuspendLayout();
             // 
@@ -509,18 +510,6 @@
             textBoxSpent.Text = "Spent";
             textBoxSpent.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBoxCurrentMonth
-            // 
-            textBoxCurrentMonth.BackColor = Color.White;
-            textBoxCurrentMonth.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBoxCurrentMonth.Location = new Point(0, 12);
-            textBoxCurrentMonth.Name = "textBoxCurrentMonth";
-            textBoxCurrentMonth.ReadOnly = true;
-            textBoxCurrentMonth.Size = new Size(495, 53);
-            textBoxCurrentMonth.TabIndex = 6;
-            textBoxCurrentMonth.Text = "Month";
-            textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
-            // 
             // textBoxBudget
             // 
             textBoxBudget.BackColor = Color.White;
@@ -533,6 +522,33 @@
             textBoxBudget.Text = "Budget";
             textBoxBudget.TextAlign = HorizontalAlignment.Center;
             // 
+            // textBoxCurrentMonth
+            // 
+            textBoxCurrentMonth.BackColor = Color.White;
+            textBoxCurrentMonth.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxCurrentMonth.Location = new Point(0, 12);
+            textBoxCurrentMonth.Name = "textBoxCurrentMonth";
+            textBoxCurrentMonth.ReadOnly = true;
+            textBoxCurrentMonth.Size = new Size(495, 53);
+            textBoxCurrentMonth.TabIndex = 6;
+            textBoxCurrentMonth.Text = "Month";
+            textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
+            // 
+            // buttonViewTransactions
+            // 
+            buttonViewTransactions.BackColor = Color.FromArgb(123, 114, 229);
+            buttonViewTransactions.FlatAppearance.BorderSize = 0;
+            buttonViewTransactions.FlatStyle = FlatStyle.Flat;
+            buttonViewTransactions.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonViewTransactions.ForeColor = Color.White;
+            buttonViewTransactions.Location = new Point(461, 12);
+            buttonViewTransactions.Name = "buttonViewTransactions";
+            buttonViewTransactions.Size = new Size(49, 49);
+            buttonViewTransactions.TabIndex = 25;
+            buttonViewTransactions.Text = "\U0001f9fe";
+            buttonViewTransactions.UseVisualStyleBackColor = false;
+            buttonViewTransactions.Click += buttonViewTransactions_Click;
+            // 
             // BudgetTrackerForm
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
@@ -541,6 +557,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 696);
+            Controls.Add(buttonViewTransactions);
             Controls.Add(roundedGroupBudgetTracker);
             Controls.Add(buttonBackLogin);
             Controls.Add(label1);
@@ -597,5 +614,6 @@
         private TextBox textBoxCurrentDay;
         private TextBox textBoxTotalDays;
         private TextBox textBoxBudget;
+        private Button buttonViewTransactions;
     }
 }

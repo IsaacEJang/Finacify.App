@@ -96,18 +96,19 @@ namespace MiniProject___Budgetting_App.Forms
             MessageBox.Show(message, "Set Your Own Budget");
         }
 
-        private Budget newBudget = new Budget();
 
         private void roundedButtonSaveBudget_Click(object sender, EventArgs e)
         {
-            bool isValid = decimal.TryParse(textBoxSetBudgetGroceries.Text, out decimal groceries) && (newBudget.BudgetGroceries = groceries) == groceries &&
-                           decimal.TryParse(textBoxSetBudgetGas.Text, out decimal gas) && (newBudget.BudgetGas = gas) == gas &&
-                           decimal.TryParse(textBoxSetBudgetDiningOut.Text, out decimal diningOut) && (newBudget.BudgetDiningOut = diningOut) == diningOut &&
-                           decimal.TryParse(textBoxSetBudgetShopping.Text, out decimal shopping) && (newBudget.BudgetShopping = shopping) == shopping &&
-                           decimal.TryParse(textBoxSetBudgetMisc.Text, out decimal misc) && (newBudget.BudgetMisc = misc) == misc;
+            
 
-            if (isValid)
+            if (true)
             {
+                Data.defaultBudget.BudgetGroceries = decimal.Parse(textBoxSetBudgetGroceries.Text);
+                Data.defaultBudget.BudgetGas = decimal.Parse(textBoxSetBudgetGas.Text);
+                Data.defaultBudget.BudgetDiningOut = decimal.Parse(textBoxSetBudgetDiningOut.Text);
+                Data.defaultBudget.BudgetShopping = decimal.Parse(textBoxSetBudgetShopping.Text);
+                Data.defaultBudget.BudgetMisc = decimal.Parse(textBoxSetBudgetMisc.Text);
+
                 textBoxSetBudgetGroceries.Clear();
                 textBoxSetBudgetGas.Clear();
                 textBoxSetBudgetDiningOut.Clear();

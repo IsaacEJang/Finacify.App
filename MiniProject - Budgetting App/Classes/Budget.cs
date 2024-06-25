@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace MiniProject___Budgetting_App.Classes
 {
+    public static class Data 
+    {
+        public static Budget defaultBudget = new Budget();
+    }
+
     public class Budget
     {
         public decimal BudgetGroceries { get; set; }
@@ -14,14 +19,14 @@ namespace MiniProject___Budgetting_App.Classes
         public decimal BudgetShopping { get; set; }
         public decimal BudgetMisc { get; set; }
 
-        public static Budget DefaultBudget = new Budget
+        public Budget()
         {
-            BudgetGroceries = 750,
-            BudgetGas = 500,
-            BudgetDiningOut = 450,
-            BudgetShopping = 450,
-            BudgetMisc = 500
-        };
+            BudgetGroceries = 750;
+            BudgetGas = 500;
+            BudgetDiningOut = 450;
+            BudgetShopping = 450;
+            BudgetMisc = 500;
+        }
     }
 }
 
