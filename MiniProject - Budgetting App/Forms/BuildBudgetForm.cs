@@ -103,11 +103,11 @@ namespace MiniProject___Budgetting_App.Forms
 
             if (true)
             {
-                Data.defaultBudget.BudgetGroceries = decimal.Parse(textBoxSetBudgetGroceries.Text);
-                Data.defaultBudget.BudgetGas = decimal.Parse(textBoxSetBudgetGas.Text);
-                Data.defaultBudget.BudgetDiningOut = decimal.Parse(textBoxSetBudgetDiningOut.Text);
-                Data.defaultBudget.BudgetShopping = decimal.Parse(textBoxSetBudgetShopping.Text);
-                Data.defaultBudget.BudgetMisc = decimal.Parse(textBoxSetBudgetMisc.Text);
+                DataBudget.defaultBudget.BudgetGroceries = decimal.Parse(textBoxSetBudgetGroceries.Text);
+                DataBudget.defaultBudget.BudgetGas = decimal.Parse(textBoxSetBudgetGas.Text);
+                DataBudget.defaultBudget.BudgetDiningOut = decimal.Parse(textBoxSetBudgetDiningOut.Text);
+                DataBudget.defaultBudget.BudgetShopping = decimal.Parse(textBoxSetBudgetShopping.Text);
+                DataBudget.defaultBudget.BudgetMisc = decimal.Parse(textBoxSetBudgetMisc.Text);
 
                 textBoxSetBudgetGroceries.Clear();
                 textBoxSetBudgetGas.Clear();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniProject___Budgetting_App.Classes
 {
-    public static class Data 
+    public static class DataBudget 
     {
         public static Budget defaultBudget = new Budget();
     }
@@ -23,7 +23,7 @@ namespace MiniProject___Budgetting_App.Classes
         {
             BudgetGroceries = 750;
             BudgetGas = 500;
-            BudgetDiningOut = 450;
+            BudgetDiningOut = 450; 
             BudgetShopping = 450;
             BudgetMisc = 500;
         }

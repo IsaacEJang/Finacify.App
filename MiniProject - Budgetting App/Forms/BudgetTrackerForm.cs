@@ -43,11 +43,11 @@ namespace MiniProject___Budgetting_App
 
 
             //// Setting text boxes with formatted currency values
-            textBoxGroceryBudget.Text = Data.defaultBudget.BudgetGroceries.ToString("C");
-            textBoxGasBudget.Text = Data.defaultBudget.BudgetGas.ToString("C");
-            textBoxDiningOutBudget.Text = Data.defaultBudget.BudgetDiningOut.ToString("C");
-            textBoxShoppingBudget.Text = Data.defaultBudget.BudgetShopping.ToString("C");
-            textBoxMiscBudget.Text = Data.defaultBudget.BudgetMisc.ToString("C");
+            textBoxGroceryBudget.Text = DataBudget.defaultBudget.BudgetGroceries.ToString("C");
+            textBoxGasBudget.Text = DataBudget.defaultBudget.BudgetGas.ToString("C");
+            textBoxDiningOutBudget.Text = DataBudget.defaultBudget.BudgetDiningOut.ToString("C");
+            textBoxShoppingBudget.Text = DataBudget.defaultBudget.BudgetShopping.ToString("C");
+            textBoxMiscBudget.Text = DataBudget.defaultBudget.BudgetMisc.ToString("C");
         }
 
 
