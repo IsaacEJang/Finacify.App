@@ -21,8 +21,73 @@ namespace MiniProject___Budgetting_App
         public TrackExpenseForm()
         {
             InitializeComponent();
+
+            // Set the placeholder text for the expense amount TextBox and add event handlers
+            SetExampleExpenseAmount();
+            textBoxExpenseAmount.Enter += textBoxExpenseAmount_Enter;
+            textBoxExpenseAmount.Leave += textBoxExpenseAmount_Leave;
+
+            // Set the placeholder text for the expense description TextBox and add event handlers
+            SetExampleExpenseDescription();
+            textBoxExpenseDescription.Enter += textBoxExpenseDescription_Enter;
+            textBoxExpenseDescription.Leave += textBoxExpenseDescription_Leave;
         }
 
+        // Method to set the example expense amount as placeholder text
+        private void SetExampleExpenseAmount()
+        {
+            textBoxExpenseAmount.Text = "100.00";
+            textBoxExpenseAmount.ForeColor = Color.Gray; // Set the text color to gray to indicate it is a placeholder
+        }
+
+        // Event handler for when the expense amount TextBox gains focus
+        private void textBoxExpenseAmount_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text and change the text color to black
+            if (textBoxExpenseAmount.Text == "100.00")
+            {
+                textBoxExpenseAmount.Text = "";
+                textBoxExpenseAmount.ForeColor = Color.Black;
+            }
+        }
+
+        // Event handler for when the expense amount TextBox loses focus
+        private void textBoxExpenseAmount_Leave(object sender, EventArgs e)
+        {
+            // If the TextBox is empty, reset the placeholder text
+            if (string.IsNullOrWhiteSpace(textBoxExpenseAmount.Text))
+            {
+                SetExampleExpenseAmount();
+            }
+        }
+
+        // Method to set the example expense description as placeholder text
+        private void SetExampleExpenseDescription()
+        {
+            textBoxExpenseDescription.Text = "Description";
+            textBoxExpenseDescription.ForeColor = Color.Gray; // Set the text color to gray to indicate it is a placeholder
+        }
+
+        // Event handler for when the expense description TextBox gains focus
+        private void textBoxExpenseDescription_Enter(object sender, EventArgs e)
+        {
+            // Clear the placeholder text and change the text color to black
+            if (textBoxExpenseDescription.Text == "Description")
+            {
+                textBoxExpenseDescription.Text = "";
+                textBoxExpenseDescription.ForeColor = Color.Black;
+            }
+        }
+
+        // Event handler for when the expense description TextBox loses focus
+        private void textBoxExpenseDescription_Leave(object sender, EventArgs e)
+        {
+            // If the TextBox is empty, reset the placeholder text
+            if (string.IsNullOrWhiteSpace(textBoxExpenseDescription.Text))
+            {
+                SetExampleExpenseDescription();
+            }
+        }
 
         private void buttonBackLogin_Click(object sender, EventArgs e)
         {

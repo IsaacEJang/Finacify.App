@@ -76,7 +76,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(231, 9);
+            label1.Location = new Point(235, 9);
             label1.Name = "label1";
             label1.Size = new Size(76, 53);
             label1.TabIndex = 25;
@@ -88,7 +88,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(99, 62);
+            label7.Location = new Point(104, 62);
             label7.Name = "label7";
             label7.Size = new Size(319, 45);
             label7.TabIndex = 24;
@@ -101,7 +101,7 @@
             buttonSaveExpense.FlatStyle = FlatStyle.Flat;
             buttonSaveExpense.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonSaveExpense.ForeColor = Color.White;
-            buttonSaveExpense.Location = new Point(164, 574);
+            buttonSaveExpense.Location = new Point(174, 574);
             buttonSaveExpense.Name = "buttonSaveExpense";
             buttonSaveExpense.Size = new Size(179, 57);
             buttonSaveExpense.TabIndex = 28;
@@ -116,25 +116,27 @@
             groupBoxDescription.Controls.Add(textBoxExpenseDescription);
             groupBoxDescription.Location = new Point(52, 482);
             groupBoxDescription.Name = "groupBoxDescription";
-            groupBoxDescription.Size = new Size(418, 77);
+            groupBoxDescription.Size = new Size(420, 77);
             groupBoxDescription.TabIndex = 31;
             groupBoxDescription.TabStop = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 34);
+            label3.Font = new Font("Times New Roman", 13.8F);
+            label3.Location = new Point(23, 30);
             label3.Name = "label3";
-            label3.Size = new Size(109, 22);
+            label3.Size = new Size(60, 26);
             label3.TabIndex = 1;
-            label3.Text = "Description:";
+            label3.Text = "Item:";
             // 
             // textBoxExpenseDescription
             // 
-            textBoxExpenseDescription.Location = new Point(139, 30);
+            textBoxExpenseDescription.Location = new Point(171, 30);
             textBoxExpenseDescription.Name = "textBoxExpenseDescription";
-            textBoxExpenseDescription.Size = new Size(261, 30);
+            textBoxExpenseDescription.Size = new Size(217, 30);
             textBoxExpenseDescription.TabIndex = 0;
+            textBoxExpenseDescription.TextAlign = HorizontalAlignment.Right;
             // 
             // groupBoxAmount
             // 
@@ -143,7 +145,7 @@
             groupBoxAmount.Controls.Add(textBoxExpenseAmount);
             groupBoxAmount.Location = new Point(52, 399);
             groupBoxAmount.Name = "groupBoxAmount";
-            groupBoxAmount.Size = new Size(418, 77);
+            groupBoxAmount.Size = new Size(420, 77);
             groupBoxAmount.TabIndex = 30;
             groupBoxAmount.TabStop = false;
             // 
@@ -151,18 +153,20 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(23, 35);
+            label2.Font = new Font("Times New Roman", 13.8F);
+            label2.Location = new Point(23, 31);
             label2.Name = "label2";
-            label2.Size = new Size(106, 22);
+            label2.Size = new Size(127, 26);
             label2.TabIndex = 1;
             label2.Text = "Amount ($):";
             // 
             // textBoxExpenseAmount
             // 
-            textBoxExpenseAmount.Location = new Point(139, 31);
+            textBoxExpenseAmount.Location = new Point(171, 31);
             textBoxExpenseAmount.Name = "textBoxExpenseAmount";
-            textBoxExpenseAmount.Size = new Size(261, 30);
+            textBoxExpenseAmount.Size = new Size(217, 30);
             textBoxExpenseAmount.TabIndex = 0;
+            textBoxExpenseAmount.TextAlign = HorizontalAlignment.Right;
             // 
             // groupBoxCategory
             // 
@@ -173,9 +177,9 @@
             groupBoxCategory.Controls.Add(radioButtonDiningOut);
             groupBoxCategory.Controls.Add(radioButtonGas);
             groupBoxCategory.Controls.Add(radioButtonGroceries);
-            groupBoxCategory.Location = new Point(52, 190);
+            groupBoxCategory.Location = new Point(52, 192);
             groupBoxCategory.Name = "groupBoxCategory";
-            groupBoxCategory.Size = new Size(418, 203);
+            groupBoxCategory.Size = new Size(420, 203);
             groupBoxCategory.TabIndex = 29;
             groupBoxCategory.TabStop = false;
             // 
@@ -249,9 +253,9 @@
             roundedGroupBox1.BackColor = Color.White;
             roundedGroupBox1.Controls.Add(dateTimePicker);
             roundedGroupBox1.Controls.Add(label5);
-            roundedGroupBox1.Location = new Point(52, 110);
+            roundedGroupBox1.Location = new Point(52, 112);
             roundedGroupBox1.Name = "roundedGroupBox1";
-            roundedGroupBox1.Size = new Size(418, 77);
+            roundedGroupBox1.Size = new Size(420, 77);
             roundedGroupBox1.TabIndex = 31;
             roundedGroupBox1.TabStop = false;
             // 
@@ -266,9 +270,10 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
+            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(23, 33);
             label5.Name = "label5";
-            label5.Size = new Size(53, 22);
+            label5.Size = new Size(60, 26);
             label5.TabIndex = 1;
             label5.Text = "Date:";
             // 

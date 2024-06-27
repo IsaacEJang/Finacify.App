@@ -50,12 +50,6 @@
             groupBoxAmount.SuspendLayout();
             groupBoxDescription.SuspendLayout();
             SuspendLayout();
-            // Add CheckedChanged event handlers
-            this.radioButtonGroceries.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
-            this.radioButtonGas.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
-            this.radioButtonDiningOut.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
-            this.radioButtonShopping.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
-            this.radioButtonMisc.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // label7
             // 
@@ -104,6 +98,7 @@
             radioButtonShopping.TabStop = true;
             radioButtonShopping.Text = "Shopping";
             radioButtonShopping.UseVisualStyleBackColor = true;
+            radioButtonShopping.CheckedChanged += radioButton_CheckedChanged;
             // 
             // radioButtonMisc
             // 
@@ -115,6 +110,7 @@
             radioButtonMisc.TabStop = true;
             radioButtonMisc.Text = "Misc";
             radioButtonMisc.UseVisualStyleBackColor = true;
+            radioButtonMisc.CheckedChanged += radioButton_CheckedChanged;
             // 
             // radioButtonDiningOut
             // 
@@ -126,6 +122,7 @@
             radioButtonDiningOut.TabStop = true;
             radioButtonDiningOut.Text = "Dining Out";
             radioButtonDiningOut.UseVisualStyleBackColor = true;
+            radioButtonDiningOut.CheckedChanged += radioButton_CheckedChanged;
             // 
             // radioButtonGas
             // 
@@ -137,6 +134,7 @@
             radioButtonGas.TabStop = true;
             radioButtonGas.Text = "Gas";
             radioButtonGas.UseVisualStyleBackColor = true;
+            radioButtonGas.CheckedChanged += radioButton_CheckedChanged;
             // 
             // radioButtonGroceries
             // 
@@ -148,6 +146,7 @@
             radioButtonGroceries.TabStop = true;
             radioButtonGroceries.Text = "Groceries";
             radioButtonGroceries.UseVisualStyleBackColor = true;
+            radioButtonGroceries.CheckedChanged += radioButton_CheckedChanged;
             // 
             // label1
             // 
@@ -176,18 +175,20 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(23, 42);
+            label2.Font = new Font("Times New Roman", 13.8F);
+            label2.Location = new Point(23, 38);
             label2.Name = "label2";
-            label2.Size = new Size(106, 22);
+            label2.Size = new Size(127, 26);
             label2.TabIndex = 1;
             label2.Text = "Amount ($):";
             // 
             // textBoxExpenseAmount
             // 
-            textBoxExpenseAmount.Location = new Point(143, 38);
+            textBoxExpenseAmount.Location = new Point(165, 38);
             textBoxExpenseAmount.Name = "textBoxExpenseAmount";
-            textBoxExpenseAmount.Size = new Size(261, 30);
+            textBoxExpenseAmount.Size = new Size(217, 30);
             textBoxExpenseAmount.TabIndex = 0;
+            textBoxExpenseAmount.TextAlign = HorizontalAlignment.Right;
             // 
             // groupBoxDescription
             // 
@@ -203,18 +204,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 40);
+            label3.Font = new Font("Times New Roman", 13.8F);
+            label3.Location = new Point(23, 36);
             label3.Name = "label3";
-            label3.Size = new Size(109, 22);
+            label3.Size = new Size(66, 26);
             label3.TabIndex = 1;
-            label3.Text = "Description:";
+            label3.Text = "Item: ";
             // 
             // textBoxExpenseDescription
             // 
-            textBoxExpenseDescription.Location = new Point(143, 36);
+            textBoxExpenseDescription.Location = new Point(165, 36);
             textBoxExpenseDescription.Name = "textBoxExpenseDescription";
-            textBoxExpenseDescription.Size = new Size(261, 30);
+            textBoxExpenseDescription.Size = new Size(217, 30);
             textBoxExpenseDescription.TabIndex = 0;
+            textBoxExpenseDescription.TextAlign = HorizontalAlignment.Right;
             // 
             // buttonSubmitExpense
             // 

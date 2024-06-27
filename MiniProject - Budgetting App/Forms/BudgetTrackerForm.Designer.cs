@@ -33,6 +33,10 @@
             label7 = new Label();
             buttonBackLogin = new Button();
             roundedGroupBudgetTracker = new RoundedGroupBox();
+            buttonSubtractMonth = new Button();
+            textBoxCurrentMonth = new TextBox();
+            textBox3 = new TextBox();
+            textBox5 = new TextBox();
             textBoxDaysRemaining = new TextBox();
             textBoxCurrentDay = new TextBox();
             textBoxTotalDays = new TextBox();
@@ -55,15 +59,13 @@
             textBoxGasRemaining = new TextBox();
             textBoxGasSpent = new TextBox();
             textBoxGasBudget = new TextBox();
-            textBox5 = new TextBox();
             textBoxGroceryRemaining = new TextBox();
             textBoxGroceriesSpent = new TextBox();
             textBoxGroceryBudget = new TextBox();
-            textBox3 = new TextBox();
             textBoxRemaining = new TextBox();
             textBoxSpent = new TextBox();
             textBoxBudget = new TextBox();
-            textBoxCurrentMonth = new TextBox();
+            buttonAddMonth = new Button();
             buttonViewTransactions = new Button();
             roundedGroupBoxBarChart = new RoundedGroupBox();
             cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
@@ -71,9 +73,13 @@
             buttonBarChart = new Button();
             buttonPieChart = new Button();
             roundedGroupBoxPieChart = new RoundedGroupBox();
+            label2 = new Label();
+            pieChart1 = new LiveCharts.WinForms.PieChart();
+            label3 = new Label();
             roundedGroupBudgetTracker.SuspendLayout();
             roundedGroupBoxBarChart.SuspendLayout();
             roundedGroupBox1.SuspendLayout();
+            roundedGroupBoxPieChart.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -119,6 +125,10 @@
             // 
             roundedGroupBudgetTracker.BackColor = Color.White;
             roundedGroupBudgetTracker.BackgroundImageLayout = ImageLayout.Center;
+            roundedGroupBudgetTracker.Controls.Add(buttonSubtractMonth);
+            roundedGroupBudgetTracker.Controls.Add(textBoxCurrentMonth);
+            roundedGroupBudgetTracker.Controls.Add(textBox3);
+            roundedGroupBudgetTracker.Controls.Add(textBox5);
             roundedGroupBudgetTracker.Controls.Add(textBoxDaysRemaining);
             roundedGroupBudgetTracker.Controls.Add(textBoxCurrentDay);
             roundedGroupBudgetTracker.Controls.Add(textBoxTotalDays);
@@ -141,20 +151,67 @@
             roundedGroupBudgetTracker.Controls.Add(textBoxGasRemaining);
             roundedGroupBudgetTracker.Controls.Add(textBoxGasSpent);
             roundedGroupBudgetTracker.Controls.Add(textBoxGasBudget);
-            roundedGroupBudgetTracker.Controls.Add(textBox5);
             roundedGroupBudgetTracker.Controls.Add(textBoxGroceryRemaining);
             roundedGroupBudgetTracker.Controls.Add(textBoxGroceriesSpent);
             roundedGroupBudgetTracker.Controls.Add(textBoxGroceryBudget);
-            roundedGroupBudgetTracker.Controls.Add(textBox3);
             roundedGroupBudgetTracker.Controls.Add(textBoxRemaining);
             roundedGroupBudgetTracker.Controls.Add(textBoxSpent);
             roundedGroupBudgetTracker.Controls.Add(textBoxBudget);
-            roundedGroupBudgetTracker.Controls.Add(textBoxCurrentMonth);
+            roundedGroupBudgetTracker.Controls.Add(buttonAddMonth);
             roundedGroupBudgetTracker.Location = new Point(14, 108);
             roundedGroupBudgetTracker.Name = "roundedGroupBudgetTracker";
             roundedGroupBudgetTracker.Size = new Size(495, 571);
             roundedGroupBudgetTracker.TabIndex = 24;
             roundedGroupBudgetTracker.TabStop = false;
+            // 
+            // buttonSubtractMonth
+            // 
+            buttonSubtractMonth.BackColor = Color.White;
+            buttonSubtractMonth.Font = new Font("Times New Roman", 24F);
+            buttonSubtractMonth.ForeColor = Color.Black;
+            buttonSubtractMonth.Location = new Point(-4, 10);
+            buttonSubtractMonth.Name = "buttonSubtractMonth";
+            buttonSubtractMonth.Size = new Size(61, 56);
+            buttonSubtractMonth.TabIndex = 38;
+            buttonSubtractMonth.Text = "◀";
+            buttonSubtractMonth.UseVisualStyleBackColor = false;
+            buttonSubtractMonth.Click += buttonSubtractMonth_Click;
+            // 
+            // textBoxCurrentMonth
+            // 
+            textBoxCurrentMonth.BackColor = Color.White;
+            textBoxCurrentMonth.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxCurrentMonth.Location = new Point(56, 12);
+            textBoxCurrentMonth.Name = "textBoxCurrentMonth";
+            textBoxCurrentMonth.ReadOnly = true;
+            textBoxCurrentMonth.Size = new Size(380, 53);
+            textBoxCurrentMonth.TabIndex = 6;
+            textBoxCurrentMonth.Text = "Month";
+            textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.FromArgb(244, 153, 153);
+            textBox3.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(0, 99);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(495, 39);
+            textBox3.TabIndex = 10;
+            textBox3.Text = "Groceries";
+            textBox3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.FromArgb(249, 203, 156);
+            textBox5.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(0, 172);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(495, 39);
+            textBox5.TabIndex = 14;
+            textBox5.Text = "Gas";
+            textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxDaysRemaining
             // 
@@ -432,18 +489,6 @@
             textBoxGasBudget.Text = "Gas Budget";
             textBoxGasBudget.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.FromArgb(249, 203, 156);
-            textBox5.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(0, 173);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(495, 39);
-            textBox5.TabIndex = 14;
-            textBox5.Text = "Gas";
-            textBox5.TextAlign = HorizontalAlignment.Center;
-            // 
             // textBoxGroceryRemaining
             // 
             textBoxGroceryRemaining.BackColor = Color.White;
@@ -482,18 +527,6 @@
             textBoxGroceryBudget.Text = "Groceries";
             textBoxGroceryBudget.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.FromArgb(244, 153, 153);
-            textBox3.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(0, 99);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(495, 39);
-            textBox3.TabIndex = 10;
-            textBox3.Text = "Groceries";
-            textBox3.TextAlign = HorizontalAlignment.Center;
-            // 
             // textBoxRemaining
             // 
             textBoxRemaining.BackColor = Color.White;
@@ -530,17 +563,18 @@
             textBoxBudget.Text = "Budget";
             textBoxBudget.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBoxCurrentMonth
+            // buttonAddMonth
             // 
-            textBoxCurrentMonth.BackColor = Color.White;
-            textBoxCurrentMonth.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBoxCurrentMonth.Location = new Point(61, 11);
-            textBoxCurrentMonth.Name = "textBoxCurrentMonth";
-            textBoxCurrentMonth.ReadOnly = true;
-            textBoxCurrentMonth.Size = new Size(374, 53);
-            textBoxCurrentMonth.TabIndex = 6;
-            textBoxCurrentMonth.Text = "Month";
-            textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
+            buttonAddMonth.BackColor = Color.White;
+            buttonAddMonth.Font = new Font("Times New Roman", 24F);
+            buttonAddMonth.ForeColor = Color.Black;
+            buttonAddMonth.Location = new Point(435, 10);
+            buttonAddMonth.Name = "buttonAddMonth";
+            buttonAddMonth.Size = new Size(61, 56);
+            buttonAddMonth.TabIndex = 39;
+            buttonAddMonth.Text = "▶";
+            buttonAddMonth.UseVisualStyleBackColor = false;
+            buttonAddMonth.Click += buttonAddMonth_Click;
             // 
             // buttonViewTransactions
             // 
@@ -560,6 +594,7 @@
             // roundedGroupBoxBarChart
             // 
             roundedGroupBoxBarChart.BackColor = Color.White;
+            roundedGroupBoxBarChart.Controls.Add(label3);
             roundedGroupBoxBarChart.Controls.Add(cartesianChart1);
             roundedGroupBoxBarChart.ForeColor = Color.Black;
             roundedGroupBoxBarChart.Location = new Point(534, 193);
@@ -571,9 +606,9 @@
             // cartesianChart1
             // 
             cartesianChart1.ForeColor = Color.Black;
-            cartesianChart1.Location = new Point(19, 29);
+            cartesianChart1.Location = new Point(19, 70);
             cartesianChart1.Name = "cartesianChart1";
-            cartesianChart1.Size = new Size(448, 433);
+            cartesianChart1.Size = new Size(448, 392);
             cartesianChart1.TabIndex = 0;
             cartesianChart1.Text = "cartesianChart1";
             // 
@@ -614,12 +649,42 @@
             // roundedGroupBoxPieChart
             // 
             roundedGroupBoxPieChart.BackColor = Color.White;
+            roundedGroupBoxPieChart.Controls.Add(label2);
+            roundedGroupBoxPieChart.Controls.Add(pieChart1);
             roundedGroupBoxPieChart.ForeColor = Color.Black;
             roundedGroupBoxPieChart.Location = new Point(534, 193);
             roundedGroupBoxPieChart.Name = "roundedGroupBoxPieChart";
             roundedGroupBoxPieChart.Size = new Size(497, 486);
             roundedGroupBoxPieChart.TabIndex = 29;
             roundedGroupBoxPieChart.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(133, 26);
+            label2.Name = "label2";
+            label2.Size = new Size(232, 25);
+            label2.TabIndex = 1;
+            label2.Text = "Percent(%) Of Spend";
+            // 
+            // pieChart1
+            // 
+            pieChart1.Location = new Point(19, 70);
+            pieChart1.Name = "pieChart1";
+            pieChart1.Size = new Size(458, 399);
+            pieChart1.TabIndex = 0;
+            pieChart1.Text = "pieChart1";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(133, 26);
+            label3.Name = "label3";
+            label3.Size = new Size(242, 25);
+            label3.TabIndex = 2;
+            label3.Text = "Percent(%) Of Budget";
             // 
             // BudgetTrackerForm
             // 
@@ -629,7 +694,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1050, 708);
-            Controls.Add(roundedGroupBoxPieChart);
             Controls.Add(roundedGroupBox1);
             Controls.Add(roundedGroupBoxBarChart);
             Controls.Add(buttonViewTransactions);
@@ -637,6 +701,7 @@
             Controls.Add(buttonBackLogin);
             Controls.Add(label1);
             Controls.Add(label7);
+            Controls.Add(roundedGroupBoxPieChart);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.White;
             Margin = new Padding(4, 3, 4, 3);
@@ -646,7 +711,10 @@
             roundedGroupBudgetTracker.ResumeLayout(false);
             roundedGroupBudgetTracker.PerformLayout();
             roundedGroupBoxBarChart.ResumeLayout(false);
+            roundedGroupBoxBarChart.PerformLayout();
             roundedGroupBox1.ResumeLayout(false);
+            roundedGroupBoxPieChart.ResumeLayout(false);
+            roundedGroupBoxPieChart.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -699,5 +767,12 @@
         private Button buttonBarChart;
         private Button buttonPieChart;
         private RoundedGroupBox roundedGroupBoxPieChart;
+        private Button button3;
+        private Button button2;
+        private Button buttonSubtractMonth;
+        private Button buttonAddMonth;
+        private LiveCharts.WinForms.PieChart pieChart1;
+        private Label label2;
+        private Label label3;
     }
 }
