@@ -90,6 +90,7 @@
             textBoxPassword2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxPassword2.Location = new Point(23, 314);
             textBoxPassword2.Name = "textBoxPassword2";
+            textBoxPassword2.PasswordChar = '•';
             textBoxPassword2.Size = new Size(356, 30);
             textBoxPassword2.TabIndex = 22;
             // 
@@ -98,6 +99,7 @@
             textBoxPassword1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxPassword1.Location = new Point(23, 232);
             textBoxPassword1.Name = "textBoxPassword1";
+            textBoxPassword1.PasswordChar = '•';
             textBoxPassword1.Size = new Size(356, 30);
             textBoxPassword1.TabIndex = 21;
             // 

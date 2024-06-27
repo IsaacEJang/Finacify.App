@@ -115,7 +115,7 @@ namespace MiniProject___Budgetting_App.Forms
             if (result == DialogResult.Yes)
             {
                 // Save the selected transaction in the Expense class
-                Expense.EditTransaction = Expense.GetExpenses()[selectedIndex];
+                Expense.EditTransaction = (Expense)dataGridViewTransactions.SelectedRows[0].DataBoundItem;
 
                 // Remove the transaction at the selected index
                 Expense.GetExpenses().RemoveAt(selectedIndex);
