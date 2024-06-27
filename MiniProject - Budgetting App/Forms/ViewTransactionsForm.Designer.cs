@@ -37,6 +37,7 @@
             buttonEditTransaction = new Button();
             buttonAddTransaction = new Button();
             buttonDeleteTransaction = new Button();
+            buttonExportToExcel = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTransactions).BeginInit();
             roundedGroupBox1.SuspendLayout();
             SuspendLayout();
@@ -86,7 +87,7 @@
             dataGridViewTransactions.Location = new Point(12, 200);
             dataGridViewTransactions.Name = "dataGridViewTransactions";
             dataGridViewTransactions.RowHeadersWidth = 51;
-            dataGridViewTransactions.Size = new Size(498, 336);
+            dataGridViewTransactions.Size = new Size(498, 411);
             dataGridViewTransactions.TabIndex = 24;
             // 
             // roundedGroupBox1
@@ -134,6 +135,21 @@
             buttonDeleteTransaction.UseVisualStyleBackColor = true;
             buttonDeleteTransaction.Click += buttonDeleteTransaction_Click;
             // 
+            // buttonExportToExcel
+            // 
+            buttonExportToExcel.BackColor = Color.FromArgb(123, 114, 229);
+            buttonExportToExcel.FlatAppearance.BorderSize = 0;
+            buttonExportToExcel.FlatStyle = FlatStyle.Flat;
+            buttonExportToExcel.Font = new Font("Times New Roman", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonExportToExcel.ForeColor = Color.White;
+            buttonExportToExcel.Location = new Point(466, 1);
+            buttonExportToExcel.Name = "buttonExportToExcel";
+            buttonExportToExcel.Size = new Size(60, 60);
+            buttonExportToExcel.TabIndex = 30;
+            buttonExportToExcel.Text = "📤";
+            buttonExportToExcel.UseVisualStyleBackColor = false;
+            buttonExportToExcel.Click += buttonExportToExcel_Click;
+            // 
             // ViewTransactionsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -142,6 +158,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 623);
+            Controls.Add(buttonExportToExcel);
             Controls.Add(roundedGroupBox1);
             Controls.Add(dataGridViewTransactions);
             Controls.Add(buttonBackHome);
@@ -165,5 +182,6 @@
         private Button buttonDeleteTransaction;
         private Button buttonAddTransaction;
         private Button buttonEditTransaction;
+        private Button buttonExportToExcel;
     }
 }

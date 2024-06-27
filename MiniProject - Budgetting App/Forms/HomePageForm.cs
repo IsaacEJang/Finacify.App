@@ -99,7 +99,10 @@ namespace MiniProject___Budgetting_App
             buildBudgetForm.Show();
             this.Hide();
 
-            DialogResult result = MessageBox.Show("This page is where you can create your own budget.", "🏦 Build Budget Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("This page is where you can create your own budget. \n\n" +
+                "Start by inputting your Total Monthly Income (Post Tax) and click the 'Calculate' button. \n\n" +
+                "You can read more by clicking on the 'Recommendations' and 'Set Your Budget' links!\n\n" +
+                "After you input whatever numbers your comforatble with, make sure to click '💾 Save Budget'!", "🏦 Build Budget Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
             if (result == DialogResult.OK)
             {
@@ -107,7 +110,9 @@ namespace MiniProject___Budgetting_App
                 trackExpenseForm.Show();
                 buildBudgetForm.Hide();
 
-                result = MessageBox.Show("This page is where you can track all your expenses.", "💳 Track Expense Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                result = MessageBox.Show("This page is where you can track all your expenses.\n\n" +
+                    "Select a Date, Category, enter the Amount, and an Item Description. \n\n" +
+                    "Once you click on the '💸 Submit' button, your expense will be saved!", "💳 Track Expense Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (result == DialogResult.OK)
                 {
@@ -115,7 +120,10 @@ namespace MiniProject___Budgetting_App
                     viewTransactionsForm.Show();
                     trackExpenseForm.Hide();
 
-                    result = MessageBox.Show("This page is where you can see all your transactions.", "🧾 View Transactions Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    result = MessageBox.Show("This page is where you can see all your transactions.\n\n" +
+                        "You can Delete(🗑), Edit(✏️), or Add(➕) transactions!\n\n" +
+                        "The most recent transactions will be at the top!\n\n" +
+                        "At the top right, you can find the Export to Excel(📤) Button", "🧾 View Transactions Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (result == DialogResult.OK)
                     {
@@ -123,7 +131,13 @@ namespace MiniProject___Budgetting_App
                         budgetTrackerForm.Show();
                         viewTransactionsForm.Hide();
 
-                        result = MessageBox.Show("This page is where you can see a budget summary of your current month.", "💸 Budget Tracker Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        result = MessageBox.Show("This page is where you can see a budget summary of your current month.\n\n" +
+                            "On the left, you will the current month's budget breakdown summary. " +
+                            "You can view other months by clicking the ◀ and ▶ arrow buttons. \n\n" +
+                            "On the right, you will find different ways of visualizing your budget:\n" +
+                            "📊 will show you the Bar Graph.\n" +
+                            "🥧 will show you the Pie Chart.\n\n" +
+                            "On the top right, you can quickly access the '🧾 View Transactions Page'.", "💸 Budget Tracker Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         if (result == DialogResult.OK)
                         {
@@ -131,16 +145,19 @@ namespace MiniProject___Budgetting_App
                             feedbackForm.Show();
                             budgetTrackerForm.Hide();
 
-                            result = MessageBox.Show("This page is where you can leave feedback, whether that is to report a bug or request a feature.", "📝 Leave Feedback Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            result = MessageBox.Show("This page is where you can leave feedback, whether that is to report a bug or request a feature.\n\n" +
+                                "Choose the Type of Feedback, and on Which Page. Then leave a comment and click '📪 Submit'!", "📝 Leave Feedback Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             if (result == DialogResult.OK)
                             {
-                                MessageBox.Show("Welcome to the Finacify App!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 // Show the HomePageForm at the end of the tour
                                 HomePageForm homePageForm = new HomePageForm();
                                 homePageForm.Show();
                                 feedbackForm.Hide();
+
+                                MessageBox.Show("Welcome to the Finacify®️ App!\n\n Hope you enjoy!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             }
                         }
                     }

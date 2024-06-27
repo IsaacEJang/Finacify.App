@@ -60,16 +60,9 @@ namespace MiniProject___Budgetting_App.Forms
             ClearForm();
         }
 
-        private void ClearForm()
-        {
-            comboBoxTypeOfFeedback.SelectedIndex = 0;
-            comboBoxFeedbackPage.SelectedIndex = 0;
-            richTextBoxFeedbackComment.Clear();
-        }
-
         private void WriteFeedbackToFile(Feedback feedback)
         {
-            string directoryPath = @"C:\MSSA\Assignments\MiniProject - Budgetting App";
+            string directoryPath = @"C:\MSSA\Assignments\MiniProject - Budgetting App\DataFiles";
             string filePath = Path.Combine(directoryPath, "feedback.txt");
             string feedbackText = feedback.ToString();
 
@@ -94,7 +87,12 @@ namespace MiniProject___Budgetting_App.Forms
                 MessageBox.Show($"An error occurred while writing to the file: {ex.Message}");
             }
         }
-    
 
+        private void ClearForm()
+        {
+            comboBoxTypeOfFeedback.SelectedIndex = 0;
+            comboBoxFeedbackPage.SelectedIndex = 0;
+            richTextBoxFeedbackComment.Clear();
+        }
     }
 }

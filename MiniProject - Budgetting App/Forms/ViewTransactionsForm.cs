@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using ClosedXML.Excel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,8 +33,11 @@ namespace MiniProject___Budgetting_App.Forms
             // Retrieve the list of expenses
             List<Expense> expenses = Expense.GetExpenses();
 
-            // Bind the DataGridView to the list of expenses
-            dataGridViewTransactions.DataSource = expenses;
+            // Sort the list of expenses by date in descending order will show most recent first
+            var sortedExpenses = expenses.OrderByDescending(expense => expense.Date).ToList();
+
+            // Bind the DataGridView to the sorted list of expenses
+            dataGridViewTransactions.DataSource = sortedExpenses;
 
             // Set the column headers to the desired text
             dataGridViewTransactions.Columns["Date"].HeaderText = "Date";
@@ -120,7 +124,48 @@ namespace MiniProject___Budgetting_App.Forms
                 editTransactionForm.Show();
                 this.Hide();
             }
-                
+
+        }
+
+        private void buttonExportToExcel_Click(object sender, EventArgs e)
+        {
+            // Ask the user for confirmation
+            var result = MessageBox.Show("Are you sure you want to EXPORT all transaction?", "Confirm Export", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                // Get the current date and time for the file name
+                string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+                string filePath = $@"C:\MSSA\Assignments\MiniProject - Budgetting App\DataFiles\AllTransactions\{currentDateTime}_All_Transactions.xlsx";
+
+                // Create a new Excel workbook
+                using (var workbook = new XLWorkbook())
+                {
+                    // Create a new worksheet
+                    var worksheet = workbook.Worksheets.Add("Transactions");
+
+                    // Add the column headers to the worksheet
+                    for (int i = 0; i < dataGridViewTransactions.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i + 1).Value = dataGridViewTransactions.Columns[i].HeaderText;
+                    }
+
+                    // Add the rows to the worksheet
+                    for (int i = 0; i < dataGridViewTransactions.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridViewTransactions.Columns.Count; j++)
+                        {
+                            worksheet.Cell(i + 2, j + 1).Value = dataGridViewTransactions.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    // Save the workbook to the specified file path
+                    workbook.SaveAs(filePath);
+                }
+
+                // Notify the user that the export was successful
+                MessageBox.Show($"Data exported successfully to {filePath}");
+            }
         }
     }
 }

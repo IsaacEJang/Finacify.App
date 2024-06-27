@@ -15,14 +15,13 @@ namespace MiniProject___Budgetting_App.Classes
 
     public enum PageLocation
     {
-        AnnualSummaryForm,
         BudgetTrackerForm,
         BuildBudgetForm,
         CreateAccountForm,
+        EditTransactionForm,
         FeedbackForm,
         ForgotPasswordForm,
         HomePageForm,
-        LogIncomeForm,
         LoginForm,
         TrackExpenseForm,
         ViewTransactionsForm,

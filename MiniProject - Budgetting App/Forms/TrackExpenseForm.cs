@@ -89,7 +89,7 @@ namespace MiniProject___Budgetting_App
             }
         }
 
-        private void buttonBackLogin_Click(object sender, EventArgs e)
+        private void buttonBackLogin_Click_1(object sender, EventArgs e)
         {
             HomePageForm homePageForm = new HomePageForm();
             homePageForm.Show();
@@ -128,7 +128,7 @@ namespace MiniProject___Budgetting_App
             }
         }
 
-        private void buttonSubmitExpense_Click(object sender, EventArgs e)
+        private void buttonSubmitExpense_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -141,10 +141,10 @@ namespace MiniProject___Budgetting_App
                 // Create a new Expense object
                 Expense newExpense = new Expense
                 {
-                    Date = DateTime.Today,          // Set the current date
-                    Category = selectedCategory,    // Set the selected category
-                    Amount = amount,                // Set the entered amount
-                    Description = description       // Set the entered description
+                    Date = dateTimePicker.Value.Date,    // Set the full date from dateTimePicker
+                    Category = selectedCategory,         // Set the selected category
+                    Amount = amount,                     // Set the entered amount
+                    Description = description            // Set the entered description
                 };
 
                 // Add the new expense to the storage
@@ -169,5 +169,11 @@ namespace MiniProject___Budgetting_App
             textBoxExpenseAmount.Clear();   // Clear the amount text box
             textBoxExpenseDescription.Clear();   // Clear the description text box
         }
+
+        private void TrackExpenseForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

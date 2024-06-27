@@ -30,6 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackExpenseForm));
             label7 = new Label();
+            label1 = new Label();
+            buttonSubmitExpense = new RoundedButton();
+            buttonBackLogin = new Button();
+            roundedGroupBox1 = new RoundedGroupBox();
+            dateTimePicker = new DateTimePicker();
+            label5 = new Label();
+            groupBoxDescription = new RoundedGroupBox();
+            label3 = new Label();
+            textBoxExpenseDescription = new TextBox();
+            groupBoxAmount = new RoundedGroupBox();
+            label2 = new Label();
+            textBoxExpenseAmount = new TextBox();
             groupBoxCategory = new RoundedGroupBox();
             label4 = new Label();
             radioButtonShopping = new RadioButton();
@@ -37,18 +49,10 @@
             radioButtonDiningOut = new RadioButton();
             radioButtonGas = new RadioButton();
             radioButtonGroceries = new RadioButton();
-            label1 = new Label();
-            groupBoxAmount = new RoundedGroupBox();
-            label2 = new Label();
-            textBoxExpenseAmount = new TextBox();
-            groupBoxDescription = new RoundedGroupBox();
-            label3 = new Label();
-            textBoxExpenseDescription = new TextBox();
-            buttonSubmitExpense = new RoundedButton();
-            buttonBackLogin = new Button();
-            groupBoxCategory.SuspendLayout();
-            groupBoxAmount.SuspendLayout();
+            roundedGroupBox1.SuspendLayout();
             groupBoxDescription.SuspendLayout();
+            groupBoxAmount.SuspendLayout();
+            groupBoxCategory.SuspendLayout();
             SuspendLayout();
             // 
             // label7
@@ -63,6 +67,136 @@
             label7.TabIndex = 13;
             label7.Text = "Track Expense";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(225, -1);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 53);
+            label1.TabIndex = 16;
+            label1.Text = "💳";
+            // 
+            // buttonSubmitExpense
+            // 
+            buttonSubmitExpense.BackColor = Color.FromArgb(123, 114, 229);
+            buttonSubmitExpense.FlatAppearance.BorderSize = 0;
+            buttonSubmitExpense.FlatStyle = FlatStyle.Flat;
+            buttonSubmitExpense.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSubmitExpense.ForeColor = Color.White;
+            buttonSubmitExpense.Location = new Point(182, 574);
+            buttonSubmitExpense.Name = "buttonSubmitExpense";
+            buttonSubmitExpense.Size = new Size(179, 57);
+            buttonSubmitExpense.TabIndex = 18;
+            buttonSubmitExpense.Text = "💸 Submit";
+            buttonSubmitExpense.UseVisualStyleBackColor = false;
+            buttonSubmitExpense.Click += buttonSubmitExpense_Click_1;
+            // 
+            // buttonBackLogin
+            // 
+            buttonBackLogin.BackColor = Color.FromArgb(123, 114, 229);
+            buttonBackLogin.FlatAppearance.BorderSize = 0;
+            buttonBackLogin.FlatStyle = FlatStyle.Flat;
+            buttonBackLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonBackLogin.ForeColor = Color.White;
+            buttonBackLogin.Location = new Point(12, 12);
+            buttonBackLogin.Name = "buttonBackLogin";
+            buttonBackLogin.Size = new Size(49, 49);
+            buttonBackLogin.TabIndex = 22;
+            buttonBackLogin.Text = "↩️";
+            buttonBackLogin.UseVisualStyleBackColor = false;
+            buttonBackLogin.Click += buttonBackLogin_Click_1;
+            // 
+            // roundedGroupBox1
+            // 
+            roundedGroupBox1.BackColor = Color.White;
+            roundedGroupBox1.Controls.Add(dateTimePicker);
+            roundedGroupBox1.Controls.Add(label5);
+            roundedGroupBox1.Location = new Point(51, 102);
+            roundedGroupBox1.Name = "roundedGroupBox1";
+            roundedGroupBox1.Size = new Size(420, 77);
+            roundedGroupBox1.TabIndex = 34;
+            roundedGroupBox1.TabStop = false;
+            // 
+            // dateTimePicker
+            // 
+            dateTimePicker.Location = new Point(112, 30);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(288, 30);
+            dateTimePicker.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(23, 33);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 26);
+            label5.TabIndex = 1;
+            label5.Text = "Date:";
+            // 
+            // groupBoxDescription
+            // 
+            groupBoxDescription.BackColor = Color.White;
+            groupBoxDescription.Controls.Add(label3);
+            groupBoxDescription.Controls.Add(textBoxExpenseDescription);
+            groupBoxDescription.Location = new Point(51, 472);
+            groupBoxDescription.Name = "groupBoxDescription";
+            groupBoxDescription.Size = new Size(420, 77);
+            groupBoxDescription.TabIndex = 35;
+            groupBoxDescription.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 13.8F);
+            label3.Location = new Point(23, 30);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 26);
+            label3.TabIndex = 1;
+            label3.Text = "Item:";
+            // 
+            // textBoxExpenseDescription
+            // 
+            textBoxExpenseDescription.Location = new Point(171, 30);
+            textBoxExpenseDescription.Name = "textBoxExpenseDescription";
+            textBoxExpenseDescription.Size = new Size(217, 30);
+            textBoxExpenseDescription.TabIndex = 0;
+            textBoxExpenseDescription.TextAlign = HorizontalAlignment.Right;
+            // 
+            // groupBoxAmount
+            // 
+            groupBoxAmount.BackColor = Color.White;
+            groupBoxAmount.Controls.Add(label2);
+            groupBoxAmount.Controls.Add(textBoxExpenseAmount);
+            groupBoxAmount.Location = new Point(51, 389);
+            groupBoxAmount.Name = "groupBoxAmount";
+            groupBoxAmount.Size = new Size(420, 77);
+            groupBoxAmount.TabIndex = 33;
+            groupBoxAmount.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Times New Roman", 13.8F);
+            label2.Location = new Point(23, 31);
+            label2.Name = "label2";
+            label2.Size = new Size(127, 26);
+            label2.TabIndex = 1;
+            label2.Text = "Amount ($):";
+            // 
+            // textBoxExpenseAmount
+            // 
+            textBoxExpenseAmount.Location = new Point(171, 31);
+            textBoxExpenseAmount.Name = "textBoxExpenseAmount";
+            textBoxExpenseAmount.Size = new Size(217, 30);
+            textBoxExpenseAmount.TabIndex = 0;
+            textBoxExpenseAmount.TextAlign = HorizontalAlignment.Right;
+            // 
             // groupBoxCategory
             // 
             groupBoxCategory.BackColor = Color.White;
@@ -72,10 +206,10 @@
             groupBoxCategory.Controls.Add(radioButtonDiningOut);
             groupBoxCategory.Controls.Add(radioButtonGas);
             groupBoxCategory.Controls.Add(radioButtonGroceries);
-            groupBoxCategory.Location = new Point(54, 104);
+            groupBoxCategory.Location = new Point(51, 182);
             groupBoxCategory.Name = "groupBoxCategory";
-            groupBoxCategory.Size = new Size(418, 203);
-            groupBoxCategory.TabIndex = 15;
+            groupBoxCategory.Size = new Size(420, 203);
+            groupBoxCategory.TabIndex = 32;
             groupBoxCategory.TabStop = false;
             // 
             // label4
@@ -148,107 +282,6 @@
             radioButtonGroceries.UseVisualStyleBackColor = true;
             radioButtonGroceries.CheckedChanged += radioButton_CheckedChanged;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(225, -1);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 53);
-            label1.TabIndex = 16;
-            label1.Text = "💳";
-            // 
-            // groupBoxAmount
-            // 
-            groupBoxAmount.BackColor = Color.White;
-            groupBoxAmount.Controls.Add(label2);
-            groupBoxAmount.Controls.Add(textBoxExpenseAmount);
-            groupBoxAmount.Location = new Point(54, 322);
-            groupBoxAmount.Name = "groupBoxAmount";
-            groupBoxAmount.Size = new Size(418, 91);
-            groupBoxAmount.TabIndex = 16;
-            groupBoxAmount.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Times New Roman", 13.8F);
-            label2.Location = new Point(23, 38);
-            label2.Name = "label2";
-            label2.Size = new Size(127, 26);
-            label2.TabIndex = 1;
-            label2.Text = "Amount ($):";
-            // 
-            // textBoxExpenseAmount
-            // 
-            textBoxExpenseAmount.Location = new Point(165, 38);
-            textBoxExpenseAmount.Name = "textBoxExpenseAmount";
-            textBoxExpenseAmount.Size = new Size(217, 30);
-            textBoxExpenseAmount.TabIndex = 0;
-            textBoxExpenseAmount.TextAlign = HorizontalAlignment.Right;
-            // 
-            // groupBoxDescription
-            // 
-            groupBoxDescription.BackColor = Color.White;
-            groupBoxDescription.Controls.Add(label3);
-            groupBoxDescription.Controls.Add(textBoxExpenseDescription);
-            groupBoxDescription.Location = new Point(54, 437);
-            groupBoxDescription.Name = "groupBoxDescription";
-            groupBoxDescription.Size = new Size(418, 91);
-            groupBoxDescription.TabIndex = 17;
-            groupBoxDescription.TabStop = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 13.8F);
-            label3.Location = new Point(23, 36);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 26);
-            label3.TabIndex = 1;
-            label3.Text = "Item: ";
-            // 
-            // textBoxExpenseDescription
-            // 
-            textBoxExpenseDescription.Location = new Point(165, 36);
-            textBoxExpenseDescription.Name = "textBoxExpenseDescription";
-            textBoxExpenseDescription.Size = new Size(217, 30);
-            textBoxExpenseDescription.TabIndex = 0;
-            textBoxExpenseDescription.TextAlign = HorizontalAlignment.Right;
-            // 
-            // buttonSubmitExpense
-            // 
-            buttonSubmitExpense.BackColor = Color.FromArgb(123, 114, 229);
-            buttonSubmitExpense.FlatAppearance.BorderSize = 0;
-            buttonSubmitExpense.FlatStyle = FlatStyle.Flat;
-            buttonSubmitExpense.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonSubmitExpense.ForeColor = Color.White;
-            buttonSubmitExpense.Location = new Point(168, 546);
-            buttonSubmitExpense.Name = "buttonSubmitExpense";
-            buttonSubmitExpense.Size = new Size(179, 57);
-            buttonSubmitExpense.TabIndex = 18;
-            buttonSubmitExpense.Text = "💸 Submit";
-            buttonSubmitExpense.UseVisualStyleBackColor = false;
-            buttonSubmitExpense.Click += buttonSubmitExpense_Click;
-            // 
-            // buttonBackLogin
-            // 
-            buttonBackLogin.BackColor = Color.FromArgb(123, 114, 229);
-            buttonBackLogin.FlatAppearance.BorderSize = 0;
-            buttonBackLogin.FlatStyle = FlatStyle.Flat;
-            buttonBackLogin.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonBackLogin.ForeColor = Color.White;
-            buttonBackLogin.Location = new Point(12, 12);
-            buttonBackLogin.Name = "buttonBackLogin";
-            buttonBackLogin.Size = new Size(49, 49);
-            buttonBackLogin.TabIndex = 22;
-            buttonBackLogin.Text = "↩️";
-            buttonBackLogin.UseVisualStyleBackColor = false;
-            buttonBackLogin.Click += buttonBackLogin_Click;
-            // 
             // TrackExpenseForm
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
@@ -256,24 +289,28 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 623);
-            Controls.Add(buttonBackLogin);
-            Controls.Add(buttonSubmitExpense);
+            ClientSize = new Size(522, 643);
+            Controls.Add(roundedGroupBox1);
             Controls.Add(groupBoxDescription);
             Controls.Add(groupBoxAmount);
-            Controls.Add(label1);
             Controls.Add(groupBoxCategory);
+            Controls.Add(buttonBackLogin);
+            Controls.Add(buttonSubmitExpense);
+            Controls.Add(label1);
             Controls.Add(label7);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
             Name = "TrackExpenseForm";
             Text = "Track Expense";
-            groupBoxCategory.ResumeLayout(false);
-            groupBoxCategory.PerformLayout();
-            groupBoxAmount.ResumeLayout(false);
-            groupBoxAmount.PerformLayout();
+            Load += TrackExpenseForm_Load;
+            roundedGroupBox1.ResumeLayout(false);
+            roundedGroupBox1.PerformLayout();
             groupBoxDescription.ResumeLayout(false);
             groupBoxDescription.PerformLayout();
+            groupBoxAmount.ResumeLayout(false);
+            groupBoxAmount.PerformLayout();
+            groupBoxCategory.ResumeLayout(false);
+            groupBoxCategory.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -281,21 +318,24 @@
         #endregion
 
         private Label label7;
-        private RoundedGroupBox groupBoxCategory;
         private Label label1;
+        private RoundedButton buttonSubmitExpense;
+        private Button buttonBackLogin;
+        private RoundedGroupBox roundedGroupBox1;
+        private DateTimePicker dateTimePicker;
+        private Label label5;
+        private RoundedGroupBox groupBoxDescription;
+        private Label label3;
+        private TextBox textBoxExpenseDescription;
+        private RoundedGroupBox groupBoxAmount;
+        private Label label2;
+        private TextBox textBoxExpenseAmount;
+        private RoundedGroupBox groupBoxCategory;
+        private Label label4;
         private RadioButton radioButtonShopping;
         private RadioButton radioButtonMisc;
         private RadioButton radioButtonDiningOut;
         private RadioButton radioButtonGas;
         private RadioButton radioButtonGroceries;
-        private RoundedGroupBox groupBoxAmount;
-        private TextBox textBoxExpenseAmount;
-        private RoundedGroupBox groupBoxDescription;
-        private TextBox textBoxExpenseDescription;
-        private RoundedButton buttonSubmitExpense;
-        private Button buttonBackLogin;
-        private Label label3;
-        private Label label2;
-        private Label label4;
     }
 }

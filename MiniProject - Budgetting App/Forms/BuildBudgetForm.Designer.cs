@@ -80,7 +80,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(221, 9);
+            label1.Location = new Point(213, 9);
             label1.Name = "label1";
             label1.Size = new Size(113, 68);
             label1.TabIndex = 21;
@@ -92,7 +92,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Times New Roman", 22.2F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(145, 77);
+            label2.Location = new Point(140, 77);
             label2.Name = "label2";
             label2.Size = new Size(260, 42);
             label2.TabIndex = 22;
@@ -132,6 +132,7 @@
             textBoxPostTaxMonthlyIncome.Name = "textBoxPostTaxMonthlyIncome";
             textBoxPostTaxMonthlyIncome.Size = new Size(127, 30);
             textBoxPostTaxMonthlyIncome.TabIndex = 2;
+            textBoxPostTaxMonthlyIncome.TextAlign = HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -213,6 +214,7 @@
             textBoxSetBudgetMisc.Name = "textBoxSetBudgetMisc";
             textBoxSetBudgetMisc.Size = new Size(125, 30);
             textBoxSetBudgetMisc.TabIndex = 16;
+            textBoxSetBudgetMisc.TextAlign = HorizontalAlignment.Right;
             // 
             // textBoxSetBudgetShopping
             // 
@@ -220,6 +222,7 @@
             textBoxSetBudgetShopping.Name = "textBoxSetBudgetShopping";
             textBoxSetBudgetShopping.Size = new Size(125, 30);
             textBoxSetBudgetShopping.TabIndex = 15;
+            textBoxSetBudgetShopping.TextAlign = HorizontalAlignment.Right;
             // 
             // textBoxSetBudgetDiningOut
             // 
@@ -227,6 +230,7 @@
             textBoxSetBudgetDiningOut.Name = "textBoxSetBudgetDiningOut";
             textBoxSetBudgetDiningOut.Size = new Size(129, 30);
             textBoxSetBudgetDiningOut.TabIndex = 14;
+            textBoxSetBudgetDiningOut.TextAlign = HorizontalAlignment.Right;
             // 
             // textBoxSetBudgetGas
             // 
@@ -234,6 +238,7 @@
             textBoxSetBudgetGas.Name = "textBoxSetBudgetGas";
             textBoxSetBudgetGas.Size = new Size(129, 30);
             textBoxSetBudgetGas.TabIndex = 13;
+            textBoxSetBudgetGas.TextAlign = HorizontalAlignment.Right;
             // 
             // textBoxSetBudgetGroceries
             // 
@@ -241,13 +246,14 @@
             textBoxSetBudgetGroceries.Name = "textBoxSetBudgetGroceries";
             textBoxSetBudgetGroceries.Size = new Size(129, 30);
             textBoxSetBudgetGroceries.TabIndex = 12;
+            textBoxSetBudgetGroceries.TextAlign = HorizontalAlignment.Right;
             // 
             // linkLabelSetBudget
             // 
             linkLabelSetBudget.AutoSize = true;
             linkLabelSetBudget.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkLabelSetBudget.LinkColor = Color.FromArgb(123, 114, 229);
-            linkLabelSetBudget.Location = new Point(172, 26);
+            linkLabelSetBudget.Location = new Point(180, 24);
             linkLabelSetBudget.Name = "linkLabelSetBudget";
             linkLabelSetBudget.Size = new Size(146, 23);
             linkLabelSetBudget.TabIndex = 11;
@@ -307,7 +313,7 @@
             roundedButtonSaveBudget.FlatStyle = FlatStyle.Flat;
             roundedButtonSaveBudget.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             roundedButtonSaveBudget.ForeColor = Color.White;
-            roundedButtonSaveBudget.Location = new Point(174, 564);
+            roundedButtonSaveBudget.Location = new Point(182, 564);
             roundedButtonSaveBudget.Name = "roundedButtonSaveBudget";
             roundedButtonSaveBudget.Size = new Size(176, 47);
             roundedButtonSaveBudget.TabIndex = 27;

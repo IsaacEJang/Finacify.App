@@ -68,6 +68,7 @@
             buttonAddMonth = new Button();
             buttonViewTransactions = new Button();
             roundedGroupBoxBarChart = new RoundedGroupBox();
+            label3 = new Label();
             cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             roundedGroupBox1 = new RoundedGroupBox();
             buttonBarChart = new Button();
@@ -75,7 +76,6 @@
             roundedGroupBoxPieChart = new RoundedGroupBox();
             label2 = new Label();
             pieChart1 = new LiveCharts.WinForms.PieChart();
-            label3 = new Label();
             roundedGroupBudgetTracker.SuspendLayout();
             roundedGroupBoxBarChart.SuspendLayout();
             roundedGroupBox1.SuspendLayout();
@@ -603,6 +603,16 @@
             roundedGroupBoxBarChart.TabIndex = 28;
             roundedGroupBoxBarChart.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(133, 26);
+            label3.Name = "label3";
+            label3.Size = new Size(242, 25);
+            label3.TabIndex = 2;
+            label3.Text = "Percent(%) Of Budget";
+            // 
             // cartesianChart1
             // 
             cartesianChart1.ForeColor = Color.Black;
@@ -676,16 +686,6 @@
             pieChart1.TabIndex = 0;
             pieChart1.Text = "pieChart1";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(133, 26);
-            label3.Name = "label3";
-            label3.Size = new Size(242, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Percent(%) Of Budget";
-            // 
             // BudgetTrackerForm
             // 
             AutoScaleDimensions = new SizeF(11F, 22F);
@@ -695,13 +695,13 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1050, 708);
             Controls.Add(roundedGroupBox1);
-            Controls.Add(roundedGroupBoxBarChart);
             Controls.Add(buttonViewTransactions);
             Controls.Add(roundedGroupBudgetTracker);
             Controls.Add(buttonBackLogin);
             Controls.Add(label1);
             Controls.Add(label7);
             Controls.Add(roundedGroupBoxPieChart);
+            Controls.Add(roundedGroupBoxBarChart);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.White;
             Margin = new Padding(4, 3, 4, 3);

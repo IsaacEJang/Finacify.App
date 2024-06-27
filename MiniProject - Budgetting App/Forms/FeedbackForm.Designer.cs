@@ -157,7 +157,7 @@
             roundedButtonSaveBudget.FlatStyle = FlatStyle.Flat;
             roundedButtonSaveBudget.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             roundedButtonSaveBudget.ForeColor = Color.White;
-            roundedButtonSaveBudget.Location = new Point(170, 564);
+            roundedButtonSaveBudget.Location = new Point(175, 552);
             roundedButtonSaveBudget.Name = "roundedButtonSaveBudget";
             roundedButtonSaveBudget.Size = new Size(176, 47);
             roundedButtonSaveBudget.TabIndex = 28;
