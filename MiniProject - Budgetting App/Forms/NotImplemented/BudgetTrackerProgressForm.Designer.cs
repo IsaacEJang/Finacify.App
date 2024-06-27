@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudgetTrackerProgressForm));
             label2 = new Label();
             roundedGroupBoxSetBudget = new RoundedGroupBox();
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            roundedGroupBoxSetBudget.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -48,11 +50,22 @@
             // roundedGroupBoxSetBudget
             // 
             roundedGroupBoxSetBudget.BackColor = Color.White;
+            roundedGroupBoxSetBudget.Controls.Add(cartesianChart1);
+            roundedGroupBoxSetBudget.ForeColor = Color.Black;
             roundedGroupBoxSetBudget.Location = new Point(10, 68);
             roundedGroupBoxSetBudget.Name = "roundedGroupBoxSetBudget";
             roundedGroupBoxSetBudget.Size = new Size(500, 399);
             roundedGroupBoxSetBudget.TabIndex = 27;
             roundedGroupBoxSetBudget.TabStop = false;
+            // 
+            // cartesianChart1
+            // 
+            cartesianChart1.ForeColor = Color.Black;
+            cartesianChart1.Location = new Point(6, 40);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(475, 343);
+            cartesianChart1.TabIndex = 0;
+            cartesianChart1.Text = "cartesianChart1";
             // 
             // BudgetTrackerProgressForm
             // 
@@ -67,6 +80,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "BudgetTrackerProgressForm";
             Text = "Budget Progress";
+            roundedGroupBoxSetBudget.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -75,5 +89,6 @@
 
         private Label label2;
         private RoundedGroupBox roundedGroupBoxSetBudget;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }

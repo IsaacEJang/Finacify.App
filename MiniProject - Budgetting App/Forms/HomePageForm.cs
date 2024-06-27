@@ -48,9 +48,15 @@ namespace MiniProject___Budgetting_App
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
+            // Ask the user for confirmation
+            var result = MessageBox.Show("Are you sure you want to exit the program?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            { 
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+                this.Hide();
+            }
         }
 
         private void ButtonBuildBudget_Click(object sender, EventArgs e)
@@ -69,7 +75,14 @@ namespace MiniProject___Budgetting_App
 
         private void roundedButtonInformation_Click(object sender, EventArgs e)
         {
+            // Ask the user if they want to take a tour
+            DialogResult result = MessageBox.Show("Would you like to take a tour?", "Welcome", MessageBoxButtons.YesNo);
 
+            if (result == DialogResult.Yes)
+            {
+                UserTour();
+            }
+            
         }
 
         private void roundedButtonFeedback_Click(object sender, EventArgs e)
@@ -77,6 +90,62 @@ namespace MiniProject___Budgetting_App
             FeedbackForm feedbackForm = new FeedbackForm();
             feedbackForm.Show();
             this.Hide();
+        }
+
+        public void UserTour()
+        {
+            // Start the tour by showing the first form and a message
+            BuildBudgetForm buildBudgetForm = new BuildBudgetForm();
+            buildBudgetForm.Show();
+            this.Hide();
+
+            DialogResult result = MessageBox.Show("This page is where you can create your own budget.", "🏦 Build Budget Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            if (result == DialogResult.OK)
+            {
+                TrackExpenseForm trackExpenseForm = new TrackExpenseForm();
+                trackExpenseForm.Show();
+                buildBudgetForm.Hide();
+
+                result = MessageBox.Show("This page is where you can track all your expenses.", "💳 Track Expense Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (result == DialogResult.OK)
+                {
+                    ViewTransactionsForm viewTransactionsForm = new ViewTransactionsForm();
+                    viewTransactionsForm.Show();
+                    trackExpenseForm.Hide();
+
+                    result = MessageBox.Show("This page is where you can see all your transactions.", "🧾 View Transactions Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (result == DialogResult.OK)
+                    {
+                        BudgetTrackerForm budgetTrackerForm = new BudgetTrackerForm();
+                        budgetTrackerForm.Show();
+                        viewTransactionsForm.Hide();
+
+                        result = MessageBox.Show("This page is where you can see a budget summary of your current month.", "💸 Budget Tracker Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if (result == DialogResult.OK)
+                        {
+                            FeedbackForm feedbackForm = new FeedbackForm();
+                            feedbackForm.Show();
+                            budgetTrackerForm.Hide();
+
+                            result = MessageBox.Show("This page is where you can leave feedback, whether that is to report a bug or request a feature.", "📝 Leave Feedback Page", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            if (result == DialogResult.OK)
+                            {
+                                MessageBox.Show("Welcome to the Finacify App!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Show the HomePageForm at the end of the tour
+                                HomePageForm homePageForm = new HomePageForm();
+                                homePageForm.Show();
+                                feedbackForm.Hide();
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

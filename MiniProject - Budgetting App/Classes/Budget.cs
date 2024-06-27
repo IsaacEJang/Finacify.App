@@ -26,6 +26,13 @@ namespace MiniProject___Budgetting_App.Classes
             BudgetDiningOut = 450; 
             BudgetShopping = 450;
             BudgetMisc = 500;
+            
+        }
+
+        // Method to calculate the total budget
+        public decimal GetTotalBudget()
+        {
+            return BudgetGroceries + BudgetGas + BudgetDiningOut + BudgetShopping + BudgetMisc;
         }
     }
 }

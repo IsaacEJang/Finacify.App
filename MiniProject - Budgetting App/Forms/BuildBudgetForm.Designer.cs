@@ -78,13 +78,13 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Times New Roman", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(235, 10);
+            label1.Location = new Point(221, 9);
             label1.Name = "label1";
-            label1.Size = new Size(95, 68);
+            label1.Size = new Size(113, 68);
             label1.TabIndex = 21;
-            label1.Text = "\U0001fa99";
+            label1.Text = "🏦 ";
             // 
             // label2
             // 
@@ -92,7 +92,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Times New Roman", 22.2F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(151, 78);
+            label2.Location = new Point(145, 77);
             label2.Name = "label2";
             label2.Size = new Size(260, 42);
             label2.TabIndex = 22;
@@ -206,41 +206,41 @@
             roundedGroupBoxSetBudget.Size = new Size(488, 192);
             roundedGroupBoxSetBudget.TabIndex = 26;
             roundedGroupBoxSetBudget.TabStop = false;
-                // 
-                // textBoxSetBudgetMisc
-                // 
-                textBoxSetBudgetMisc.Location = new Point(346, 116);
-                textBoxSetBudgetMisc.Name = "textBoxSetBudgetMisc";
-                textBoxSetBudgetMisc.Size = new Size(125, 30);
-                textBoxSetBudgetMisc.TabIndex = 16;
-                // 
-                // textBoxSetBudgetShopping
-                // 
-                textBoxSetBudgetShopping.Location = new Point(347, 69);
-                textBoxSetBudgetShopping.Name = "textBoxSetBudgetShopping";
-                textBoxSetBudgetShopping.Size = new Size(125, 30);
-                textBoxSetBudgetShopping.TabIndex = 15;
-                // 
-                // textBoxSetBudgetDiningOut
-                // 
-                textBoxSetBudgetDiningOut.Location = new Point(116, 136);
-                textBoxSetBudgetDiningOut.Name = "textBoxSetBudgetDiningOut";
-                textBoxSetBudgetDiningOut.Size = new Size(129, 30);
-                textBoxSetBudgetDiningOut.TabIndex = 14;
-                // 
-                // textBoxSetBudgetGas
-                // 
-                textBoxSetBudgetGas.Location = new Point(116, 97);
-                textBoxSetBudgetGas.Name = "textBoxSetBudgetGas";
-                textBoxSetBudgetGas.Size = new Size(129, 30);
-                textBoxSetBudgetGas.TabIndex = 13;
-                // 
-                // textBoxSetBudgetGroceries
-                // 
-                textBoxSetBudgetGroceries.Location = new Point(116, 55);
-                textBoxSetBudgetGroceries.Name = "textBoxSetBudgetGroceries";
-                textBoxSetBudgetGroceries.Size = new Size(129, 30);
-                textBoxSetBudgetGroceries.TabIndex = 12;
+            // 
+            // textBoxSetBudgetMisc
+            // 
+            textBoxSetBudgetMisc.Location = new Point(346, 116);
+            textBoxSetBudgetMisc.Name = "textBoxSetBudgetMisc";
+            textBoxSetBudgetMisc.Size = new Size(125, 30);
+            textBoxSetBudgetMisc.TabIndex = 16;
+            // 
+            // textBoxSetBudgetShopping
+            // 
+            textBoxSetBudgetShopping.Location = new Point(347, 69);
+            textBoxSetBudgetShopping.Name = "textBoxSetBudgetShopping";
+            textBoxSetBudgetShopping.Size = new Size(125, 30);
+            textBoxSetBudgetShopping.TabIndex = 15;
+            // 
+            // textBoxSetBudgetDiningOut
+            // 
+            textBoxSetBudgetDiningOut.Location = new Point(116, 136);
+            textBoxSetBudgetDiningOut.Name = "textBoxSetBudgetDiningOut";
+            textBoxSetBudgetDiningOut.Size = new Size(129, 30);
+            textBoxSetBudgetDiningOut.TabIndex = 14;
+            // 
+            // textBoxSetBudgetGas
+            // 
+            textBoxSetBudgetGas.Location = new Point(116, 97);
+            textBoxSetBudgetGas.Name = "textBoxSetBudgetGas";
+            textBoxSetBudgetGas.Size = new Size(129, 30);
+            textBoxSetBudgetGas.TabIndex = 13;
+            // 
+            // textBoxSetBudgetGroceries
+            // 
+            textBoxSetBudgetGroceries.Location = new Point(116, 55);
+            textBoxSetBudgetGroceries.Name = "textBoxSetBudgetGroceries";
+            textBoxSetBudgetGroceries.Size = new Size(129, 30);
+            textBoxSetBudgetGroceries.TabIndex = 12;
             // 
             // linkLabelSetBudget
             // 

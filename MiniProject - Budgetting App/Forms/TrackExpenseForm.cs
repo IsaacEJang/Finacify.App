@@ -67,16 +67,16 @@ namespace MiniProject___Budgetting_App
         {
             try
             {
-                // Convert the text from textBox1 to decimal for amount
+                // Convert the text from textBoxExpenseAmount to decimal for amount
                 decimal amount = Convert.ToDecimal(textBoxExpenseAmount.Text);
 
-                // Get the description from textBox2
+                // Get the description from textBoxExpenseDescription
                 string description = textBoxExpenseDescription.Text;
 
                 // Create a new Expense object
                 Expense newExpense = new Expense
                 {
-                    Date = DateTime.Now,            // Set the current date and time
+                    Date = DateTime.Today,          // Set the current date
                     Category = selectedCategory,    // Set the selected category
                     Amount = amount,                // Set the entered amount
                     Description = description       // Set the entered description
@@ -96,7 +96,6 @@ namespace MiniProject___Budgetting_App
                 // Show an error message if the amount is not a valid decimal
                 MessageBox.Show("Please enter a valid amount.");
             }
-                       
         }
 
         // Method to clear the form fields

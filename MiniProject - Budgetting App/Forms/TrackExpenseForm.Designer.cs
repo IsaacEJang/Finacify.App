@@ -50,6 +50,12 @@
             groupBoxAmount.SuspendLayout();
             groupBoxDescription.SuspendLayout();
             SuspendLayout();
+            // Add CheckedChanged event handlers
+            this.radioButtonGroceries.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonGas.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonDiningOut.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonShopping.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonMisc.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // label7
             // 

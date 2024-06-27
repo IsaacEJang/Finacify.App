@@ -33,9 +33,12 @@
             label7 = new Label();
             buttonBackHome = new Button();
             dataGridViewTransactions = new DataGridView();
-            roundedEditTransaction = new RoundedButton();
-            roundedButtonDeleteTransaction = new RoundedButton();
+            roundedGroupBox1 = new RoundedGroupBox();
+            buttonEditTransaction = new Button();
+            buttonAddTransaction = new Button();
+            buttonDeleteTransaction = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTransactions).BeginInit();
+            roundedGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -43,8 +46,8 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.SeaShell;
-            label1.Location = new Point(221, 12);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(232, 12);
             label1.Name = "label1";
             label1.Size = new Size(76, 53);
             label1.TabIndex = 19;
@@ -55,8 +58,8 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.SeaShell;
-            label7.Location = new Point(113, 65);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(100, 65);
             label7.Name = "label7";
             label7.Size = new Size(332, 45);
             label7.TabIndex = 17;
@@ -80,41 +83,56 @@
             // dataGridViewTransactions
             // 
             dataGridViewTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTransactions.Location = new Point(12, 113);
+            dataGridViewTransactions.Location = new Point(12, 200);
             dataGridViewTransactions.Name = "dataGridViewTransactions";
             dataGridViewTransactions.RowHeadersWidth = 51;
-            dataGridViewTransactions.Size = new Size(498, 423);
+            dataGridViewTransactions.Size = new Size(498, 336);
             dataGridViewTransactions.TabIndex = 24;
             // 
-            // roundedEditTransaction
+            // roundedGroupBox1
             // 
-            roundedEditTransaction.BackColor = Color.FromArgb(123, 114, 229);
-            roundedEditTransaction.FlatAppearance.BorderSize = 0;
-            roundedEditTransaction.FlatStyle = FlatStyle.Flat;
-            roundedEditTransaction.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            roundedEditTransaction.ForeColor = Color.White;
-            roundedEditTransaction.Location = new Point(310, 556);
-            roundedEditTransaction.Name = "roundedEditTransaction";
-            roundedEditTransaction.Size = new Size(200, 55);
-            roundedEditTransaction.TabIndex = 26;
-            roundedEditTransaction.Text = "Edit Transaction";
-            roundedEditTransaction.UseVisualStyleBackColor = false;
-            roundedEditTransaction.Click += roundedEditTransaction_Click;
+            roundedGroupBox1.BackColor = Color.White;
+            roundedGroupBox1.Controls.Add(buttonEditTransaction);
+            roundedGroupBox1.Controls.Add(buttonAddTransaction);
+            roundedGroupBox1.Controls.Add(buttonDeleteTransaction);
+            roundedGroupBox1.Location = new Point(12, 111);
+            roundedGroupBox1.Name = "roundedGroupBox1";
+            roundedGroupBox1.Size = new Size(498, 70);
+            roundedGroupBox1.TabIndex = 29;
+            roundedGroupBox1.TabStop = false;
             // 
-            // roundedButtonDeleteTransaction
+            // buttonEditTransaction
             // 
-            roundedButtonDeleteTransaction.BackColor = Color.FromArgb(255, 128, 128);
-            roundedButtonDeleteTransaction.FlatAppearance.BorderSize = 0;
-            roundedButtonDeleteTransaction.FlatStyle = FlatStyle.Flat;
-            roundedButtonDeleteTransaction.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            roundedButtonDeleteTransaction.ForeColor = Color.White;
-            roundedButtonDeleteTransaction.Location = new Point(12, 556);
-            roundedButtonDeleteTransaction.Name = "roundedButtonDeleteTransaction";
-            roundedButtonDeleteTransaction.Size = new Size(200, 55);
-            roundedButtonDeleteTransaction.TabIndex = 27;
-            roundedButtonDeleteTransaction.Text = "Delete Transaction";
-            roundedButtonDeleteTransaction.UseVisualStyleBackColor = false;
-            roundedButtonDeleteTransaction.Click += roundedButtonDeleteTransaction_Click;
+            buttonEditTransaction.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonEditTransaction.Location = new Point(161, 1);
+            buttonEditTransaction.Name = "buttonEditTransaction";
+            buttonEditTransaction.Size = new Size(175, 72);
+            buttonEditTransaction.TabIndex = 2;
+            buttonEditTransaction.Text = "✏️";
+            buttonEditTransaction.UseVisualStyleBackColor = true;
+            buttonEditTransaction.Click += buttonEditTransaction_Click;
+            // 
+            // buttonAddTransaction
+            // 
+            buttonAddTransaction.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonAddTransaction.Location = new Point(325, 2);
+            buttonAddTransaction.Name = "buttonAddTransaction";
+            buttonAddTransaction.Size = new Size(175, 72);
+            buttonAddTransaction.TabIndex = 3;
+            buttonAddTransaction.Text = "➕";
+            buttonAddTransaction.UseVisualStyleBackColor = true;
+            buttonAddTransaction.Click += buttonAddTransaction_Click;
+            // 
+            // buttonDeleteTransaction
+            // 
+            buttonDeleteTransaction.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonDeleteTransaction.Location = new Point(-4, 2);
+            buttonDeleteTransaction.Name = "buttonDeleteTransaction";
+            buttonDeleteTransaction.Size = new Size(175, 72);
+            buttonDeleteTransaction.TabIndex = 0;
+            buttonDeleteTransaction.Text = "🗑";
+            buttonDeleteTransaction.UseVisualStyleBackColor = true;
+            buttonDeleteTransaction.Click += buttonDeleteTransaction_Click;
             // 
             // ViewTransactionsForm
             // 
@@ -124,8 +142,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(522, 623);
-            Controls.Add(roundedButtonDeleteTransaction);
-            Controls.Add(roundedEditTransaction);
+            Controls.Add(roundedGroupBox1);
             Controls.Add(dataGridViewTransactions);
             Controls.Add(buttonBackHome);
             Controls.Add(label1);
@@ -133,6 +150,7 @@
             Name = "ViewTransactionsForm";
             Text = "View Transactions";
             ((System.ComponentModel.ISupportInitialize)dataGridViewTransactions).EndInit();
+            roundedGroupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,7 +161,9 @@
         private Label label7;
         private Button buttonBackHome;
         private DataGridView dataGridViewTransactions;
-        private RoundedButton roundedEditTransaction;
-        private RoundedButton roundedButtonDeleteTransaction;
+        private RoundedGroupBox roundedGroupBox1;
+        private Button buttonDeleteTransaction;
+        private Button buttonAddTransaction;
+        private Button buttonEditTransaction;
     }
 }

@@ -65,7 +65,15 @@
             textBoxBudget = new TextBox();
             textBoxCurrentMonth = new TextBox();
             buttonViewTransactions = new Button();
+            roundedGroupBoxBarChart = new RoundedGroupBox();
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            roundedGroupBox1 = new RoundedGroupBox();
+            buttonBarChart = new Button();
+            buttonPieChart = new Button();
+            roundedGroupBoxPieChart = new RoundedGroupBox();
             roundedGroupBudgetTracker.SuspendLayout();
+            roundedGroupBoxBarChart.SuspendLayout();
+            roundedGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -74,7 +82,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(235, 12);
+            label1.Location = new Point(496, 9);
             label1.Name = "label1";
             label1.Size = new Size(76, 53);
             label1.TabIndex = 19;
@@ -86,7 +94,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(128, 62);
+            label7.Location = new Point(390, 60);
             label7.Name = "label7";
             label7.Size = new Size(289, 45);
             label7.TabIndex = 17;
@@ -144,7 +152,7 @@
             roundedGroupBudgetTracker.Controls.Add(textBoxCurrentMonth);
             roundedGroupBudgetTracker.Location = new Point(14, 108);
             roundedGroupBudgetTracker.Name = "roundedGroupBudgetTracker";
-            roundedGroupBudgetTracker.Size = new Size(495, 576);
+            roundedGroupBudgetTracker.Size = new Size(495, 571);
             roundedGroupBudgetTracker.TabIndex = 24;
             roundedGroupBudgetTracker.TabStop = false;
             // 
@@ -276,7 +284,7 @@
             // 
             // textBox14
             // 
-            textBox14.BackColor = Color.FromArgb(217, 210, 233);
+            textBox14.BackColor = Color.FromArgb(180, 167, 214);
             textBox14.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox14.Location = new Point(0, 392);
             textBox14.Name = "textBox14";
@@ -326,7 +334,7 @@
             // 
             // textBox10
             // 
-            textBox10.BackColor = Color.FromArgb(183, 225, 205);
+            textBox10.BackColor = Color.FromArgb(125, 206, 166);
             textBox10.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox10.Location = new Point(0, 319);
             textBox10.Name = "textBox10";
@@ -376,7 +384,7 @@
             // 
             // textBox6
             // 
-            textBox6.BackColor = Color.FromArgb(255, 242, 204);
+            textBox6.BackColor = Color.FromArgb(255, 229, 153);
             textBox6.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox6.Location = new Point(0, 246);
             textBox6.Name = "textBox6";
@@ -426,7 +434,7 @@
             // 
             // textBox5
             // 
-            textBox5.BackColor = Color.FromArgb(252, 229, 205);
+            textBox5.BackColor = Color.FromArgb(249, 203, 156);
             textBox5.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox5.Location = new Point(0, 173);
             textBox5.Name = "textBox5";
@@ -476,7 +484,7 @@
             // 
             // textBox3
             // 
-            textBox3.BackColor = Color.FromArgb(244, 204, 204);
+            textBox3.BackColor = Color.FromArgb(244, 153, 153);
             textBox3.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.Location = new Point(0, 99);
             textBox3.Name = "textBox3";
@@ -526,10 +534,10 @@
             // 
             textBoxCurrentMonth.BackColor = Color.White;
             textBoxCurrentMonth.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBoxCurrentMonth.Location = new Point(0, 12);
+            textBoxCurrentMonth.Location = new Point(61, 11);
             textBoxCurrentMonth.Name = "textBoxCurrentMonth";
             textBoxCurrentMonth.ReadOnly = true;
-            textBoxCurrentMonth.Size = new Size(495, 53);
+            textBoxCurrentMonth.Size = new Size(374, 53);
             textBoxCurrentMonth.TabIndex = 6;
             textBoxCurrentMonth.Text = "Month";
             textBoxCurrentMonth.TextAlign = HorizontalAlignment.Center;
@@ -541,13 +549,77 @@
             buttonViewTransactions.FlatStyle = FlatStyle.Flat;
             buttonViewTransactions.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonViewTransactions.ForeColor = Color.White;
-            buttonViewTransactions.Location = new Point(461, 12);
+            buttonViewTransactions.Location = new Point(987, 0);
             buttonViewTransactions.Name = "buttonViewTransactions";
-            buttonViewTransactions.Size = new Size(49, 49);
+            buttonViewTransactions.Size = new Size(63, 62);
             buttonViewTransactions.TabIndex = 25;
             buttonViewTransactions.Text = "\U0001f9fe";
             buttonViewTransactions.UseVisualStyleBackColor = false;
             buttonViewTransactions.Click += buttonViewTransactions_Click;
+            // 
+            // roundedGroupBoxBarChart
+            // 
+            roundedGroupBoxBarChart.BackColor = Color.White;
+            roundedGroupBoxBarChart.Controls.Add(cartesianChart1);
+            roundedGroupBoxBarChart.ForeColor = Color.Black;
+            roundedGroupBoxBarChart.Location = new Point(534, 193);
+            roundedGroupBoxBarChart.Name = "roundedGroupBoxBarChart";
+            roundedGroupBoxBarChart.Size = new Size(497, 486);
+            roundedGroupBoxBarChart.TabIndex = 28;
+            roundedGroupBoxBarChart.TabStop = false;
+            // 
+            // cartesianChart1
+            // 
+            cartesianChart1.ForeColor = Color.Black;
+            cartesianChart1.Location = new Point(19, 29);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(448, 433);
+            cartesianChart1.TabIndex = 0;
+            cartesianChart1.Text = "cartesianChart1";
+            // 
+            // roundedGroupBox1
+            // 
+            roundedGroupBox1.BackColor = Color.White;
+            roundedGroupBox1.Controls.Add(buttonBarChart);
+            roundedGroupBox1.Controls.Add(buttonPieChart);
+            roundedGroupBox1.ForeColor = Color.Black;
+            roundedGroupBox1.Location = new Point(534, 108);
+            roundedGroupBox1.Name = "roundedGroupBox1";
+            roundedGroupBox1.Size = new Size(497, 79);
+            roundedGroupBox1.TabIndex = 29;
+            roundedGroupBox1.TabStop = false;
+            // 
+            // buttonBarChart
+            // 
+            buttonBarChart.Font = new Font("Times New Roman", 22.2F);
+            buttonBarChart.Location = new Point(0, 0);
+            buttonBarChart.Name = "buttonBarChart";
+            buttonBarChart.Size = new Size(253, 88);
+            buttonBarChart.TabIndex = 0;
+            buttonBarChart.Text = "📊";
+            buttonBarChart.UseVisualStyleBackColor = true;
+            buttonBarChart.Click += buttonBarChart_Click;
+            // 
+            // buttonPieChart
+            // 
+            buttonPieChart.Font = new Font("Times New Roman", 22.2F);
+            buttonPieChart.Location = new Point(251, 0);
+            buttonPieChart.Name = "buttonPieChart";
+            buttonPieChart.Size = new Size(253, 88);
+            buttonPieChart.TabIndex = 1;
+            buttonPieChart.Text = "\U0001f967";
+            buttonPieChart.UseVisualStyleBackColor = true;
+            buttonPieChart.Click += buttonPieChart_Click;
+            // 
+            // roundedGroupBoxPieChart
+            // 
+            roundedGroupBoxPieChart.BackColor = Color.White;
+            roundedGroupBoxPieChart.ForeColor = Color.Black;
+            roundedGroupBoxPieChart.Location = new Point(534, 193);
+            roundedGroupBoxPieChart.Name = "roundedGroupBoxPieChart";
+            roundedGroupBoxPieChart.Size = new Size(497, 486);
+            roundedGroupBoxPieChart.TabIndex = 29;
+            roundedGroupBoxPieChart.TabStop = false;
             // 
             // BudgetTrackerForm
             // 
@@ -556,7 +628,10 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(522, 696);
+            ClientSize = new Size(1050, 708);
+            Controls.Add(roundedGroupBoxPieChart);
+            Controls.Add(roundedGroupBox1);
+            Controls.Add(roundedGroupBoxBarChart);
             Controls.Add(buttonViewTransactions);
             Controls.Add(roundedGroupBudgetTracker);
             Controls.Add(buttonBackLogin);
@@ -567,8 +642,11 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "BudgetTrackerForm";
             Text = "Budget Tracker";
+            Load += BudgetTrackerForm_Load;
             roundedGroupBudgetTracker.ResumeLayout(false);
             roundedGroupBudgetTracker.PerformLayout();
+            roundedGroupBoxBarChart.ResumeLayout(false);
+            roundedGroupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -615,5 +693,11 @@
         private TextBox textBoxTotalDays;
         private TextBox textBoxBudget;
         private Button buttonViewTransactions;
+        private RoundedGroupBox roundedGroupBoxBarChart;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private RoundedGroupBox roundedGroupBox1;
+        private Button buttonBarChart;
+        private Button buttonPieChart;
+        private RoundedGroupBox roundedGroupBoxPieChart;
     }
 }

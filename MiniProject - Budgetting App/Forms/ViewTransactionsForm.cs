@@ -16,9 +16,7 @@ namespace MiniProject___Budgetting_App.Forms
         public ViewTransactionsForm()
         {
             InitializeComponent();
-
             ViewTransactionsForm_Load();
-
         }
 
         private void buttonBackHome_Click_1(object sender, EventArgs e)
@@ -37,25 +35,36 @@ namespace MiniProject___Budgetting_App.Forms
             // Bind the DataGridView to the list of expenses
             dataGridViewTransactions.DataSource = expenses;
 
-
             // Set the column headers to the desired text
             dataGridViewTransactions.Columns["Date"].HeaderText = "Date";
             dataGridViewTransactions.Columns["Category"].HeaderText = "Category";
             dataGridViewTransactions.Columns["Amount"].HeaderText = "Amount ($)";
             dataGridViewTransactions.Columns["Description"].HeaderText = "Description";
+
+            // Auto-size the columns to fit the DataGridView width
+            dataGridViewTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
 
-        private void roundedEditTransaction_Click(object sender, EventArgs e)
+        private void RefreshDataGridView()
         {
-            
+            dataGridViewTransactions.DataSource = null;
+            dataGridViewTransactions.DataSource = Expense.GetExpenses();
+
+            // Optional: Set the column headers to the desired text
+            dataGridViewTransactions.Columns["Date"].HeaderText = "Date";
+            dataGridViewTransactions.Columns["Category"].HeaderText = "Category";
+            dataGridViewTransactions.Columns["Amount"].HeaderText = "Amount";
+            dataGridViewTransactions.Columns["Description"].HeaderText = "Description";
         }
 
-        private void roundedButtonDeleteTransaction_Click(object sender, EventArgs e)
+
+        private void buttonDeleteTransaction_Click(object sender, EventArgs e)
         {
             if (dataGridViewTransactions.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a transaction to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a transaction. \n\n Click on the first column and ensure the whole row is highlighted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -63,7 +72,7 @@ namespace MiniProject___Budgetting_App.Forms
             var selectedIndex = dataGridViewTransactions.SelectedRows[0].Index;
 
             // Ask the user for confirmation
-            var result = MessageBox.Show("Are you sure you want to delete the selected transaction?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to DELETE the selected transaction?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -78,16 +87,40 @@ namespace MiniProject___Budgetting_App.Forms
             }
         }
 
-        private void RefreshDataGridView()
+        private void buttonAddTransaction_Click(object sender, EventArgs e)
         {
-            dataGridViewTransactions.DataSource = null;
-            dataGridViewTransactions.DataSource = Expense.GetExpenses();
+            TrackExpenseForm trackExpenseForm = new TrackExpenseForm();
+            trackExpenseForm.Show();
+            this.Hide();
+        }
 
-            // Optional: Set the column headers to the desired text
-            dataGridViewTransactions.Columns["Date"].HeaderText = "Date";
-            dataGridViewTransactions.Columns["Category"].HeaderText = "Category";
-            dataGridViewTransactions.Columns["Amount"].HeaderText = "Amount";
-            dataGridViewTransactions.Columns["Description"].HeaderText = "Description";
+        private void buttonEditTransaction_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewTransactions.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a transaction. \n\n Click on the first column and ensure the whole row is highlighted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Get the index of the selected transaction
+            var selectedIndex = dataGridViewTransactions.SelectedRows[0].Index;
+
+            // Ask the user for confirmation
+            var result = MessageBox.Show("Are you sure you want to EDIT the selected transaction?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Save the selected transaction in the Expense class
+                Expense.EditTransaction = Expense.GetExpenses()[selectedIndex];
+
+                // Remove the transaction at the selected index
+                Expense.GetExpenses().RemoveAt(selectedIndex);
+
+                EditTransactionForm editTransactionForm = new EditTransactionForm();
+                editTransactionForm.Show();
+                this.Hide();
+            }
+                
         }
     }
 }
