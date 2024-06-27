@@ -16,6 +16,9 @@ namespace MiniProject___Budgetting_App
         public HomePageForm()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
         }
 
         private void buttonTrackExpenseForm_Click(object sender, EventArgs e)

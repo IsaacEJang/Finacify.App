@@ -17,6 +17,9 @@ namespace MiniProject___Budgetting_App.Forms
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             // Populate FeedbackType combo box
             comboBoxTypeOfFeedback.Items.Add(""); // Add empty item
             comboBoxTypeOfFeedback.Items.AddRange(Enum.GetNames(typeof(FeedbackType)));

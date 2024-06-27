@@ -17,6 +17,9 @@ namespace MiniProject___Budgetting_App.Forms
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             // Set the placeholder text for the specified TextBoxes and add event handlers
             SetExamplePostTaxMonthlyIncome();
             textBoxPostTaxMonthlyIncome.Enter += textBoxPostTaxMonthlyIncome_Enter;

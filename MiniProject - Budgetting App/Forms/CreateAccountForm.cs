@@ -17,6 +17,9 @@ namespace MiniProject___Budgetting_App
         public CreateAccountForm()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
         }
 
         private void buttonBackHome_Click(object sender, EventArgs e)

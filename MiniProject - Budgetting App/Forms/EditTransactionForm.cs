@@ -17,6 +17,10 @@ namespace MiniProject___Budgetting_App.Forms
         public EditTransactionForm()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             LoadTransactionData();
         }
 

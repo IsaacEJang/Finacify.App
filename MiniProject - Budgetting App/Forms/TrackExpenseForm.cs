@@ -22,6 +22,9 @@ namespace MiniProject___Budgetting_App
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             // Set the placeholder text for the expense amount TextBox and add event handlers
             SetExampleExpenseAmount();
             textBoxExpenseAmount.Enter += textBoxExpenseAmount_Enter;

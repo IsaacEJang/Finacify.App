@@ -10,6 +10,9 @@ namespace MiniProject___Budgetting_App
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             // Set the placeholder text for the email TextBox and add event handlers
             SetExampleEmail();
             textBoxLoginEmail.Enter += textBoxLoginEmail_Enter;

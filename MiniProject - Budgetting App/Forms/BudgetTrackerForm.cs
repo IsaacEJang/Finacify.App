@@ -21,6 +21,10 @@ namespace MiniProject___Budgetting_App
         public BudgetTrackerForm()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(500, 300);
+
             CurrentMonth();
             
             // Use the current date for the initial load
