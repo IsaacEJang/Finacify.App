@@ -162,68 +162,68 @@ namespace MiniProject___Budgetting_App
             var textColor = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0));               // Black
 
             cartesianChart1.Series = new SeriesCollection
-    {
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { (decimal)daysPercent, 0, 0, 0, 0, 0 },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Days",
-            Fill = daysColor,
-            Foreground = percentColor
-        },
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { 0, miscPercent, 0, 0, 0, 0 },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Misc",
-            Fill = miscColor,
-            Foreground = percentColor
-        },
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { 0, 0, shoppingPercent, 0, 0, 0 },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Shopping",
-            Fill = shoppingColor,
-            Foreground = percentColor
-        },
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { 0, 0, 0, diningOutPercent, 0, 0 },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Dining Out",
-            Fill = diningOutColor,
-            Foreground = percentColor
-        },
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { 0, 0, 0, 0, gasPercent, 0 },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Gas",
-            Fill = gasColor,
-            Foreground = percentColor
-        },
-        new StackedRowSeries
-        {
-            Values = new ChartValues<decimal> { 0, 0, 0, 0, 0, groceriesPercent },
-            StackMode = StackMode.Values,
-            DataLabels = true,
-            LabelPoint = p => p.X.ToString("F0") + "%",
-            Title = "Groceries",
-            Fill = groceriesColor,
-            Foreground = percentColor
-        }
-    };
+            {
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { (decimal)daysPercent, 0, 0, 0, 0, 0 },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Days",
+                    Fill = daysColor,
+                    Foreground = percentColor
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { 0, miscPercent, 0, 0, 0, 0 },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Misc",
+                    Fill = miscColor,
+                    Foreground = percentColor
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { 0, 0, shoppingPercent, 0, 0, 0 },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Shopping",
+                    Fill = shoppingColor,
+                    Foreground = percentColor
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { 0, 0, 0, diningOutPercent, 0, 0 },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Dining Out",
+                    Fill = diningOutColor,
+                    Foreground = percentColor
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { 0, 0, 0, 0, gasPercent, 0 },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Gas",
+                    Fill = gasColor,
+                    Foreground = percentColor
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues<decimal> { 0, 0, 0, 0, 0, groceriesPercent },
+                    StackMode = StackMode.Values,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString("F0") + "%",
+                    Title = "Groceries",
+                    Fill = groceriesColor,
+                    Foreground = percentColor
+                }
+            };
 
             // Add remaining series
             cartesianChart1.Series.Add(new StackedRowSeries
@@ -273,8 +273,6 @@ namespace MiniProject___Budgetting_App
         // Populates Pie Graph Data
         public void LoadPieChart(DateTime monthDate)
         {
-            
-
             // Calculate the percentages for each category
             decimal miscPercent = Math.Round(Expense.GetCategorySumForMonth(ExpenseCategory.Misc, monthDate) / DataBudget.defaultBudget.BudgetMisc * 100, 2);
             decimal shoppingPercent = Math.Round(Expense.GetCategorySumForMonth(ExpenseCategory.Shopping, monthDate) / DataBudget.defaultBudget.BudgetShopping * 100, 2);
