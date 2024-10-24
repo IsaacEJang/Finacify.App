@@ -1,4 +1,4 @@
-# Finacify.App4
+# Finacify.App
 
 ## Overview
 This project is a budgeting application aimed at helping users manage their personal finances by tracking income and expenses. The app allows users to categorize their transactions, set budget limits, and view summaries of their financial activities. The primary technologies used in this project include **C#**, **Windows Forms** for the graphical user interface (GUI), and **Excel** files for data storage.
