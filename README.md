@@ -8,17 +8,18 @@ This project is a budgeting application aimed at helping users manage their pers
 
 | Pages                    | View |
 |--------------------------|------------|
-| **Login Page** \m *Allows users to create accounts and/or log in.*  | ![Login Page](https://github.com/user-attachments/assets/edd1da52-cc79-4114-b1c4-f289024cb787) |
-| **Home Page**             | ![Home Page](https://github.com/user-attachments/assets/4a25b7d3-e0a5-4009-b713-c50538e2f98d) |
-| *Users can take a quick tour of the entire app by clicking on the [i] button (top right) or leave feedback (bottom right).* | |
-| **Budget Tracker Page**   | ![Budget Tracker Page](https://github.com/user-attachments/assets/553cca5a-e2da-466a-983b-6e14e9448bed) |
-| *Users can view their budget in both bar and pie graphs.* | |
-| **Track Expense Page**    | ![Track Expense Page](https://github.com/user-attachments/assets/df5b413b-9c2e-4c3f-a144-04da19916dea) |
-| *Allows users to add and track their expenses in real-time.* | |
-| **View Transactions Page** | ![View Transactions Page](https://github.com/user-attachments/assets/cf225d51-5a4e-4a5e-9bec-9963a080da81) |
-| *Supports CRUD operations and the ability to export to Excel (top right).* | |
-| **Build a Budget Page**   | ![Build a Budget Page](https://github.com/user-attachments/assets/60491b5c-ed4b-4af0-858c-4f02019ba830) |
-| *Allows users to create and manage their budget effectively.* | |
+| **Login Page**            | ![Login Page](https://github.com/user-attachments/assets/edd1da52-cc79-4114-b1c4-f289024cb787)  
+Allows users to create accounts and/or log in. |
+| **Home Page**             | ![Home Page](https://github.com/user-attachments/assets/4a25b7d3-e0a5-4009-b713-c50538e2f98d)  
+Users can take a quick tour of the entire app by clicking on the [i] button (top right) or leave feedback (bottom right). |
+| **Budget Tracker Page**   | ![Budget Tracker Page](https://github.com/user-attachments/assets/553cca5a-e2da-466a-983b-6e14e9448bed)  
+Users can view their budget in both bar and pie graphs. |
+| **Track Expense Page**    | ![Track Expense Page](https://github.com/user-attachments/assets/df5b413b-9c2e-4c3f-a144-04da19916dea)  
+Allows users to add and track their expenses in real-time. |
+| **View Transactions Page** | ![View Transactions Page](https://github.com/user-attachments/assets/cf225d51-5a4e-4a5e-9bec-9963a080da81)  
+Supports CRUD operations and the ability to export to Excel (top right). |
+| **Build a Budget Page**   | ![Build a Budget Page](https://github.com/user-attachments/assets/60491b5c-ed4b-4af0-858c-4f02019ba830)  
+Allows users to create and manage their budget effectively. |
 
 
 
