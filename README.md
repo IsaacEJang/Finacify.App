@@ -3,6 +3,10 @@
 ## Overview
 This project is a budgeting application aimed at helping users manage their personal finances by tracking income and expenses. The app allows users to categorize their transactions, set budget limits, and view summaries of their financial activities. The primary technologies used in this project include **C#**, **Windows Forms** for the graphical user interface (GUI), and **Excel** files for data storage.
 
+![Login Page](https://github.com/user-attachments/assets/5851785e-206f-42f3-9f7e-181421ef6afa) ![Home Page](https://github.com/user-attachments/assets/27418a09-7458-4f23-85c1-85c25cbf958c)
+
+
+
 ## Architecture
 The application follows a modular architecture where the core logic is divided into different classes for ease of maintenance and scalability.
 
