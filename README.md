@@ -3,7 +3,16 @@
 ## Overview
 This project is a budgeting application aimed at helping users manage their personal finances by tracking income and expenses. The app allows users to categorize their transactions, set budget limits, and view summaries of their financial activities. The primary technologies used in this project include **C#**, **Windows Forms** for the graphical user interface (GUI), and **Excel** files for data storage.
 
-![Login Page](https://github.com/user-attachments/assets/5851785e-206f-42f3-9f7e-181421ef6afa) ![Home Page](https://github.com/user-attachments/assets/27418a09-7458-4f23-85c1-85c25cbf958c)
+## Screenshots
+
+| Description             | Screenshot |
+|-------------------------|------------|
+| **Login Page**           | ![Login Page](https://github.com/user-attachments/assets/edd1da52-cc79-4114-b1c4-f289024cb787) |
+| **Home Page**            | ![Home Page](https://github.com/user-attachments/assets/4a25b7d3-e0a5-4009-b713-c50538e2f98d) |
+| **Budget Tracker Page**  | ![Budget Tracker Page](https://github.com/user-attachments/assets/553cca5a-e2da-466a-983b-6e14e9448bed) |
+| **Track Expense Page**   | ![Track Expense Page](https://github.com/user-attachments/assets/df5b413b-9c2e-4c3f-a144-04da19916dea) |
+| **View Transactions Page** | ![View Transactions Page](https://github.com/user-attachments/assets/cf225d51-5a4e-4a5e-9bec-9963a080da81) |
+| **Build a Budget Page**  | ![Build a Budge Page](https://github.com/user-attachments/assets/60491b5c-ed4b-4af0-858c-4f02019ba830) |
 
 
 
