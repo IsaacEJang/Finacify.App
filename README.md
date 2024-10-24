@@ -11,7 +11,9 @@ The application follows a modular architecture where the core logic is divided i
 - **Data Storage**: Data is temporarily stored in Excel files, allowing users to load and save their financial data without a database. This was chosen for simplicity in the early stages of development, though a database integration is planned for future iterations.
 
 ### Architectural Decisions
-- **NoSQL vs SQL**: For simplicity, we opted for Excel file storage instead of a more complex database system like SQL or NoSQL. This decision was made to minimize dependencies and reduce setup time for users.
+- **SQL Database**: I am currently working on integrating a SQL database to replace the Excel file storage. This transition will allow for more robust data management, including querying capabilities, better data integrity, and the potential for scaling the application in the future. Using SQL will also help prepare the application for cloud integration or multi-user environments.
+- **Cloud vs On-premise**: This is an on-premise solution because all data is currently stored locally on the user's device. A potential cloud integration could be added in the future for backups or synchronization across multiple devices.
+
 - **Cloud vs On-premise**: This is an on-premise solution because all data is stored locally on the user's device. A potential cloud integration could be added in the future for backups or synchronization across multiple devices.
 
 ## Functionality
