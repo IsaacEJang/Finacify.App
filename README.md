@@ -8,7 +8,7 @@ This project is a budgeting application aimed at helping users manage their pers
 
 | Pages                    | View |
 |--------------------------|------------|
-| **Login Page**: Allows users to create accounts and/or log in. | ![Login Page](https://github.com/user-attachments/assets/edd1da52-cc79-4114-b1c4-f289024cb787) 
+| **Login Page** <br /> Allows users to create accounts and/or log in. | ![Login Page](https://github.com/user-attachments/assets/edd1da52-cc79-4114-b1c4-f289024cb787) 
 | **Home Page**             | ![Home Page](https://github.com/user-attachments/assets/4a25b7d3-e0a5-4009-b713-c50538e2f98d)  
 Users can take a quick tour of the entire app by clicking on the [i] button (top right) or leave feedback (bottom right). |
 | **Budget Tracker Page**   | ![Budget Tracker Page](https://github.com/user-attachments/assets/553cca5a-e2da-466a-983b-6e14e9448bed)  
